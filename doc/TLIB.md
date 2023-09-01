@@ -1,9 +1,9 @@
 # TOS_TLIB文档
 
-#### KEIL文件仓库架构
+#### 文件仓库架构(新增)
 
 ```
-32_TOS
+TOS_TLIB
 	|-tlib( tlib 用户API部分代码)
 		|-tlib.h
 		|-tlib.c (内核态入口)
@@ -22,14 +22,14 @@
 
 #### 技术文档
 
-- [用户API手册](./doc/TLIB_SDK.md)
-- [用户API手册（细节化）](./doc/TLIB_SDK_DETAIL.md)
-- [TLIB开发细节](./doc/TLIB_DETAIL.md)
+- [用户API手册](./TLIB_SDK.md)
+- [用户API手册（细节化）](./TLIB_SDK_DETAIL.md)
+- [TLIB开发细节](./TLIB_DETAIL.md)
 
 #### 使用指南
 
-- [用户使用指南](./doc/User_Manual.md)
+- [用户使用指南](./User_Manual.md)
 
 #### TOS内核开发经验分享
 
-- [开发经验](./doc/ker_work_exp.md)
+- [开发经验](./ker_work_exp.md)

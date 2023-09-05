@@ -1,0 +1,48 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000         
+    2 00000000         
+    3 00000000                 AREA             MYRO, CODE, READONLY, ALIGN=2
+    4 00000000                 THUMB
+    5 00000000                 REQUIRE8
+    6 00000000                 PRESERVE8
+    7 00000000         
+    8 00000000                 GLOBAL           syscall
+    9 00000000         syscall
+   10 00000000 DF0F            SVC              #0xf
+   11 00000002 4770            BX               LR
+   12 00000004                 END
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4 --fpu=SoftVFP
+ --depend=32_tos\tlib_s.d -o32_tos\tlib_s.o -I.\RTE\_32_TOS -ID:\Keil5\ARM\PACK
+\ARM\CMSIS\5.0.1\CMSIS\Include -ID:\Keil5\ARM\PACK\Keil\STM32WLxx_DFP\1.1.0\Dri
+vers\CMSIS\Device\ST\STM32WLxx\Include --predefine="__MICROLIB SETA 1" --predef
+ine="__UVISION_VERSION SETA 524" --predefine="_RTE_ SETA 1" --predefine="STM32W
+LE5xx SETA 1" --list=tlib_s.lst ..\tos\tlib\tlib_s.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+MYRO 00000000
+
+Symbol: MYRO
+   Definitions
+      At line 3 in file ..\tos\tlib\tlib_s.s
+   Uses
+      None
+Comment: MYRO unused
+syscall 00000000
+
+Symbol: syscall
+   Definitions
+      At line 9 in file ..\tos\tlib\tlib_s.s
+   Uses
+      At line 8 in file ..\tos\tlib\tlib_s.s
+Comment: syscall used once
+2 symbols
+336 symbols in table

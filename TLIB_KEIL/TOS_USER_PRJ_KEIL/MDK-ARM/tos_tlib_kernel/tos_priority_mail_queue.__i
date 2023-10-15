@@ -1,0 +1,8 @@
+-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c
+-fno-rtti -funsigned-char -fshort-enums -fshort-wchar
+-D__MICROLIB -gdwarf-3 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../Core/Inc -I ../Drivers/STM32WLxx_HAL_Driver/Inc -I ../Drivers/STM32WLxx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32WLxx/Include -I ../Drivers/CMSIS/Include -I ../TOS/ARCH -I ../TOS/CONFIG -I ../TOS/KERNEL/include -I ../TOS/TLIB_PORT
+-I./RTE/_tos_tlib_kernel
+-ID:/Keil5/ARM/PACK/ARM/CMSIS/5.0.1/CMSIS/Include
+-ID:/Keil5/ARM/PACK/Keil/STM32WLxx_DFP/1.1.0/Drivers/CMSIS/Device/ST/STM32WLxx/Include
+-D__UVISION_VERSION="524" -D_RTE_ -DSTM32WLE5xx -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WLE5xx
+-o tos_tlib_kernel/tos_priority_mail_queue.o -MD "../TOS/KERNEL/tos_priority_mail_queue.c"

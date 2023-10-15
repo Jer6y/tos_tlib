@@ -1,0 +1,2049 @@
+Component: ARM Compiler 6.7 Tool: armlink [5c9ef700]
+
+==============================================================================
+
+Section Cross References
+
+    app_entry.o(.text.Test_1) refers to app_entry.o(.rodata.str1.1) for .L.str
+    app_entry.o(.text.Test_1) refers to app_entry.o(.data.str_1) for str_1
+    app_entry.o(.text.Test_1) refers to printfa.o(i.__0printf) for printf
+    app_entry.o(.ARM.exidx.text.Test_1) refers to app_entry.o(.text.Test_1) for [Anonymous Symbol]
+    app_entry.o(.text.Test_2) refers to app_entry.o(.rodata.str1.1) for .L.str
+    app_entry.o(.text.Test_2) refers to app_entry.o(.data.str_2) for str_2
+    app_entry.o(.text.Test_2) refers to printfa.o(i.__0printf) for printf
+    app_entry.o(.ARM.exidx.text.Test_2) refers to app_entry.o(.text.Test_2) for [Anonymous Symbol]
+    app_entry.o(.text.cmd_goto) refers to app_entry.o(.rodata.str1.1) for .L.str.1
+    app_entry.o(.text.cmd_goto) refers to printfa.o(i.__0printf) for printf
+    app_entry.o(.text.cmd_goto) refers to app_entry.o(.text.parse_argv_address) for parse_argv_address
+    app_entry.o(.text.cmd_goto) refers to tlib_s.o(RO) for tool_goto_adrs_asm
+    app_entry.o(.ARM.exidx.text.cmd_goto) refers to app_entry.o(.text.cmd_goto) for [Anonymous Symbol]
+    app_entry.o(.text.parse_argv_address) refers to strlen.o(.text) for strlen
+    app_entry.o(.ARM.exidx.text.parse_argv_address) refers to app_entry.o(.text.parse_argv_address) for [Anonymous Symbol]
+    app_entry.o(.text.cmd_write_bt) refers to app_entry.o(.rodata.str1.1) for .L.str.1
+    app_entry.o(.text.cmd_write_bt) refers to printfa.o(i.__0printf) for printf
+    app_entry.o(.text.cmd_write_bt) refers to app_entry.o(.text.parse_argv_address) for parse_argv_address
+    app_entry.o(.text.cmd_write_bt) refers to app_entry.o(.text.parse_argv_byte) for parse_argv_byte
+    app_entry.o(.ARM.exidx.text.cmd_write_bt) refers to app_entry.o(.text.cmd_write_bt) for [Anonymous Symbol]
+    app_entry.o(.text.parse_argv_byte) refers to strlen.o(.text) for strlen
+    app_entry.o(.ARM.exidx.text.parse_argv_byte) refers to app_entry.o(.text.parse_argv_byte) for [Anonymous Symbol]
+    app_entry.o(.text.cmd_chk_func) refers to app_entry.o(.rodata.str1.1) for .L.str.3
+    app_entry.o(.text.cmd_chk_func) refers to printfa.o(i.__0printf) for printf
+    app_entry.o(.text.cmd_chk_func) refers to app_entry.o(.text.Test_1) for Test_1
+    app_entry.o(.text.cmd_chk_func) refers to app_entry.o(.text.Test_2) for Test_2
+    app_entry.o(.ARM.exidx.text.cmd_chk_func) refers to app_entry.o(.text.cmd_chk_func) for [Anonymous Symbol]
+    app_entry.o(.text.cmd_chk_adrs) refers to app_entry.o(.rodata.str1.1) for .L.str.6
+    app_entry.o(.text.cmd_chk_adrs) refers to printfa.o(i.__0printf) for printf
+    app_entry.o(.text.cmd_chk_adrs) refers to app_entry.o(.data.str_1) for str_1
+    app_entry.o(.text.cmd_chk_adrs) refers to strlen.o(.text) for strlen
+    app_entry.o(.text.cmd_chk_adrs) refers to app_entry.o(.data.str_2) for str_2
+    app_entry.o(.ARM.exidx.text.cmd_chk_adrs) refers to app_entry.o(.text.cmd_chk_adrs) for [Anonymous Symbol]
+    app_entry.o(.text.cmd_read_bt) refers to app_entry.o(.rodata.str1.1) for .L.str.1
+    app_entry.o(.text.cmd_read_bt) refers to printfa.o(i.__0printf) for printf
+    app_entry.o(.text.cmd_read_bt) refers to app_entry.o(.text.parse_argv_address) for parse_argv_address
+    app_entry.o(.ARM.exidx.text.cmd_read_bt) refers to app_entry.o(.text.cmd_read_bt) for [Anonymous Symbol]
+    app_entry.o(.text.cmd_kv_walk) refers to tos_kv.o(.text.tos_kv_walkthru) for tos_kv_walkthru
+    app_entry.o(.ARM.exidx.text.cmd_kv_walk) refers to app_entry.o(.text.cmd_kv_walk) for [Anonymous Symbol]
+    app_entry.o(.text.cmd_kv_set) refers to app_entry.o(.rodata.str1.1) for .L.str.1
+    app_entry.o(.text.cmd_kv_set) refers to printfa.o(i.__0printf) for printf
+    app_entry.o(.text.cmd_kv_set) refers to strlen.o(.text) for strlen
+    app_entry.o(.text.cmd_kv_set) refers to tos_kv.o(.text.tos_kv_set) for tos_kv_set
+    app_entry.o(.ARM.exidx.text.cmd_kv_set) refers to app_entry.o(.text.cmd_kv_set) for [Anonymous Symbol]
+    app_entry.o(.text.cmd_kv_find) refers to app_entry.o(.rodata.str1.1) for .L.str.1
+    app_entry.o(.text.cmd_kv_find) refers to printfa.o(i.__0printf) for printf
+    app_entry.o(.text.cmd_kv_find) refers to tos_kv.o(.text.tos_kv_get) for tos_kv_get
+    app_entry.o(.ARM.exidx.text.cmd_kv_find) refers to app_entry.o(.text.cmd_kv_find) for [Anonymous Symbol]
+    app_entry.o(.text.cmd_kv_del) refers to app_entry.o(.rodata.str1.1) for .L.str.1
+    app_entry.o(.text.cmd_kv_del) refers to printfa.o(i.__0printf) for printf
+    app_entry.o(.text.cmd_kv_del) refers to tos_kv.o(.text.tos_kv_del) for tos_kv_del
+    app_entry.o(.ARM.exidx.text.cmd_kv_del) refers to app_entry.o(.text.cmd_kv_del) for [Anonymous Symbol]
+    app_entry.o(.text.cmd_post) refers to app_entry.o(.bss.sem) for sem
+    app_entry.o(.text.cmd_post) refers to tlib_usr.o(.text.tos_sem_post) for tos_sem_post
+    app_entry.o(.ARM.exidx.text.cmd_post) refers to app_entry.o(.text.cmd_post) for [Anonymous Symbol]
+    app_entry.o(.text.out) refers to stdout.o(.data) for __stdout
+    app_entry.o(.text.out) refers to tool.o(.text.fputc) for fputc
+    app_entry.o(.ARM.exidx.text.out) refers to app_entry.o(.text.out) for [Anonymous Symbol]
+    app_entry.o(.text.rx_hook) refers to tos_shell.o(.text.tos_shell_input_byte) for tos_shell_input_byte
+    app_entry.o(.ARM.exidx.text.rx_hook) refers to app_entry.o(.text.rx_hook) for [Anonymous Symbol]
+    app_entry.o(.text.write_flash) refers to tlib_usr.o(.text.tos_io_write) for tos_io_write
+    app_entry.o(.ARM.exidx.text.write_flash) refers to app_entry.o(.text.write_flash) for [Anonymous Symbol]
+    app_entry.o(.ARM.exidx.text.read_flash) refers to app_entry.o(.text.read_flash) for [Anonymous Symbol]
+    app_entry.o(.text.erase_flash) refers to tlib_usr.o(.text.tos_io_write) for tos_io_write
+    app_entry.o(.ARM.exidx.text.erase_flash) refers to app_entry.o(.text.erase_flash) for [Anonymous Symbol]
+    app_entry.o(.text.thread_1) refers to app_entry.o(.bss.sem) for sem
+    app_entry.o(.text.thread_1) refers to tlib_usr.o(.text.tos_sem_pend) for tos_sem_pend
+    app_entry.o(.text.thread_1) refers to app_entry.o(.rodata.str1.1) for .L.str.15
+    app_entry.o(.text.thread_1) refers to printfa.o(i.__0printf) for printf
+    app_entry.o(.ARM.exidx.text.thread_1) refers to app_entry.o(.text.thread_1) for [Anonymous Symbol]
+    app_entry.o(.text.thread_2) refers to app_entry.o(.rodata.str1.1) for .L.str.16
+    app_entry.o(.text.thread_2) refers to printfa.o(i.__0printf) for printf
+    app_entry.o(.text.thread_2) refers to tlib_usr.o(.text.tos_task_delay) for tos_task_delay
+    app_entry.o(.ARM.exidx.text.thread_2) refers to app_entry.o(.text.thread_2) for [Anonymous Symbol]
+    app_entry.o(.text.test) refers to app_entry.o(.text.write_flash) for write_flash
+    app_entry.o(.text.test) refers to app_entry.o(.text.read_flash) for read_flash
+    app_entry.o(.text.test) refers to app_entry.o(.text.erase_flash) for erase_flash
+    app_entry.o(.text.test) refers to tos_kv.o(.text.tos_kv_init) for tos_kv_init
+    app_entry.o(.text.test) refers to app_entry.o(.bss.sem) for sem
+    app_entry.o(.text.test) refers to tlib_usr.o(.text.tos_sem_create) for tos_sem_create
+    app_entry.o(.text.test) refers to app_entry.o(.rodata.str1.1) for .L.str.17
+    app_entry.o(.text.test) refers to app_entry.o(.text.thread_1) for thread_1
+    app_entry.o(.text.test) refers to tlib_usr.o(.text.tos_task_create_dyn) for tos_task_create_dyn
+    app_entry.o(.text.test) refers to app_entry.o(.text.thread_2) for thread_2
+    app_entry.o(.text.test) refers to app_entry.o(.bss.shell) for shell
+    app_entry.o(.text.test) refers to app_entry.o(.text.out) for out
+    app_entry.o(.text.test) refers to app_entry.o(.data.user_shell_cmd_set) for user_shell_cmd_set
+    app_entry.o(.text.test) refers to tos_shell.o(.text.tos_shell_init) for tos_shell_init
+    app_entry.o(.text.test) refers to app_entry.o(.text.rx_hook) for rx_hook
+    app_entry.o(.text.test) refers to tlib_usr.o(.text.tos_io_control) for tos_io_control
+    app_entry.o(.text.test) refers to tlib_usr.o(.text.tos_task_destroy) for tos_task_destroy
+    app_entry.o(.ARM.exidx.text.test) refers to app_entry.o(.text.test) for [Anonymous Symbol]
+    app_entry.o(.ARM.__at_0x0803f000) refers to app_entry.o(.bss.mem) for mem
+    app_entry.o(.ARM.__at_0x0803f000) refers to tlib_usr.o(.text.tos_mmheap_pool_add) for tos_mmheap_pool_add
+    app_entry.o(.ARM.__at_0x0803f000) refers to app_entry.o(.bss.stack_1) for stack_1
+    app_entry.o(.ARM.__at_0x0803f000) refers to app_entry.o(.bss.t1_tcb) for t1_tcb
+    app_entry.o(.ARM.__at_0x0803f000) refers to app_entry.o(.rodata.str1.1) for .L.str.19
+    app_entry.o(.ARM.__at_0x0803f000) refers to app_entry.o(.text.test) for test
+    app_entry.o(.ARM.__at_0x0803f000) refers to tlib_usr.o(.text.tos_task_create) for tos_task_create
+    app_entry.o(.ARM.__at_0x0803f000) refers to tlib_usr.o(.text.tos_task_destroy_k) for tos_task_destroy_k
+    app_entry.o(.ARM.exidx.ARM.__at_0x0803f000) refers to app_entry.o(.ARM.__at_0x0803f000) for [Anonymous Symbol]
+    app_entry.o(.data.user_shell_cmd_set) refers to app_entry.o(.rodata.user_shell_commands) for [Anonymous Symbol]
+    app_entry.o(.rodata.user_shell_commands) refers to app_entry.o(.rodata.str1.1) for .L.str.20
+    app_entry.o(.rodata.user_shell_commands) refers to app_entry.o(.text.cmd_goto) for cmd_goto
+    app_entry.o(.rodata.user_shell_commands) refers to app_entry.o(.text.cmd_chk_func) for cmd_chk_func
+    app_entry.o(.rodata.user_shell_commands) refers to app_entry.o(.text.cmd_chk_adrs) for cmd_chk_adrs
+    app_entry.o(.rodata.user_shell_commands) refers to app_entry.o(.text.cmd_write_bt) for cmd_write_bt
+    app_entry.o(.rodata.user_shell_commands) refers to app_entry.o(.text.cmd_read_bt) for cmd_read_bt
+    app_entry.o(.rodata.user_shell_commands) refers to app_entry.o(.text.cmd_kv_walk) for cmd_kv_walk
+    app_entry.o(.rodata.user_shell_commands) refers to app_entry.o(.text.cmd_kv_set) for cmd_kv_set
+    app_entry.o(.rodata.user_shell_commands) refers to app_entry.o(.text.cmd_kv_del) for cmd_kv_del
+    app_entry.o(.rodata.user_shell_commands) refers to app_entry.o(.text.cmd_kv_find) for cmd_kv_find
+    app_entry.o(.rodata.user_shell_commands) refers to app_entry.o(.text.cmd_post) for cmd_post
+    tos_shell.o(.text.tos_shell_init) refers to tos_shell.o(.bss.shell_ctl) for shell_ctl
+    tos_shell.o(.text.tos_shell_init) refers to memseta.o(.text) for __aeabi_memclr8
+    tos_shell.o(.text.tos_shell_init) refers to tos_shell_commands.o(.text.shell_cmd_init) for shell_cmd_init
+    tos_shell.o(.text.tos_shell_init) refers to tlib_usr.o(.text.tos_mmheap_alloc) for tos_mmheap_alloc
+    tos_shell.o(.text.tos_shell_init) refers to tlib_usr.o(.text.tos_chr_fifo_create) for tos_chr_fifo_create
+    tos_shell.o(.text.tos_shell_init) refers to tlib_usr.o(.text.tos_sem_create) for tos_sem_create
+    tos_shell.o(.text.tos_shell_init) refers to tos_shell.o(.bss.shell_parser_task_stack) for shell_parser_task_stack
+    tos_shell.o(.text.tos_shell_init) refers to tos_shell.o(.rodata.str1.1) for .L.str
+    tos_shell.o(.text.tos_shell_init) refers to tos_shell.o(.text.shell_parser) for shell_parser
+    tos_shell.o(.text.tos_shell_init) refers to tlib_usr.o(.text.tos_task_create) for tos_task_create
+    tos_shell.o(.text.tos_shell_init) refers to tlib_usr.o(.text.tos_sem_destroy) for tos_sem_destroy
+    tos_shell.o(.text.tos_shell_init) refers to tlib_usr.o(.text.tos_mmheap_free) for tos_mmheap_free
+    tos_shell.o(.text.tos_shell_init) refers to tlib_usr.o(.text.tos_chr_fifo_destroy) for tos_chr_fifo_destroy
+    tos_shell.o(.ARM.exidx.text.tos_shell_init) refers to tos_shell.o(.text.tos_shell_init) for [Anonymous Symbol]
+    tos_shell.o(.text.shell_parser) refers to tos_shell.o(.text.shell_prompt) for shell_prompt
+    tos_shell.o(.text.shell_parser) refers to tos_shell.o(.text.shell_readline) for shell_readline
+    tos_shell.o(.text.shell_parser) refers to tos_shell.o(.text.shell_cmd_process) for shell_cmd_process
+    tos_shell.o(.ARM.exidx.text.shell_parser) refers to tos_shell.o(.text.shell_parser) for [Anonymous Symbol]
+    tos_shell.o(.text.tos_shell_deinit) refers to tos_shell.o(.bss.shell_ctl) for shell_ctl
+    tos_shell.o(.text.tos_shell_deinit) refers to tlib_usr.o(.text.tos_task_destroy) for tos_task_destroy
+    tos_shell.o(.text.tos_shell_deinit) refers to tlib_usr.o(.text.tos_sem_destroy) for tos_sem_destroy
+    tos_shell.o(.text.tos_shell_deinit) refers to tlib_usr.o(.text.tos_mmheap_free) for tos_mmheap_free
+    tos_shell.o(.text.tos_shell_deinit) refers to tlib_usr.o(.text.tos_chr_fifo_destroy) for tos_chr_fifo_destroy
+    tos_shell.o(.ARM.exidx.text.tos_shell_deinit) refers to tos_shell.o(.text.tos_shell_deinit) for [Anonymous Symbol]
+    tos_shell.o(.text.tos_shell_cmd_set_regiser) refers to tos_shell_commands.o(.text.shell_cmd_set_regiser) for shell_cmd_set_regiser
+    tos_shell.o(.ARM.exidx.text.tos_shell_cmd_set_regiser) refers to tos_shell.o(.text.tos_shell_cmd_set_regiser) for [Anonymous Symbol]
+    tos_shell.o(.text.tos_shell_cmd_set_unregiser) refers to tos_shell_commands.o(.text.shell_cmd_set_unregiser) for shell_cmd_set_unregiser
+    tos_shell.o(.ARM.exidx.text.tos_shell_cmd_set_unregiser) refers to tos_shell.o(.text.tos_shell_cmd_set_unregiser) for [Anonymous Symbol]
+    tos_shell.o(.text.tos_shell_printf) refers to tos_shell.o(.bss.tos_shell_printf.buffer) for tos_shell_printf.buffer
+    tos_shell.o(.text.tos_shell_printf) refers to printfa.o(i.__0vsnprintf) for vsnprintf
+    tos_shell.o(.text.tos_shell_printf) refers to tos_shell.o(.text.shell_puts) for shell_puts
+    tos_shell.o(.ARM.exidx.text.tos_shell_printf) refers to tos_shell.o(.text.tos_shell_printf) for [Anonymous Symbol]
+    tos_shell.o(.text.shell_puts) refers to tos_shell.o(.bss.shell_ctl) for shell_ctl
+    tos_shell.o(.ARM.exidx.text.shell_puts) refers to tos_shell.o(.text.shell_puts) for [Anonymous Symbol]
+    tos_shell.o(.text.tos_shell_printfln) refers to tos_shell.o(.bss.tos_shell_printfln.buffer) for tos_shell_printfln.buffer
+    tos_shell.o(.text.tos_shell_printfln) refers to printfa.o(i.__0vsnprintf) for vsnprintf
+    tos_shell.o(.text.tos_shell_printfln) refers to tos_shell.o(.text.shell_puts) for shell_puts
+    tos_shell.o(.text.tos_shell_printfln) refers to tos_shell.o(.rodata.str1.1) for .L.str.1
+    tos_shell.o(.ARM.exidx.text.tos_shell_printfln) refers to tos_shell.o(.text.tos_shell_printfln) for [Anonymous Symbol]
+    tos_shell.o(.text.tos_shell_input_byte) refers to tos_shell.o(.bss.shell_ctl) for shell_ctl
+    tos_shell.o(.text.tos_shell_input_byte) refers to tlib_usr.o(.text.tos_chr_fifo_push) for tos_chr_fifo_push
+    tos_shell.o(.text.tos_shell_input_byte) refers to tlib_usr.o(.text.tos_sem_post) for tos_sem_post
+    tos_shell.o(.ARM.exidx.text.tos_shell_input_byte) refers to tos_shell.o(.text.tos_shell_input_byte) for [Anonymous Symbol]
+    tos_shell.o(.text.shell_prompt) refers to tos_shell.o(.rodata.str1.1) for .L.str.2
+    tos_shell.o(.text.shell_prompt) refers to tos_shell.o(.text.tos_shell_printf) for tos_shell_printf
+    tos_shell.o(.ARM.exidx.text.shell_prompt) refers to tos_shell.o(.text.shell_prompt) for [Anonymous Symbol]
+    tos_shell.o(.text.shell_readline) refers to tos_shell.o(.bss.shell_ctl) for shell_ctl
+    tos_shell.o(.text.shell_readline) refers to tos_shell.o(.text.shell_getchar) for shell_getchar
+    tos_shell.o(.text.shell_readline) refers to tos_shell.o(.rodata.str1.1) for .L.str.1
+    tos_shell.o(.text.shell_readline) refers to tos_shell.o(.text.tos_shell_printf) for tos_shell_printf
+    tos_shell.o(.text.shell_readline) refers to tos_shell_commands.o(.text.cmd_help) for cmd_help
+    tos_shell.o(.text.shell_readline) refers to tos_shell.o(.text.shell_putchar) for shell_putchar
+    tos_shell.o(.ARM.exidx.text.shell_readline) refers to tos_shell.o(.text.shell_readline) for [Anonymous Symbol]
+    tos_shell.o(.text.shell_cmd_process) refers to tos_shell.o(.bss.shell_ctl) for shell_ctl
+    tos_shell.o(.text.shell_cmd_process) refers to tos_shell.o(.bss.shell_cmd_process.argv) for shell_cmd_process.argv
+    tos_shell.o(.text.shell_cmd_process) refers to tos_shell.o(.text.shell_cmd_do_process) for shell_cmd_do_process
+    tos_shell.o(.ARM.exidx.text.shell_cmd_process) refers to tos_shell.o(.text.shell_cmd_process) for [Anonymous Symbol]
+    tos_shell.o(.text.shell_getchar) refers to tos_shell.o(.bss.shell_ctl) for shell_ctl
+    tos_shell.o(.text.shell_getchar) refers to tlib_usr.o(.text.tos_sem_pend) for tos_sem_pend
+    tos_shell.o(.text.shell_getchar) refers to tlib_usr.o(.text.tos_chr_fifo_pop) for tos_chr_fifo_pop
+    tos_shell.o(.ARM.exidx.text.shell_getchar) refers to tos_shell.o(.text.shell_getchar) for [Anonymous Symbol]
+    tos_shell.o(.text.shell_putchar) refers to tos_shell.o(.bss.shell_ctl) for shell_ctl
+    tos_shell.o(.ARM.exidx.text.shell_putchar) refers to tos_shell.o(.text.shell_putchar) for [Anonymous Symbol]
+    tos_shell.o(.text.shell_cmd_do_process) refers to tos_shell_commands.o(.text.shell_cmd_find) for shell_cmd_find
+    tos_shell.o(.text.shell_cmd_do_process) refers to tos_shell.o(.data.shell_cmd_do_process.cmd_not_found) for shell_cmd_do_process.cmd_not_found
+    tos_shell.o(.text.shell_cmd_do_process) refers to tos_shell.o(.text.tos_shell_printf) for tos_shell_printf
+    tos_shell.o(.ARM.exidx.text.shell_cmd_do_process) refers to tos_shell.o(.text.shell_cmd_do_process) for [Anonymous Symbol]
+    tos_shell.o(.data.shell_cmd_do_process.cmd_not_found) refers to tos_shell.o(.rodata.str1.1) for .L.str.3
+    tos_shell_commands.o(.text.cmd_help) refers to tos_shell_commands.o(.bss.cmd_set_list) for cmd_set_list
+    tos_shell_commands.o(.text.cmd_help) refers to tos_shell_commands.o(.rodata.str1.1) for .L.str
+    tos_shell_commands.o(.text.cmd_help) refers to tos_shell.o(.text.tos_shell_printf) for tos_shell_printf
+    tos_shell_commands.o(.ARM.exidx.text.cmd_help) refers to tos_shell_commands.o(.text.cmd_help) for [Anonymous Symbol]
+    tos_shell_commands.o(.text.shell_cmd_set_regiser) refers to tos_shell_commands.o(.bss.cmd_set_list) for cmd_set_list
+    tos_shell_commands.o(.text.shell_cmd_set_regiser) refers to tos_shell_commands.o(.text.tos_slist_contains) for tos_slist_contains
+    tos_shell_commands.o(.text.shell_cmd_set_regiser) refers to tos_shell_commands.o(.text.tos_slist_add_head) for tos_slist_add_head
+    tos_shell_commands.o(.ARM.exidx.text.shell_cmd_set_regiser) refers to tos_shell_commands.o(.text.shell_cmd_set_regiser) for [Anonymous Symbol]
+    tos_shell_commands.o(.ARM.exidx.text.tos_slist_contains) refers to tos_shell_commands.o(.text.tos_slist_contains) for [Anonymous Symbol]
+    tos_shell_commands.o(.ARM.exidx.text.tos_slist_add_head) refers to tos_shell_commands.o(.text.tos_slist_add_head) for [Anonymous Symbol]
+    tos_shell_commands.o(.text.shell_cmd_set_unregiser) refers to tos_shell_commands.o(.bss.cmd_set_list) for cmd_set_list
+    tos_shell_commands.o(.text.shell_cmd_set_unregiser) refers to tos_shell_commands.o(.text.tos_slist_contains) for tos_slist_contains
+    tos_shell_commands.o(.text.shell_cmd_set_unregiser) refers to tos_shell_commands.o(.text.tos_slist_del) for tos_slist_del
+    tos_shell_commands.o(.ARM.exidx.text.shell_cmd_set_unregiser) refers to tos_shell_commands.o(.text.shell_cmd_set_unregiser) for [Anonymous Symbol]
+    tos_shell_commands.o(.ARM.exidx.text.tos_slist_del) refers to tos_shell_commands.o(.text.tos_slist_del) for [Anonymous Symbol]
+    tos_shell_commands.o(.text.shell_cmd_find) refers to tos_shell_commands.o(.bss.cmd_set_list) for cmd_set_list
+    tos_shell_commands.o(.text.shell_cmd_find) refers to strcmp.o(.text) for strcmp
+    tos_shell_commands.o(.ARM.exidx.text.shell_cmd_find) refers to tos_shell_commands.o(.text.shell_cmd_find) for [Anonymous Symbol]
+    tos_shell_commands.o(.text.shell_cmd_init) refers to tos_shell_commands.o(.bss.cmd_set_list) for cmd_set_list
+    tos_shell_commands.o(.text.shell_cmd_init) refers to tos_shell_commands.o(.text.tos_slist_init) for tos_slist_init
+    tos_shell_commands.o(.text.shell_cmd_init) refers to tos_shell_commands.o(.data.buildin_shell_cmd_set) for buildin_shell_cmd_set
+    tos_shell_commands.o(.text.shell_cmd_init) refers to tos_shell_commands.o(.text.tos_slist_add_head) for tos_slist_add_head
+    tos_shell_commands.o(.ARM.exidx.text.shell_cmd_init) refers to tos_shell_commands.o(.text.shell_cmd_init) for [Anonymous Symbol]
+    tos_shell_commands.o(.ARM.exidx.text.tos_slist_init) refers to tos_shell_commands.o(.text.tos_slist_init) for [Anonymous Symbol]
+    tos_shell_commands.o(.text.cmd_ps) refers to tlib_usr.o(.text.tos_task_walkthru) for tos_task_walkthru
+    tos_shell_commands.o(.ARM.exidx.text.cmd_ps) refers to tos_shell_commands.o(.text.cmd_ps) for [Anonymous Symbol]
+    tos_shell_commands.o(.text.cmd_free) refers to tlib_usr.o(.text.tos_mmheap_check) for tos_mmheap_check
+    tos_shell_commands.o(.text.cmd_free) refers to tos_shell_commands.o(.rodata.str1.1) for .L.str.7
+    tos_shell_commands.o(.text.cmd_free) refers to tos_shell.o(.text.tos_shell_printfln) for tos_shell_printfln
+    tos_shell_commands.o(.ARM.exidx.text.cmd_free) refers to tos_shell_commands.o(.text.cmd_free) for [Anonymous Symbol]
+    tos_shell_commands.o(.data.buildin_shell_cmd_set) refers to tos_shell_commands.o(.rodata.builtin_shell_cmds) for [Anonymous Symbol]
+    tos_shell_commands.o(.rodata.builtin_shell_cmds) refers to tos_shell_commands.o(.rodata.str1.1) for .L.str.1
+    tos_shell_commands.o(.rodata.builtin_shell_cmds) refers to tos_shell_commands.o(.text.cmd_help) for cmd_help
+    tos_shell_commands.o(.rodata.builtin_shell_cmds) refers to tos_shell_commands.o(.text.cmd_ps) for cmd_ps
+    tos_shell_commands.o(.rodata.builtin_shell_cmds) refers to tos_shell_commands.o(.text.cmd_free) for cmd_free
+    tos_kv.o(.text.tos_kv_walkthru) refers to tos_kv.o(.bss.kv_ctl) for kv_ctl
+    tos_kv.o(.text.tos_kv_walkthru) refers to tos_kv.o(.rodata.str1.1) for .L.str
+    tos_kv.o(.text.tos_kv_walkthru) refers to printfa.o(i.__0printf) for printf
+    tos_kv.o(.text.tos_kv_walkthru) refers to tos_kv.o(.text.kv_blk_hdr_read) for kv_blk_hdr_read
+    tos_kv.o(.text.tos_kv_walkthru) refers to tos_kv.o(.text.kv_block_walkthru) for kv_block_walkthru
+    tos_kv.o(.ARM.exidx.text.tos_kv_walkthru) refers to tos_kv.o(.text.tos_kv_walkthru) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_blk_hdr_read) refers to tos_kv.o(.text.kv_flash_read) for kv_flash_read
+    tos_kv.o(.ARM.exidx.text.kv_blk_hdr_read) refers to tos_kv.o(.text.kv_blk_hdr_read) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_block_walkthru) refers to tos_kv.o(.bss.kv_ctl) for kv_ctl
+    tos_kv.o(.text.kv_block_walkthru) refers to tos_kv.o(.rodata.str1.1) for .L.str.11
+    tos_kv.o(.text.kv_block_walkthru) refers to printfa.o(i.__0printf) for printf
+    tos_kv.o(.text.kv_block_walkthru) refers to tlib_usr.o(.text.tos_mmheap_alloc) for tos_mmheap_alloc
+    tos_kv.o(.text.kv_block_walkthru) refers to tos_kv.o(.text.kv_item_hdr_read) for kv_item_hdr_read
+    tos_kv.o(.text.kv_block_walkthru) refers to tos_kv.o(.text.kv_item_free) for kv_item_free
+    tos_kv.o(.text.kv_block_walkthru) refers to tos_kv.o(.text.kv_item_hdr_verify) for kv_item_hdr_verify
+    tos_kv.o(.text.kv_block_walkthru) refers to tos_kv.o(.text.kv_item_body_read) for kv_item_body_read
+    tos_kv.o(.text.kv_block_walkthru) refers to tos_kv.o(.text.kv_item_body_verify) for kv_item_body_verify
+    tos_kv.o(.text.kv_block_walkthru) refers to tos_kv.o(.text.kv_u8_disp) for kv_u8_disp
+    tos_kv.o(.ARM.exidx.text.kv_block_walkthru) refers to tos_kv.o(.text.kv_block_walkthru) for [Anonymous Symbol]
+    tos_kv.o(.text.tos_kv_init) refers to tos_kv.o(.text.kv_param_verify) for kv_param_verify
+    tos_kv.o(.text.tos_kv_init) refers to tos_kv.o(.bss.kv_ctl) for kv_ctl
+    tos_kv.o(.text.tos_kv_init) refers to memseta.o(.text) for __aeabi_memclr4
+    tos_kv.o(.text.tos_kv_init) refers to tos_kv.o(.text.kv_flash_ctl_init) for kv_flash_ctl_init
+    tos_kv.o(.text.tos_kv_init) refers to tos_kv.o(.text.kv_mgr_ctl_init) for kv_mgr_ctl_init
+    tos_kv.o(.text.tos_kv_init) refers to tos_kv.o(.text.kv_mgr_ctl_build) for kv_mgr_ctl_build
+    tos_kv.o(.text.tos_kv_init) refers to tos_kv.o(.text.kv_mgr_workspace_locate) for kv_mgr_workspace_locate
+    tos_kv.o(.ARM.exidx.text.tos_kv_init) refers to tos_kv.o(.text.tos_kv_init) for [Anonymous Symbol]
+    tos_kv.o(.ARM.exidx.text.kv_param_verify) refers to tos_kv.o(.text.kv_param_verify) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_flash_ctl_init) refers to tos_kv.o(.bss.kv_ctl) for kv_ctl
+    tos_kv.o(.ARM.exidx.text.kv_flash_ctl_init) refers to tos_kv.o(.text.kv_flash_ctl_init) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_mgr_ctl_init) refers to tos_kv.o(.bss.kv_ctl) for kv_ctl
+    tos_kv.o(.text.kv_mgr_ctl_init) refers to tlib_usr.o(.text.tos_mmheap_alloc) for tos_mmheap_alloc
+    tos_kv.o(.text.kv_mgr_ctl_init) refers to memseta.o(.text) for __aeabi_memclr4
+    tos_kv.o(.text.kv_mgr_ctl_init) refers to tlib_usr.o(.text.tos_mutex_create) for tos_mutex_create
+    tos_kv.o(.ARM.exidx.text.kv_mgr_ctl_init) refers to tos_kv.o(.text.kv_mgr_ctl_init) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_mgr_ctl_build) refers to tos_kv.o(.bss.kv_ctl) for kv_ctl
+    tos_kv.o(.text.kv_mgr_ctl_build) refers to tos_kv.o(.text.kv_blk_hdr_read) for kv_blk_hdr_read
+    tos_kv.o(.text.kv_mgr_ctl_build) refers to tos_kv.o(.text.kv_blk_set_bad) for kv_blk_set_bad
+    tos_kv.o(.text.kv_mgr_ctl_build) refers to tos_kv.o(.text.kv_blk_format) for kv_blk_format
+    tos_kv.o(.text.kv_mgr_ctl_build) refers to tos_kv.o(.text.kv_mgr_index_build) for kv_mgr_index_build
+    tos_kv.o(.text.kv_mgr_ctl_build) refers to tos_kv.o(.text.kv_blk_set_hanging) for kv_blk_set_hanging
+    tos_kv.o(.text.kv_mgr_ctl_build) refers to tos_kv.o(.text.kv_blk_is_fresh) for kv_blk_is_fresh
+    tos_kv.o(.text.kv_mgr_ctl_build) refers to tos_kv.o(.text.kv_handle_incomplete_gc) for kv_handle_incomplete_gc
+    tos_kv.o(.ARM.exidx.text.kv_mgr_ctl_build) refers to tos_kv.o(.text.kv_mgr_ctl_build) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_mgr_workspace_locate) refers to tos_kv.o(.bss.kv_ctl) for kv_ctl
+    tos_kv.o(.text.kv_mgr_workspace_locate) refers to tos_kv.o(.text.kv_mgr_blk_index_rebuild) for kv_mgr_blk_index_rebuild
+    tos_kv.o(.text.kv_mgr_workspace_locate) refers to tos_kv.o(.text.kv_blk_is_fresh) for kv_blk_is_fresh
+    tos_kv.o(.text.kv_mgr_workspace_locate) refers to tos_kv.o(.text.kv_blk_is_inuse) for kv_blk_is_inuse
+    tos_kv.o(.ARM.exidx.text.kv_mgr_workspace_locate) refers to tos_kv.o(.text.kv_mgr_workspace_locate) for [Anonymous Symbol]
+    tos_kv.o(.text.tos_kv_deinit) refers to tos_kv.o(.text.kv_mgr_ctl_deinit) for kv_mgr_ctl_deinit
+    tos_kv.o(.ARM.exidx.text.tos_kv_deinit) refers to tos_kv.o(.text.tos_kv_deinit) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_mgr_ctl_deinit) refers to tos_kv.o(.bss.kv_ctl) for kv_ctl
+    tos_kv.o(.text.kv_mgr_ctl_deinit) refers to tlib_usr.o(.text.tos_mutex_destroy) for tos_mutex_destroy
+    tos_kv.o(.text.kv_mgr_ctl_deinit) refers to tlib_usr.o(.text.tos_mmheap_free) for tos_mmheap_free
+    tos_kv.o(.text.kv_mgr_ctl_deinit) refers to memseta.o(.text) for __aeabi_memclr4
+    tos_kv.o(.ARM.exidx.text.kv_mgr_ctl_deinit) refers to tos_kv.o(.text.kv_mgr_ctl_deinit) for [Anonymous Symbol]
+    tos_kv.o(.text.tos_kv_set) refers to strlen.o(.text) for strlen
+    tos_kv.o(.text.tos_kv_set) refers to tos_kv.o(.text.kv_lock) for kv_lock
+    tos_kv.o(.text.tos_kv_set) refers to tos_kv.o(.text.kv_item_find) for kv_item_find
+    tos_kv.o(.text.tos_kv_set) refers to tos_kv.o(.text.kv_item_update) for kv_item_update
+    tos_kv.o(.text.tos_kv_set) refers to tos_kv.o(.text.kv_item_free) for kv_item_free
+    tos_kv.o(.text.tos_kv_set) refers to tos_kv.o(.text.kv_item_save) for kv_item_save
+    tos_kv.o(.text.tos_kv_set) refers to tos_kv.o(.text.kv_unlock) for kv_unlock
+    tos_kv.o(.ARM.exidx.text.tos_kv_set) refers to tos_kv.o(.text.tos_kv_set) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_lock) refers to tlib_usr.o(.text.tos_knl_is_running) for tos_knl_is_running
+    tos_kv.o(.text.kv_lock) refers to tos_kv.o(.bss.kv_ctl) for kv_ctl
+    tos_kv.o(.text.kv_lock) refers to tlib_usr.o(.text.tos_mutex_pend) for tos_mutex_pend
+    tos_kv.o(.ARM.exidx.text.kv_lock) refers to tos_kv.o(.text.kv_lock) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_item_find) refers to tos_kv.o(.bss.kv_ctl) for kv_ctl
+    tos_kv.o(.text.kv_item_find) refers to tos_kv.o(.text.kv_blk_is_bad) for kv_blk_is_bad
+    tos_kv.o(.text.kv_item_find) refers to tos_kv.o(.text.kv_blk_is_fresh) for kv_blk_is_fresh
+    tos_kv.o(.text.kv_item_find) refers to tos_kv.o(.text.kv_item_do_find) for kv_item_do_find
+    tos_kv.o(.ARM.exidx.text.kv_item_find) refers to tos_kv.o(.text.kv_item_find) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_item_update) refers to tos_kv.o(.text.kv_item_value_is_match) for kv_item_value_is_match
+    tos_kv.o(.text.kv_item_update) refers to tos_kv.o(.text.kv_item_save) for kv_item_save
+    tos_kv.o(.text.kv_item_update) refers to tos_kv.o(.text.kv_item_delete) for kv_item_delete
+    tos_kv.o(.ARM.exidx.text.kv_item_update) refers to tos_kv.o(.text.kv_item_update) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_item_free) refers to tlib_usr.o(.text.tos_mmheap_free) for tos_mmheap_free
+    tos_kv.o(.ARM.exidx.text.kv_item_free) refers to tos_kv.o(.text.kv_item_free) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_item_save) refers to strlen.o(.text) for strlen
+    tos_kv.o(.text.kv_item_save) refers to tos_kv.o(.bss.kv_ctl) for kv_ctl
+    tos_kv.o(.text.kv_item_save) refers to tos_kv.o(.text.kv_blk_search_suitable) for kv_blk_search_suitable
+    tos_kv.o(.text.kv_item_save) refers to tos_kv.o(.text.kv_item_is_moved) for kv_item_is_moved
+    tos_kv.o(.text.kv_item_save) refers to tos_kv.o(.text.kv_item_fix) for kv_item_fix
+    tos_kv.o(.text.kv_item_save) refers to tos_kv.o(.text.kv_blk_freesz_get) for kv_blk_freesz_get
+    tos_kv.o(.text.kv_item_save) refers to tos_kv.o(.text.kv_item_do_save) for kv_item_do_save
+    tos_kv.o(.text.kv_item_save) refers to tos_kv.o(.text.kv_blk_freesz_reduce) for kv_blk_freesz_reduce
+    tos_kv.o(.text.kv_item_save) refers to tos_kv.o(.text.kv_blk_is_fresh) for kv_blk_is_fresh
+    tos_kv.o(.text.kv_item_save) refers to tos_kv.o(.text.kv_blk_reset_fresh) for kv_blk_reset_fresh
+    tos_kv.o(.text.kv_item_save) refers to tos_kv.o(.text.kv_blk_is_full) for kv_blk_is_full
+    tos_kv.o(.text.kv_item_save) refers to tos_kv.o(.text.kv_blk_set_inuse) for kv_blk_set_inuse
+    tos_kv.o(.text.kv_item_save) refers to tos_kv.o(.text.kv_blk_reset_inuse) for kv_blk_reset_inuse
+    tos_kv.o(.ARM.exidx.text.kv_item_save) refers to tos_kv.o(.text.kv_item_save) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_unlock) refers to tlib_usr.o(.text.tos_knl_is_running) for tos_knl_is_running
+    tos_kv.o(.text.kv_unlock) refers to tos_kv.o(.bss.kv_ctl) for kv_ctl
+    tos_kv.o(.text.kv_unlock) refers to tlib_usr.o(.text.tos_mutex_post) for tos_mutex_post
+    tos_kv.o(.ARM.exidx.text.kv_unlock) refers to tos_kv.o(.text.kv_unlock) for [Anonymous Symbol]
+    tos_kv.o(.text.tos_kv_get) refers to strlen.o(.text) for strlen
+    tos_kv.o(.text.tos_kv_get) refers to tos_kv.o(.text.kv_lock) for kv_lock
+    tos_kv.o(.text.tos_kv_get) refers to tos_kv.o(.text.kv_item_find) for kv_item_find
+    tos_kv.o(.text.tos_kv_get) refers to tos_kv.o(.text.kv_unlock) for kv_unlock
+    tos_kv.o(.text.tos_kv_get) refers to tos_kv.o(.text.kv_item_free) for kv_item_free
+    tos_kv.o(.text.tos_kv_get) refers to memcpya.o(.text) for __aeabi_memcpy
+    tos_kv.o(.ARM.exidx.text.tos_kv_get) refers to tos_kv.o(.text.tos_kv_get) for [Anonymous Symbol]
+    tos_kv.o(.text.tos_kv_has_key) refers to strlen.o(.text) for strlen
+    tos_kv.o(.text.tos_kv_has_key) refers to tos_kv.o(.text.kv_lock) for kv_lock
+    tos_kv.o(.text.tos_kv_has_key) refers to tos_kv.o(.text.kv_item_find) for kv_item_find
+    tos_kv.o(.text.tos_kv_has_key) refers to tos_kv.o(.text.kv_item_free) for kv_item_free
+    tos_kv.o(.text.tos_kv_has_key) refers to tos_kv.o(.text.kv_unlock) for kv_unlock
+    tos_kv.o(.ARM.exidx.text.tos_kv_has_key) refers to tos_kv.o(.text.tos_kv_has_key) for [Anonymous Symbol]
+    tos_kv.o(.text.tos_kv_del) refers to strlen.o(.text) for strlen
+    tos_kv.o(.text.tos_kv_del) refers to tos_kv.o(.text.kv_lock) for kv_lock
+    tos_kv.o(.text.tos_kv_del) refers to tos_kv.o(.text.kv_item_find) for kv_item_find
+    tos_kv.o(.text.tos_kv_del) refers to tos_kv.o(.text.kv_unlock) for kv_unlock
+    tos_kv.o(.text.tos_kv_del) refers to tos_kv.o(.text.kv_item_delete) for kv_item_delete
+    tos_kv.o(.text.tos_kv_del) refers to tos_kv.o(.text.kv_item_free) for kv_item_free
+    tos_kv.o(.ARM.exidx.text.tos_kv_del) refers to tos_kv.o(.text.tos_kv_del) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_item_delete) refers to tos_kv.o(.text.kv_item_delete_aux) for kv_item_delete_aux
+    tos_kv.o(.ARM.exidx.text.kv_item_delete) refers to tos_kv.o(.text.kv_item_delete) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_flash_read) refers to tos_kv.o(.bss.kv_ctl) for kv_ctl
+    tos_kv.o(.ARM.exidx.text.kv_flash_read) refers to tos_kv.o(.text.kv_flash_read) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_item_hdr_read) refers to tos_kv.o(.text.kv_flash_read) for kv_flash_read
+    tos_kv.o(.ARM.exidx.text.kv_item_hdr_read) refers to tos_kv.o(.text.kv_item_hdr_read) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_item_hdr_verify) refers to tos_kv.o(.bss.kv_ctl) for kv_ctl
+    tos_kv.o(.ARM.exidx.text.kv_item_hdr_verify) refers to tos_kv.o(.text.kv_item_hdr_verify) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_item_body_read) refers to tos_kv.o(.bss.kv_ctl) for kv_ctl
+    tos_kv.o(.text.kv_item_body_read) refers to tlib_usr.o(.text.tos_mmheap_alloc) for tos_mmheap_alloc
+    tos_kv.o(.text.kv_item_body_read) refers to tos_kv.o(.text.kv_flash_read) for kv_flash_read
+    tos_kv.o(.text.kv_item_body_read) refers to tlib_usr.o(.text.tos_mmheap_free) for tos_mmheap_free
+    tos_kv.o(.ARM.exidx.text.kv_item_body_read) refers to tos_kv.o(.text.kv_item_body_read) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_item_body_verify) refers to tos_kv.o(.text.kv_checksum_crc8) for kv_checksum_crc8
+    tos_kv.o(.ARM.exidx.text.kv_item_body_verify) refers to tos_kv.o(.text.kv_item_body_verify) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_u8_disp) refers to tos_kv.o(.rodata.str1.1) for .L.str.28
+    tos_kv.o(.text.kv_u8_disp) refers to printfa.o(i.__0printf) for printf
+    tos_kv.o(.ARM.exidx.text.kv_u8_disp) refers to tos_kv.o(.text.kv_u8_disp) for [Anonymous Symbol]
+    tos_kv.o(.ARM.exidx.text.kv_checksum_crc8) refers to tos_kv.o(.text.kv_checksum_crc8) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_blk_set_bad) refers to tos_kv.o(.text.kv_blk_flags_set) for kv_blk_flags_set
+    tos_kv.o(.ARM.exidx.text.kv_blk_set_bad) refers to tos_kv.o(.text.kv_blk_set_bad) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_blk_format) refers to tos_kv.o(.text.kv_flash_blk_erase) for kv_flash_blk_erase
+    tos_kv.o(.text.kv_blk_format) refers to tos_kv.o(.text.kv_flash_wunit_modify) for kv_flash_wunit_modify
+    tos_kv.o(.text.kv_blk_format) refers to tos_kv.o(.text.kv_blk_set_fresh) for kv_blk_set_fresh
+    tos_kv.o(.ARM.exidx.text.kv_blk_format) refers to tos_kv.o(.text.kv_blk_format) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_mgr_index_build) refers to tos_kv.o(.text.kv_item_do_recovery) for kv_item_do_recovery
+    tos_kv.o(.text.kv_mgr_index_build) refers to tos_kv.o(.text.kv_item_walkthru) for kv_item_walkthru
+    tos_kv.o(.ARM.exidx.text.kv_mgr_index_build) refers to tos_kv.o(.text.kv_mgr_index_build) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_blk_set_hanging) refers to tos_kv.o(.text.kv_blk_is_hanging) for kv_blk_is_hanging
+    tos_kv.o(.text.kv_blk_set_hanging) refers to tos_kv.o(.bss.kv_ctl) for kv_ctl
+    tos_kv.o(.text.kv_blk_set_hanging) refers to tos_kv.o(.text.kv_blk_flags_add) for kv_blk_flags_add
+    tos_kv.o(.ARM.exidx.text.kv_blk_set_hanging) refers to tos_kv.o(.text.kv_blk_set_hanging) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_blk_is_fresh) refers to tos_kv.o(.text.kv_blk_flags_get) for kv_blk_flags_get
+    tos_kv.o(.ARM.exidx.text.kv_blk_is_fresh) refers to tos_kv.o(.text.kv_blk_is_fresh) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_handle_incomplete_gc) refers to tos_kv.o(.rodata.str1.1) for .L.str.31
+    tos_kv.o(.text.kv_handle_incomplete_gc) refers to printfa.o(i.__0printf) for printf
+    tos_kv.o(.text.kv_handle_incomplete_gc) refers to tos_kv.o(.text.kv_blk_format) for kv_blk_format
+    tos_kv.o(.text.kv_handle_incomplete_gc) refers to tos_kv.o(.text.kv_blk_set_bad) for kv_blk_set_bad
+    tos_kv.o(.text.kv_handle_incomplete_gc) refers to tos_kv.o(.text.kv_do_gc) for kv_do_gc
+    tos_kv.o(.ARM.exidx.text.kv_handle_incomplete_gc) refers to tos_kv.o(.text.kv_handle_incomplete_gc) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_blk_flags_set) refers to tos_kv.o(.bss.kv_ctl) for kv_ctl
+    tos_kv.o(.ARM.exidx.text.kv_blk_flags_set) refers to tos_kv.o(.text.kv_blk_flags_set) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_flash_blk_erase) refers to tos_kv.o(.bss.kv_ctl) for kv_ctl
+    tos_kv.o(.text.kv_flash_blk_erase) refers to tos_kv.o(.text.kv_flash_erase) for kv_flash_erase
+    tos_kv.o(.ARM.exidx.text.kv_flash_blk_erase) refers to tos_kv.o(.text.kv_flash_blk_erase) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_flash_wunit_modify) refers to tos_kv.o(.text.kv_flash_write) for kv_flash_write
+    tos_kv.o(.ARM.exidx.text.kv_flash_wunit_modify) refers to tos_kv.o(.text.kv_flash_wunit_modify) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_blk_set_fresh) refers to tos_kv.o(.text.kv_blk_is_fresh) for kv_blk_is_fresh
+    tos_kv.o(.text.kv_blk_set_fresh) refers to tos_kv.o(.bss.kv_ctl) for kv_ctl
+    tos_kv.o(.text.kv_blk_set_fresh) refers to tos_kv.o(.text.kv_blk_freesz_set) for kv_blk_freesz_set
+    tos_kv.o(.text.kv_blk_set_fresh) refers to tos_kv.o(.text.kv_blk_flags_set) for kv_blk_flags_set
+    tos_kv.o(.ARM.exidx.text.kv_blk_set_fresh) refers to tos_kv.o(.text.kv_blk_set_fresh) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_flash_erase) refers to tos_kv.o(.bss.kv_ctl) for kv_ctl
+    tos_kv.o(.ARM.exidx.text.kv_flash_erase) refers to tos_kv.o(.text.kv_flash_erase) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_flash_write) refers to tos_kv.o(.bss.kv_ctl) for kv_ctl
+    tos_kv.o(.ARM.exidx.text.kv_flash_write) refers to tos_kv.o(.text.kv_flash_write) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_blk_freesz_set) refers to tos_kv.o(.bss.kv_ctl) for kv_ctl
+    tos_kv.o(.ARM.exidx.text.kv_blk_freesz_set) refers to tos_kv.o(.text.kv_blk_freesz_set) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_item_walkthru) refers to tos_kv.o(.bss.kv_ctl) for kv_ctl
+    tos_kv.o(.text.kv_item_walkthru) refers to tlib_usr.o(.text.tos_mmheap_alloc) for tos_mmheap_alloc
+    tos_kv.o(.text.kv_item_walkthru) refers to tos_kv.o(.text.kv_item_hdr_read) for kv_item_hdr_read
+    tos_kv.o(.text.kv_item_walkthru) refers to tos_kv.o(.text.kv_item_free) for kv_item_free
+    tos_kv.o(.text.kv_item_walkthru) refers to tos_kv.o(.text.kv_item_hdr_verify) for kv_item_hdr_verify
+    tos_kv.o(.text.kv_item_walkthru) refers to tos_kv.o(.text.kv_item_do_delete) for kv_item_do_delete
+    tos_kv.o(.text.kv_item_walkthru) refers to tos_kv.o(.text.kv_blk_set_dirty) for kv_blk_set_dirty
+    tos_kv.o(.text.kv_item_walkthru) refers to tos_kv.o(.text.kv_blk_set_fresh) for kv_blk_set_fresh
+    tos_kv.o(.text.kv_item_walkthru) refers to tos_kv.o(.text.kv_blk_freesz_set) for kv_blk_freesz_set
+    tos_kv.o(.text.kv_item_walkthru) refers to tos_kv.o(.text.kv_blk_set_inuse) for kv_blk_set_inuse
+    tos_kv.o(.text.kv_item_walkthru) refers to tos_kv.o(.text.kv_blk_reset_inuse) for kv_blk_reset_inuse
+    tos_kv.o(.ARM.exidx.text.kv_item_walkthru) refers to tos_kv.o(.text.kv_item_walkthru) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_item_do_recovery) refers to tos_kv.o(.text.kv_item_body_read) for kv_item_body_read
+    tos_kv.o(.text.kv_item_do_recovery) refers to tos_kv.o(.text.kv_item_body_verify) for kv_item_body_verify
+    tos_kv.o(.text.kv_item_do_recovery) refers to tos_kv.o(.text.kv_item_delete) for kv_item_delete
+    tos_kv.o(.text.kv_item_do_recovery) refers to tos_kv.o(.text.kv_item_is_updated_one) for kv_item_is_updated_one
+    tos_kv.o(.text.kv_item_do_recovery) refers to tos_kv.o(.text.kv_item_try_delete) for kv_item_try_delete
+    tos_kv.o(.ARM.exidx.text.kv_item_do_recovery) refers to tos_kv.o(.text.kv_item_do_recovery) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_item_do_delete) refers to tos_kv.o(.text.kv_flash_wunit_modify) for kv_flash_wunit_modify
+    tos_kv.o(.ARM.exidx.text.kv_item_do_delete) refers to tos_kv.o(.text.kv_item_do_delete) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_blk_set_dirty) refers to tos_kv.o(.text.kv_blk_flags_add) for kv_blk_flags_add
+    tos_kv.o(.ARM.exidx.text.kv_blk_set_dirty) refers to tos_kv.o(.text.kv_blk_set_dirty) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_blk_set_inuse) refers to tos_kv.o(.text.kv_blk_is_inuse) for kv_blk_is_inuse
+    tos_kv.o(.text.kv_blk_set_inuse) refers to tos_kv.o(.bss.kv_ctl) for kv_ctl
+    tos_kv.o(.text.kv_blk_set_inuse) refers to tos_kv.o(.text.kv_blk_flags_add) for kv_blk_flags_add
+    tos_kv.o(.ARM.exidx.text.kv_blk_set_inuse) refers to tos_kv.o(.text.kv_blk_set_inuse) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_blk_reset_inuse) refers to tos_kv.o(.text.kv_blk_is_inuse) for kv_blk_is_inuse
+    tos_kv.o(.text.kv_blk_reset_inuse) refers to tos_kv.o(.bss.kv_ctl) for kv_ctl
+    tos_kv.o(.text.kv_blk_reset_inuse) refers to tos_kv.o(.text.kv_blk_flags_rmv) for kv_blk_flags_rmv
+    tos_kv.o(.ARM.exidx.text.kv_blk_reset_inuse) refers to tos_kv.o(.text.kv_blk_reset_inuse) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_blk_flags_add) refers to tos_kv.o(.bss.kv_ctl) for kv_ctl
+    tos_kv.o(.ARM.exidx.text.kv_blk_flags_add) refers to tos_kv.o(.text.kv_blk_flags_add) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_blk_is_inuse) refers to tos_kv.o(.text.kv_blk_flags_get) for kv_blk_flags_get
+    tos_kv.o(.ARM.exidx.text.kv_blk_is_inuse) refers to tos_kv.o(.text.kv_blk_is_inuse) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_blk_flags_get) refers to tos_kv.o(.bss.kv_ctl) for kv_ctl
+    tos_kv.o(.ARM.exidx.text.kv_blk_flags_get) refers to tos_kv.o(.text.kv_blk_flags_get) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_blk_flags_rmv) refers to tos_kv.o(.bss.kv_ctl) for kv_ctl
+    tos_kv.o(.ARM.exidx.text.kv_blk_flags_rmv) refers to tos_kv.o(.text.kv_blk_flags_rmv) for [Anonymous Symbol]
+    tos_kv.o(.ARM.exidx.text.kv_item_is_updated_one) refers to tos_kv.o(.text.kv_item_is_updated_one) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_item_try_delete) refers to tos_kv.o(.text.kv_item_hdr_read) for kv_item_hdr_read
+    tos_kv.o(.text.kv_item_try_delete) refers to tlib_usr.o(.text.tos_mmheap_alloc) for tos_mmheap_alloc
+    tos_kv.o(.text.kv_item_try_delete) refers to tos_kv.o(.bss.kv_ctl) for kv_ctl
+    tos_kv.o(.text.kv_item_try_delete) refers to tos_kv.o(.text.kv_flash_read) for kv_flash_read
+    tos_kv.o(.text.kv_item_try_delete) refers to tlib_usr.o(.text.tos_mmheap_free) for tos_mmheap_free
+    tos_kv.o(.text.kv_item_try_delete) refers to memcmp.o(.text) for memcmp
+    tos_kv.o(.text.kv_item_try_delete) refers to tos_kv.o(.text.kv_item_delete_aux) for kv_item_delete_aux
+    tos_kv.o(.ARM.exidx.text.kv_item_try_delete) refers to tos_kv.o(.text.kv_item_try_delete) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_item_delete_aux) refers to tos_kv.o(.text.kv_item_do_delete) for kv_item_do_delete
+    tos_kv.o(.text.kv_item_delete_aux) refers to tos_kv.o(.bss.kv_ctl) for kv_ctl
+    tos_kv.o(.text.kv_item_delete_aux) refers to tos_kv.o(.text.kv_blk_set_dirty) for kv_blk_set_dirty
+    tos_kv.o(.ARM.exidx.text.kv_item_delete_aux) refers to tos_kv.o(.text.kv_item_delete_aux) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_blk_is_hanging) refers to tos_kv.o(.text.kv_blk_flags_get) for kv_blk_flags_get
+    tos_kv.o(.ARM.exidx.text.kv_blk_is_hanging) refers to tos_kv.o(.text.kv_blk_is_hanging) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_do_gc) refers to tos_kv.o(.text.kv_blk_mark_gc_src) for kv_blk_mark_gc_src
+    tos_kv.o(.text.kv_do_gc) refers to tos_kv.o(.text.kv_blk_mark_gc_dst) for kv_blk_mark_gc_dst
+    tos_kv.o(.text.kv_do_gc) refers to tos_kv.o(.text.kv_item_do_gc) for kv_item_do_gc
+    tos_kv.o(.text.kv_do_gc) refers to tos_kv.o(.text.kv_item_walkthru) for kv_item_walkthru
+    tos_kv.o(.text.kv_do_gc) refers to tos_kv.o(.text.kv_blk_reset_inuse) for kv_blk_reset_inuse
+    tos_kv.o(.text.kv_do_gc) refers to tos_kv.o(.text.kv_blk_format) for kv_blk_format
+    tos_kv.o(.text.kv_do_gc) refers to tos_kv.o(.text.kv_blk_set_bad) for kv_blk_set_bad
+    tos_kv.o(.text.kv_do_gc) refers to tos_kv.o(.text.kv_blk_mark_gc_done) for kv_blk_mark_gc_done
+    tos_kv.o(.text.kv_do_gc) refers to tos_kv.o(.text.kv_blk_reset_fresh) for kv_blk_reset_fresh
+    tos_kv.o(.text.kv_do_gc) refers to tos_kv.o(.text.kv_blk_is_full) for kv_blk_is_full
+    tos_kv.o(.text.kv_do_gc) refers to tos_kv.o(.text.kv_blk_set_inuse) for kv_blk_set_inuse
+    tos_kv.o(.ARM.exidx.text.kv_do_gc) refers to tos_kv.o(.text.kv_do_gc) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_blk_mark_gc_src) refers to tos_kv.o(.text.kv_flash_wunit_modify) for kv_flash_wunit_modify
+    tos_kv.o(.ARM.exidx.text.kv_blk_mark_gc_src) refers to tos_kv.o(.text.kv_blk_mark_gc_src) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_blk_mark_gc_dst) refers to tos_kv.o(.text.kv_flash_wunit_modify) for kv_flash_wunit_modify
+    tos_kv.o(.ARM.exidx.text.kv_blk_mark_gc_dst) refers to tos_kv.o(.text.kv_blk_mark_gc_dst) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_item_do_gc) refers to tos_kv.o(.text.kv_item_body_read) for kv_item_body_read
+    tos_kv.o(.text.kv_item_do_gc) refers to tos_kv.o(.bss.kv_ctl) for kv_ctl
+    tos_kv.o(.text.kv_item_do_gc) refers to tos_kv.o(.text.kv_blk_freesz_get) for kv_blk_freesz_get
+    tos_kv.o(.text.kv_item_do_gc) refers to tos_kv.o(.text.kv_item_write) for kv_item_write
+    tos_kv.o(.text.kv_item_do_gc) refers to tos_kv.o(.text.kv_blk_freesz_reduce) for kv_blk_freesz_reduce
+    tos_kv.o(.ARM.exidx.text.kv_item_do_gc) refers to tos_kv.o(.text.kv_item_do_gc) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_blk_mark_gc_done) refers to tos_kv.o(.text.kv_flash_wunit_modify) for kv_flash_wunit_modify
+    tos_kv.o(.ARM.exidx.text.kv_blk_mark_gc_done) refers to tos_kv.o(.text.kv_blk_mark_gc_done) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_blk_reset_fresh) refers to tos_kv.o(.text.kv_blk_is_fresh) for kv_blk_is_fresh
+    tos_kv.o(.text.kv_blk_reset_fresh) refers to tos_kv.o(.bss.kv_ctl) for kv_ctl
+    tos_kv.o(.text.kv_blk_reset_fresh) refers to tos_kv.o(.text.kv_blk_flags_rmv) for kv_blk_flags_rmv
+    tos_kv.o(.ARM.exidx.text.kv_blk_reset_fresh) refers to tos_kv.o(.text.kv_blk_reset_fresh) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_blk_is_full) refers to tos_kv.o(.text.kv_blk_freesz_get) for kv_blk_freesz_get
+    tos_kv.o(.text.kv_blk_is_full) refers to tos_kv.o(.bss.kv_ctl) for kv_ctl
+    tos_kv.o(.ARM.exidx.text.kv_blk_is_full) refers to tos_kv.o(.text.kv_blk_is_full) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_item_write) refers to tos_kv.o(.text.kv_item_hdr_write) for kv_item_hdr_write
+    tos_kv.o(.text.kv_item_write) refers to tos_kv.o(.bss.kv_ctl) for kv_ctl
+    tos_kv.o(.text.kv_item_write) refers to tos_kv.o(.text.kv_flash_write) for kv_flash_write
+    tos_kv.o(.ARM.exidx.text.kv_item_write) refers to tos_kv.o(.text.kv_item_write) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_blk_freesz_get) refers to tos_kv.o(.bss.kv_ctl) for kv_ctl
+    tos_kv.o(.ARM.exidx.text.kv_blk_freesz_get) refers to tos_kv.o(.text.kv_blk_freesz_get) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_blk_freesz_reduce) refers to tos_kv.o(.text.kv_blk_freesz_get) for kv_blk_freesz_get
+    tos_kv.o(.text.kv_blk_freesz_reduce) refers to tos_kv.o(.text.kv_blk_freesz_set) for kv_blk_freesz_set
+    tos_kv.o(.ARM.exidx.text.kv_blk_freesz_reduce) refers to tos_kv.o(.text.kv_blk_freesz_reduce) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_item_hdr_write) refers to tos_kv.o(.bss.kv_ctl) for kv_ctl
+    tos_kv.o(.text.kv_item_hdr_write) refers to tos_kv.o(.text.kv_flash_write) for kv_flash_write
+    tos_kv.o(.text.kv_item_hdr_write) refers to tos_kv.o(.text.kv_flash_wunit_modify) for kv_flash_wunit_modify
+    tos_kv.o(.ARM.exidx.text.kv_item_hdr_write) refers to tos_kv.o(.text.kv_item_hdr_write) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_mgr_blk_index_rebuild) refers to tos_kv.o(.bss.kv_ctl) for kv_ctl
+    tos_kv.o(.text.kv_mgr_blk_index_rebuild) refers to tos_kv.o(.text.kv_blk_is_hanging) for kv_blk_is_hanging
+    tos_kv.o(.text.kv_mgr_blk_index_rebuild) refers to tos_kv.o(.text.kv_mgr_index_build) for kv_mgr_index_build
+    tos_kv.o(.text.kv_mgr_blk_index_rebuild) refers to tos_kv.o(.text.kv_blk_reset_hanging) for kv_blk_reset_hanging
+    tos_kv.o(.ARM.exidx.text.kv_mgr_blk_index_rebuild) refers to tos_kv.o(.text.kv_mgr_blk_index_rebuild) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_blk_reset_hanging) refers to tos_kv.o(.text.kv_blk_is_hanging) for kv_blk_is_hanging
+    tos_kv.o(.text.kv_blk_reset_hanging) refers to tos_kv.o(.bss.kv_ctl) for kv_ctl
+    tos_kv.o(.text.kv_blk_reset_hanging) refers to tos_kv.o(.text.kv_blk_flags_rmv) for kv_blk_flags_rmv
+    tos_kv.o(.ARM.exidx.text.kv_blk_reset_hanging) refers to tos_kv.o(.text.kv_blk_reset_hanging) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_blk_is_bad) refers to tos_kv.o(.text.kv_blk_flags_get) for kv_blk_flags_get
+    tos_kv.o(.ARM.exidx.text.kv_blk_is_bad) refers to tos_kv.o(.text.kv_blk_is_bad) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_item_do_find) refers to tos_kv.o(.text.kv_item_do_fetch) for kv_item_do_fetch
+    tos_kv.o(.text.kv_item_do_find) refers to tos_kv.o(.text.kv_item_walkthru) for kv_item_walkthru
+    tos_kv.o(.ARM.exidx.text.kv_item_do_find) refers to tos_kv.o(.text.kv_item_do_find) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_item_do_fetch) refers to strlen.o(.text) for strlen
+    tos_kv.o(.text.kv_item_do_fetch) refers to tos_kv.o(.text.kv_item_body_read) for kv_item_body_read
+    tos_kv.o(.text.kv_item_do_fetch) refers to memcmp.o(.text) for memcmp
+    tos_kv.o(.ARM.exidx.text.kv_item_do_fetch) refers to tos_kv.o(.text.kv_item_do_fetch) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_item_value_is_match) refers to memcmp.o(.text) for memcmp
+    tos_kv.o(.ARM.exidx.text.kv_item_value_is_match) refers to tos_kv.o(.text.kv_item_value_is_match) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_blk_search_suitable) refers to tos_kv.o(.bss.kv_ctl) for kv_ctl
+    tos_kv.o(.text.kv_blk_search_suitable) refers to tos_kv.o(.text.kv_blk_freesz_get) for kv_blk_freesz_get
+    tos_kv.o(.text.kv_blk_search_suitable) refers to tos_kv.o(.text.kv_blk_search_inuse) for kv_blk_search_inuse
+    tos_kv.o(.text.kv_blk_search_suitable) refers to tos_kv.o(.text.kv_blk_next_fresh) for kv_blk_next_fresh
+    tos_kv.o(.text.kv_blk_search_suitable) refers to tos_kv.o(.text.kv_gc) for kv_gc
+    tos_kv.o(.ARM.exidx.text.kv_blk_search_suitable) refers to tos_kv.o(.text.kv_blk_search_suitable) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_item_is_moved) refers to tos_kv.o(.text.kv_item_hdr_read) for kv_item_hdr_read
+    tos_kv.o(.text.kv_item_is_moved) refers to memcmp.o(.text) for memcmp
+    tos_kv.o(.text.kv_item_is_moved) refers to tos_kv.o(.text.kv_item_body_read) for kv_item_body_read
+    tos_kv.o(.text.kv_item_is_moved) refers to tlib_usr.o(.text.tos_mmheap_free) for tos_mmheap_free
+    tos_kv.o(.ARM.exidx.text.kv_item_is_moved) refers to tos_kv.o(.text.kv_item_is_moved) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_item_fix) refers to tos_kv.o(.text.kv_item_find_new_copy) for kv_item_find_new_copy
+    tos_kv.o(.text.kv_item_fix) refers to tos_kv.o(.text.kv_item_free) for kv_item_free
+    tos_kv.o(.ARM.exidx.text.kv_item_fix) refers to tos_kv.o(.text.kv_item_fix) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_item_do_save) refers to strlen.o(.text) for strlen
+    tos_kv.o(.text.kv_item_do_save) refers to tos_kv.o(.bss.kv_ctl) for kv_ctl
+    tos_kv.o(.text.kv_item_do_save) refers to tlib_usr.o(.text.tos_mmheap_alloc) for tos_mmheap_alloc
+    tos_kv.o(.text.kv_item_do_save) refers to memseta.o(.text) for __aeabi_memclr
+    tos_kv.o(.text.kv_item_do_save) refers to memcpya.o(.text) for __aeabi_memcpy
+    tos_kv.o(.text.kv_item_do_save) refers to tos_kv.o(.text.kv_checksum_crc8) for kv_checksum_crc8
+    tos_kv.o(.text.kv_item_do_save) refers to tos_kv.o(.text.kv_item_write) for kv_item_write
+    tos_kv.o(.text.kv_item_do_save) refers to tlib_usr.o(.text.tos_mmheap_free) for tos_mmheap_free
+    tos_kv.o(.ARM.exidx.text.kv_item_do_save) refers to tos_kv.o(.text.kv_item_do_save) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_blk_search_inuse) refers to tos_kv.o(.bss.kv_ctl) for kv_ctl
+    tos_kv.o(.text.kv_blk_search_inuse) refers to tos_kv.o(.text.kv_blk_is_inuse) for kv_blk_is_inuse
+    tos_kv.o(.text.kv_blk_search_inuse) refers to tos_kv.o(.text.kv_blk_freesz_get) for kv_blk_freesz_get
+    tos_kv.o(.ARM.exidx.text.kv_blk_search_inuse) refers to tos_kv.o(.text.kv_blk_search_inuse) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_blk_next_fresh) refers to tos_kv.o(.bss.kv_ctl) for kv_ctl
+    tos_kv.o(.text.kv_blk_next_fresh) refers to tos_kv.o(.text.kv_blk_is_fresh) for kv_blk_is_fresh
+    tos_kv.o(.ARM.exidx.text.kv_blk_next_fresh) refers to tos_kv.o(.text.kv_blk_next_fresh) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_gc) refers to tos_kv.o(.bss.kv_ctl) for kv_ctl
+    tos_kv.o(.text.kv_gc) refers to tos_kv.o(.text.kv_mgr_blk_index_rebuild) for kv_mgr_blk_index_rebuild
+    tos_kv.o(.text.kv_gc) refers to tos_kv.o(.text.kv_blk_next_fresh) for kv_blk_next_fresh
+    tos_kv.o(.text.kv_gc) refers to tos_kv.o(.text.kv_blk_is_dirty) for kv_blk_is_dirty
+    tos_kv.o(.text.kv_gc) refers to tos_kv.o(.text.kv_do_gc) for kv_do_gc
+    tos_kv.o(.ARM.exidx.text.kv_gc) refers to tos_kv.o(.text.kv_gc) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_blk_is_dirty) refers to tos_kv.o(.text.kv_blk_flags_get) for kv_blk_flags_get
+    tos_kv.o(.ARM.exidx.text.kv_blk_is_dirty) refers to tos_kv.o(.text.kv_blk_is_dirty) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_item_find_new_copy) refers to tos_kv.o(.bss.kv_ctl) for kv_ctl
+    tos_kv.o(.text.kv_item_find_new_copy) refers to tos_kv.o(.text.kv_blk_is_bad) for kv_blk_is_bad
+    tos_kv.o(.text.kv_item_find_new_copy) refers to tos_kv.o(.text.kv_blk_is_fresh) for kv_blk_is_fresh
+    tos_kv.o(.text.kv_item_find_new_copy) refers to tos_kv.o(.text.kv_item_do_find_new_copy) for kv_item_do_find_new_copy
+    tos_kv.o(.ARM.exidx.text.kv_item_find_new_copy) refers to tos_kv.o(.text.kv_item_find_new_copy) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_item_do_find_new_copy) refers to tos_kv.o(.text.kv_item_do_fetch_new_copy) for kv_item_do_fetch_new_copy
+    tos_kv.o(.text.kv_item_do_find_new_copy) refers to tos_kv.o(.text.kv_item_walkthru) for kv_item_walkthru
+    tos_kv.o(.ARM.exidx.text.kv_item_do_find_new_copy) refers to tos_kv.o(.text.kv_item_do_find_new_copy) for [Anonymous Symbol]
+    tos_kv.o(.text.kv_item_do_fetch_new_copy) refers to tos_kv.o(.text.kv_item_body_read) for kv_item_body_read
+    tos_kv.o(.text.kv_item_do_fetch_new_copy) refers to memcmp.o(.text) for memcmp
+    tos_kv.o(.ARM.exidx.text.kv_item_do_fetch_new_copy) refers to tos_kv.o(.text.kv_item_do_fetch_new_copy) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_task_create_k) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_task_create_k) refers to tlib_usr.o(.text.tos_task_create_k) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_task_create_dyn_k) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_task_create_dyn_k) refers to tlib_usr.o(.text.tos_task_create_dyn_k) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_task_destroy_k) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_task_destroy_k) refers to tlib_usr.o(.text.tos_task_destroy_k) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_task_destroy_dyn_k) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_task_destroy_dyn_k) refers to tlib_usr.o(.text.tos_task_destroy_dyn_k) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_knl_is_running) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_knl_is_running) refers to tlib_usr.o(.text.tos_knl_is_running) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_knl_sched_lock) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_knl_sched_lock) refers to tlib_usr.o(.text.tos_knl_sched_lock) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_knl_sched_unlock) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_knl_sched_unlock) refers to tlib_usr.o(.text.tos_knl_sched_unlock) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_task_create) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_task_create) refers to tlib_usr.o(.text.tos_task_create) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_task_destroy) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_task_destroy) refers to tlib_usr.o(.text.tos_task_destroy) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_task_create_dyn) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_task_create_dyn) refers to tlib_usr.o(.text.tos_task_create_dyn) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_task_destroy_dyn) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_task_destroy_dyn) refers to tlib_usr.o(.text.tos_task_destroy_dyn) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_task_delay) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_task_delay) refers to tlib_usr.o(.text.tos_task_delay) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_task_delay_abort) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_task_delay_abort) refers to tlib_usr.o(.text.tos_task_delay_abort) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_task_suspend) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_task_suspend) refers to tlib_usr.o(.text.tos_task_suspend) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_task_resume) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_task_resume) refers to tlib_usr.o(.text.tos_task_resume) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_task_prio_change) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_task_prio_change) refers to tlib_usr.o(.text.tos_task_prio_change) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_task_yield) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_task_yield) refers to tlib_usr.o(.text.tos_task_yield) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_task_curr_task_get) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_task_curr_task_get) refers to tlib_usr.o(.text.tos_task_curr_task_get) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_task_stack_draught_depth) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_task_stack_draught_depth) refers to tlib_usr.o(.text.tos_task_stack_draught_depth) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_task_walkthru) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_task_walkthru) refers to tlib_usr.o(.text.tos_task_walkthru) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_mmheap_pool_add) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_mmheap_pool_add) refers to tlib_usr.o(.text.tos_mmheap_pool_add) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_mmheap_pool_rmv) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_mmheap_pool_rmv) refers to tlib_usr.o(.text.tos_mmheap_pool_rmv) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_mmheap_alloc) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_mmheap_alloc) refers to tlib_usr.o(.text.tos_mmheap_alloc) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_mmheap_aligned_alloc) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_mmheap_aligned_alloc) refers to tlib_usr.o(.text.tos_mmheap_aligned_alloc) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_mmheap_realloc) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_mmheap_realloc) refers to tlib_usr.o(.text.tos_mmheap_realloc) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_mmheap_free) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_mmheap_free) refers to tlib_usr.o(.text.tos_mmheap_free) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_mmheap_pool_check) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_mmheap_pool_check) refers to tlib_usr.o(.text.tos_mmheap_pool_check) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_mmheap_check) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_mmheap_check) refers to tlib_usr.o(.text.tos_mmheap_check) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_mmblk_pool_create) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_mmblk_pool_create) refers to tlib_usr.o(.text.tos_mmblk_pool_create) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_mmblk_alloc) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_mmblk_alloc) refers to tlib_usr.o(.text.tos_mmblk_alloc) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_mmblk_free) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_mmblk_free) refers to tlib_usr.o(.text.tos_mmblk_free) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_mutex_create) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_mutex_create) refers to tlib_usr.o(.text.tos_mutex_create) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_mutex_destroy) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_mutex_destroy) refers to tlib_usr.o(.text.tos_mutex_destroy) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_mutex_pend) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_mutex_pend) refers to tlib_usr.o(.text.tos_mutex_pend) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_mutex_pend_timed) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_mutex_pend_timed) refers to tlib_usr.o(.text.tos_mutex_pend_timed) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_mutex_post) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_mutex_post) refers to tlib_usr.o(.text.tos_mutex_post) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_sem_create) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_sem_create) refers to tlib_usr.o(.text.tos_sem_create) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_sem_create_max) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_sem_create_max) refers to tlib_usr.o(.text.tos_sem_create_max) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_sem_destroy) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_sem_destroy) refers to tlib_usr.o(.text.tos_sem_destroy) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_sem_pend) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_sem_pend) refers to tlib_usr.o(.text.tos_sem_pend) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_sem_post) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_sem_post) refers to tlib_usr.o(.text.tos_sem_post) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_sem_post_all) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_sem_post_all) refers to tlib_usr.o(.text.tos_sem_post_all) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_event_create) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_event_create) refers to tlib_usr.o(.text.tos_event_create) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_event_destroy) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_event_destroy) refers to tlib_usr.o(.text.tos_event_destroy) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_event_pend) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_event_pend) refers to tlib_usr.o(.text.tos_event_pend) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_event_post) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_event_post) refers to tlib_usr.o(.text.tos_event_post) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_event_post_keep) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_event_post_keep) refers to tlib_usr.o(.text.tos_event_post_keep) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_io_control) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_io_control) refers to tlib_usr.o(.text.tos_io_control) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_io_write) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_io_write) refers to tlib_usr.o(.text.tos_io_write) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_chr_fifo_create) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_chr_fifo_create) refers to tlib_usr.o(.text.tos_chr_fifo_create) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_chr_fifo_create_dyn) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_chr_fifo_create_dyn) refers to tlib_usr.o(.text.tos_chr_fifo_create_dyn) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_chr_fifo_destroy) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_chr_fifo_destroy) refers to tlib_usr.o(.text.tos_chr_fifo_destroy) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_chr_fifo_destroy_dyn) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_chr_fifo_destroy_dyn) refers to tlib_usr.o(.text.tos_chr_fifo_destroy_dyn) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_chr_fifo_push) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_chr_fifo_push) refers to tlib_usr.o(.text.tos_chr_fifo_push) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_chr_fifo_push_stream) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_chr_fifo_push_stream) refers to tlib_usr.o(.text.tos_chr_fifo_push_stream) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_chr_fifo_pop) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_chr_fifo_pop) refers to tlib_usr.o(.text.tos_chr_fifo_pop) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_chr_fifo_pop_stream) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_chr_fifo_pop_stream) refers to tlib_usr.o(.text.tos_chr_fifo_pop_stream) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_chr_fifo_flush) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_chr_fifo_flush) refers to tlib_usr.o(.text.tos_chr_fifo_flush) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_chr_fifo_is_empty) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_chr_fifo_is_empty) refers to tlib_usr.o(.text.tos_chr_fifo_is_empty) for [Anonymous Symbol]
+    tlib_usr.o(.text.tos_chr_fifo_is_full) refers to tlib_s.o(RO) for syscall
+    tlib_usr.o(.ARM.exidx.text.tos_chr_fifo_is_full) refers to tlib_usr.o(.text.tos_chr_fifo_is_full) for [Anonymous Symbol]
+    tool.o(.text.fputc) refers to tlib_usr.o(.text.tos_io_write) for tos_io_write
+    tool.o(.ARM.exidx.text.fputc) refers to tool.o(.text.fputc) for [Anonymous Symbol]
+    tool.o(.ARM.exidx.ARM.__at_0x08030000) refers to tool.o(.ARM.__at_0x08030000) for [Anonymous Symbol]
+    printfa.o(i.__0fprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0fprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0fprintf) refers to tool.o(.text.fputc) for fputc
+    printfa.o(i.__0printf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0printf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0printf) refers to tool.o(.text.fputc) for fputc
+    printfa.o(i.__0printf) refers to stdout.o(.data) for __stdout
+    printfa.o(i.__0snprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0snprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0snprintf) refers to printfa.o(i._snputc) for _snputc
+    printfa.o(i.__0sprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0sprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0sprintf) refers to printfa.o(i._sputc) for _sputc
+    printfa.o(i.__0vfprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vfprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vfprintf) refers to tool.o(.text.fputc) for fputc
+    printfa.o(i.__0vprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vprintf) refers to tool.o(.text.fputc) for fputc
+    printfa.o(i.__0vprintf) refers to stdout.o(.data) for __stdout
+    printfa.o(i.__0vsnprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vsnprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vsnprintf) refers to printfa.o(i._snputc) for _snputc
+    printfa.o(i.__0vsprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vsprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vsprintf) refers to printfa.o(i._sputc) for _sputc
+    printfa.o(i._fp_digits) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._fp_digits) refers to dmul.o(.text) for __aeabi_dmul
+    printfa.o(i._fp_digits) refers to ddiv.o(.text) for __aeabi_ddiv
+    printfa.o(i._fp_digits) refers to cdrcmple.o(.text) for __aeabi_cdrcmple
+    printfa.o(i._fp_digits) refers to dadd.o(.text) for __aeabi_dadd
+    printfa.o(i._fp_digits) refers to dfixul.o(.text) for __aeabi_d2ulz
+    printfa.o(i._fp_digits) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printfa.o(i._printf_core) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._printf_core) refers to printfa.o(i._printf_pre_padding) for _printf_pre_padding
+    printfa.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printfa.o(i._printf_core) refers to printfa.o(i._printf_post_padding) for _printf_post_padding
+    printfa.o(i._printf_core) refers to printfa.o(i._fp_digits) for _fp_digits
+    printfa.o(i._printf_core) refers to uidiv.o(.text) for __aeabi_uidivmod
+    printfa.o(i._printf_post_padding) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._printf_pre_padding) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._snputc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._sputc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    uldiv.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    uldiv.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    dadd.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dadd.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    dadd.o(.text) refers to llsshr.o(.text) for __aeabi_lasr
+    dadd.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    dmul.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dmul.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    ddiv.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    ddiv.o(.text) refers to depilogue.o(.text) for _double_round
+    dfixul.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dfixul.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    dfixul.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    cdrcmple.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    depilogue.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    depilogue.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    depilogue.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+
+
+==============================================================================
+
+Removing Unused exception sections from the image.
+
+    Removing app_entry.o(.ARM.exidx.text.Test_1), (8 bytes).
+    Removing app_entry.o(.ARM.exidx.text.Test_2), (8 bytes).
+    Removing app_entry.o(.ARM.exidx.text.cmd_goto), (8 bytes).
+    Removing app_entry.o(.ARM.exidx.text.parse_argv_address), (8 bytes).
+    Removing app_entry.o(.ARM.exidx.text.cmd_write_bt), (8 bytes).
+    Removing app_entry.o(.ARM.exidx.text.parse_argv_byte), (8 bytes).
+    Removing app_entry.o(.ARM.exidx.text.cmd_chk_func), (8 bytes).
+    Removing app_entry.o(.ARM.exidx.text.cmd_chk_adrs), (8 bytes).
+    Removing app_entry.o(.ARM.exidx.text.cmd_read_bt), (8 bytes).
+    Removing app_entry.o(.ARM.exidx.text.cmd_kv_walk), (8 bytes).
+    Removing app_entry.o(.ARM.exidx.text.cmd_kv_set), (8 bytes).
+    Removing app_entry.o(.ARM.exidx.text.cmd_kv_find), (8 bytes).
+    Removing app_entry.o(.ARM.exidx.text.cmd_kv_del), (8 bytes).
+    Removing app_entry.o(.ARM.exidx.text.cmd_post), (8 bytes).
+    Removing app_entry.o(.ARM.exidx.text.out), (8 bytes).
+    Removing app_entry.o(.ARM.exidx.text.rx_hook), (8 bytes).
+    Removing app_entry.o(.ARM.exidx.text.write_flash), (8 bytes).
+    Removing app_entry.o(.ARM.exidx.text.read_flash), (8 bytes).
+    Removing app_entry.o(.ARM.exidx.text.erase_flash), (8 bytes).
+    Removing app_entry.o(.ARM.exidx.text.thread_1), (8 bytes).
+    Removing app_entry.o(.ARM.exidx.text.thread_2), (8 bytes).
+    Removing app_entry.o(.ARM.exidx.text.test), (8 bytes).
+    Removing app_entry.o(.ARM.exidx.ARM.__at_0x0803f000), (8 bytes).
+    Removing tos_shell.o(.ARM.exidx.text.tos_shell_init), (8 bytes).
+    Removing tos_shell.o(.ARM.exidx.text.shell_parser), (8 bytes).
+    Removing tos_shell.o(.ARM.exidx.text.tos_shell_deinit), (8 bytes).
+    Removing tos_shell.o(.ARM.exidx.text.tos_shell_cmd_set_regiser), (8 bytes).
+    Removing tos_shell.o(.ARM.exidx.text.tos_shell_cmd_set_unregiser), (8 bytes).
+    Removing tos_shell.o(.ARM.exidx.text.tos_shell_printf), (8 bytes).
+    Removing tos_shell.o(.ARM.exidx.text.shell_puts), (8 bytes).
+    Removing tos_shell.o(.ARM.exidx.text.tos_shell_printfln), (8 bytes).
+    Removing tos_shell.o(.ARM.exidx.text.tos_shell_input_byte), (8 bytes).
+    Removing tos_shell.o(.ARM.exidx.text.shell_prompt), (8 bytes).
+    Removing tos_shell.o(.ARM.exidx.text.shell_readline), (8 bytes).
+    Removing tos_shell.o(.ARM.exidx.text.shell_cmd_process), (8 bytes).
+    Removing tos_shell.o(.ARM.exidx.text.shell_getchar), (8 bytes).
+    Removing tos_shell.o(.ARM.exidx.text.shell_putchar), (8 bytes).
+    Removing tos_shell.o(.ARM.exidx.text.shell_cmd_do_process), (8 bytes).
+    Removing tos_shell_commands.o(.ARM.exidx.text.cmd_help), (8 bytes).
+    Removing tos_shell_commands.o(.ARM.exidx.text.shell_cmd_set_regiser), (8 bytes).
+    Removing tos_shell_commands.o(.ARM.exidx.text.tos_slist_contains), (8 bytes).
+    Removing tos_shell_commands.o(.ARM.exidx.text.tos_slist_add_head), (8 bytes).
+    Removing tos_shell_commands.o(.ARM.exidx.text.shell_cmd_set_unregiser), (8 bytes).
+    Removing tos_shell_commands.o(.ARM.exidx.text.tos_slist_del), (8 bytes).
+    Removing tos_shell_commands.o(.ARM.exidx.text.shell_cmd_find), (8 bytes).
+    Removing tos_shell_commands.o(.ARM.exidx.text.shell_cmd_init), (8 bytes).
+    Removing tos_shell_commands.o(.ARM.exidx.text.tos_slist_init), (8 bytes).
+    Removing tos_shell_commands.o(.ARM.exidx.text.cmd_ps), (8 bytes).
+    Removing tos_shell_commands.o(.ARM.exidx.text.cmd_free), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.tos_kv_walkthru), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_blk_hdr_read), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_block_walkthru), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.tos_kv_init), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_param_verify), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_flash_ctl_init), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_mgr_ctl_init), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_mgr_ctl_build), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_mgr_workspace_locate), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.tos_kv_deinit), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_mgr_ctl_deinit), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.tos_kv_set), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_lock), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_item_find), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_item_update), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_item_free), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_item_save), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_unlock), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.tos_kv_get), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.tos_kv_has_key), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.tos_kv_del), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_item_delete), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_flash_read), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_item_hdr_read), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_item_hdr_verify), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_item_body_read), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_item_body_verify), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_u8_disp), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_checksum_crc8), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_blk_set_bad), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_blk_format), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_mgr_index_build), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_blk_set_hanging), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_blk_is_fresh), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_handle_incomplete_gc), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_blk_flags_set), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_flash_blk_erase), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_flash_wunit_modify), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_blk_set_fresh), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_flash_erase), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_flash_write), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_blk_freesz_set), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_item_walkthru), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_item_do_recovery), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_item_do_delete), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_blk_set_dirty), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_blk_set_inuse), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_blk_reset_inuse), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_blk_flags_add), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_blk_is_inuse), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_blk_flags_get), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_blk_flags_rmv), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_item_is_updated_one), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_item_try_delete), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_item_delete_aux), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_blk_is_hanging), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_do_gc), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_blk_mark_gc_src), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_blk_mark_gc_dst), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_item_do_gc), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_blk_mark_gc_done), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_blk_reset_fresh), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_blk_is_full), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_item_write), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_blk_freesz_get), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_blk_freesz_reduce), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_item_hdr_write), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_mgr_blk_index_rebuild), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_blk_reset_hanging), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_blk_is_bad), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_item_do_find), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_item_do_fetch), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_item_value_is_match), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_blk_search_suitable), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_item_is_moved), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_item_fix), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_item_do_save), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_blk_search_inuse), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_blk_next_fresh), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_gc), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_blk_is_dirty), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_item_find_new_copy), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_item_do_find_new_copy), (8 bytes).
+    Removing tos_kv.o(.ARM.exidx.text.kv_item_do_fetch_new_copy), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_task_create_k), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_task_create_dyn_k), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_task_destroy_k), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_task_destroy_dyn_k), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_knl_is_running), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_knl_sched_lock), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_knl_sched_unlock), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_task_create), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_task_destroy), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_task_create_dyn), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_task_destroy_dyn), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_task_delay), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_task_delay_abort), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_task_suspend), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_task_resume), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_task_prio_change), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_task_yield), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_task_curr_task_get), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_task_stack_draught_depth), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_task_walkthru), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_mmheap_pool_add), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_mmheap_pool_rmv), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_mmheap_alloc), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_mmheap_aligned_alloc), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_mmheap_realloc), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_mmheap_free), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_mmheap_pool_check), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_mmheap_check), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_mmblk_pool_create), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_mmblk_alloc), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_mmblk_free), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_mutex_create), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_mutex_destroy), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_mutex_pend), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_mutex_pend_timed), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_mutex_post), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_sem_create), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_sem_create_max), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_sem_destroy), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_sem_pend), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_sem_post), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_sem_post_all), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_event_create), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_event_destroy), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_event_pend), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_event_post), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_event_post_keep), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_io_control), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_io_write), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_chr_fifo_create), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_chr_fifo_create_dyn), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_chr_fifo_destroy), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_chr_fifo_destroy_dyn), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_chr_fifo_push), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_chr_fifo_push_stream), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_chr_fifo_pop), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_chr_fifo_pop_stream), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_chr_fifo_flush), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_chr_fifo_is_empty), (8 bytes).
+    Removing tlib_usr.o(.ARM.exidx.text.tos_chr_fifo_is_full), (8 bytes).
+    Removing tool.o(.ARM.exidx.text.fputc), (8 bytes).
+    Removing tool.o(.ARM.exidx.ARM.__at_0x08030000), (8 bytes).
+
+195 unused section(s) (total 1560 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    ../APP/app_entry.c                       0x00000000   Number         0  app_entry.o ABSOLUTE
+    ../APP/tos_kv.c                          0x00000000   Number         0  tos_kv.o ABSOLUTE
+    ../APP/tos_shell.c                       0x00000000   Number         0  tos_shell.o ABSOLUTE
+    ../APP/tos_shell_commands.c              0x00000000   Number         0  tos_shell_commands.o ABSOLUTE
+    ../TLIB/tlib_usr.c                       0x00000000   Number         0  tlib_usr.o ABSOLUTE
+    ../TOOLS/tool.c                          0x00000000   Number         0  tool.o ABSOLUTE
+    ../clib/microlib/division.c              0x00000000   Number         0  uidiv.o ABSOLUTE
+    ../clib/microlib/division.c              0x00000000   Number         0  uldiv.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llsshr.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfa.o ABSOLUTE
+    ../clib/microlib/stdio/streams.c         0x00000000   Number         0  stdout.o ABSOLUTE
+    ../clib/microlib/string/memcmp.c         0x00000000   Number         0  memcmp.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpyb.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpya.o ABSOLUTE
+    ../clib/microlib/string/memset.c         0x00000000   Number         0  memseta.o ABSOLUTE
+    ../clib/microlib/string/strcmp.c         0x00000000   Number         0  strcmp.o ABSOLUTE
+    ../clib/microlib/string/strlen.c         0x00000000   Number         0  strlen.o ABSOLUTE
+    ../clib/microlib/stubs.s                 0x00000000   Number         0  iusefp.o ABSOLUTE
+    ../fplib/microlib/fpadd.c                0x00000000   Number         0  dadd.o ABSOLUTE
+    ../fplib/microlib/fpdiv.c                0x00000000   Number         0  ddiv.o ABSOLUTE
+    ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  depilogue.o ABSOLUTE
+    ../fplib/microlib/fpfix.c                0x00000000   Number         0  dfixul.o ABSOLUTE
+    ../fplib/microlib/fpmul.c                0x00000000   Number         0  dmul.o ABSOLUTE
+    ..\tlib\tlib_s.s                         0x00000000   Number         0  tlib_s.o ABSOLUTE
+    cdrcmple.s                               0x00000000   Number         0  cdrcmple.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    [Anonymous Symbol]                       0x08030000   Section        0  tool.o(.ARM.__at_0x08030000)
+    .text                                    0x08030084   Section        0  memcpya.o(.text)
+    .text                                    0x080300a8   Section        0  memseta.o(.text)
+    .text                                    0x080300cc   Section        0  strlen.o(.text)
+    .text                                    0x080300da   Section        0  strcmp.o(.text)
+    .text                                    0x080300f6   Section        0  memcmp.o(.text)
+    .text                                    0x08030110   Section        0  uidiv.o(.text)
+    .text                                    0x0803013c   Section        0  uldiv.o(.text)
+    .text                                    0x0803019e   Section        0  iusefp.o(.text)
+    .text                                    0x0803019e   Section        0  dadd.o(.text)
+    .text                                    0x080302ec   Section        0  dmul.o(.text)
+    .text                                    0x080303d0   Section        0  ddiv.o(.text)
+    .text                                    0x080304ae   Section        0  dfixul.o(.text)
+    .text                                    0x080304e0   Section       48  cdrcmple.o(.text)
+    .text                                    0x08030510   Section        0  llshl.o(.text)
+    .text                                    0x0803052e   Section        0  llushr.o(.text)
+    .text                                    0x0803054e   Section        0  llsshr.o(.text)
+    .text                                    0x08030572   Section        0  depilogue.o(.text)
+    [Anonymous Symbol]                       0x0803062c   Section        0  app_entry.o(.text.Test_1)
+    [Anonymous Symbol]                       0x0803064c   Section        0  app_entry.o(.text.Test_2)
+    [Anonymous Symbol]                       0x0803066c   Section        0  app_entry.o(.text.cmd_chk_adrs)
+    [Anonymous Symbol]                       0x080306dc   Section        0  app_entry.o(.text.cmd_chk_func)
+    [Anonymous Symbol]                       0x08030738   Section        0  tos_shell_commands.o(.text.cmd_free)
+    cmd_free                                 0x08030739   Thumb Code   122  tos_shell_commands.o(.text.cmd_free)
+    [Anonymous Symbol]                       0x080307b4   Section        0  app_entry.o(.text.cmd_goto)
+    [Anonymous Symbol]                       0x0803082c   Section        0  tos_shell_commands.o(.text.cmd_help)
+    [Anonymous Symbol]                       0x08030890   Section        0  app_entry.o(.text.cmd_kv_del)
+    [Anonymous Symbol]                       0x0803090c   Section        0  app_entry.o(.text.cmd_kv_find)
+    [Anonymous Symbol]                       0x080309b0   Section        0  app_entry.o(.text.cmd_kv_set)
+    [Anonymous Symbol]                       0x08030a40   Section        0  app_entry.o(.text.cmd_kv_walk)
+    [Anonymous Symbol]                       0x08030a60   Section        0  app_entry.o(.text.cmd_post)
+    [Anonymous Symbol]                       0x08030a88   Section        0  tos_shell_commands.o(.text.cmd_ps)
+    cmd_ps                                   0x08030a89   Thumb Code    30  tos_shell_commands.o(.text.cmd_ps)
+    [Anonymous Symbol]                       0x08030aa8   Section        0  app_entry.o(.text.cmd_read_bt)
+    [Anonymous Symbol]                       0x08030b2c   Section        0  app_entry.o(.text.cmd_write_bt)
+    [Anonymous Symbol]                       0x08030bcc   Section        0  app_entry.o(.text.erase_flash)
+    [Anonymous Symbol]                       0x08030c0c   Section        0  tool.o(.text.fputc)
+    [Anonymous Symbol]                       0x08030c4c   Section        0  tos_kv.o(.text.kv_blk_flags_add)
+    kv_blk_flags_add                         0x08030c4d   Thumb Code    66  tos_kv.o(.text.kv_blk_flags_add)
+    [Anonymous Symbol]                       0x08030c90   Section        0  tos_kv.o(.text.kv_blk_flags_get)
+    kv_blk_flags_get                         0x08030c91   Thumb Code    42  tos_kv.o(.text.kv_blk_flags_get)
+    [Anonymous Symbol]                       0x08030cbc   Section        0  tos_kv.o(.text.kv_blk_flags_rmv)
+    kv_blk_flags_rmv                         0x08030cbd   Thumb Code    66  tos_kv.o(.text.kv_blk_flags_rmv)
+    [Anonymous Symbol]                       0x08030d00   Section        0  tos_kv.o(.text.kv_blk_flags_set)
+    kv_blk_flags_set                         0x08030d01   Thumb Code    58  tos_kv.o(.text.kv_blk_flags_set)
+    [Anonymous Symbol]                       0x08030d3c   Section        0  tos_kv.o(.text.kv_blk_format)
+    kv_blk_format                            0x08030d3d   Thumb Code    88  tos_kv.o(.text.kv_blk_format)
+    [Anonymous Symbol]                       0x08030d94   Section        0  tos_kv.o(.text.kv_blk_freesz_get)
+    kv_blk_freesz_get                        0x08030d95   Thumb Code    44  tos_kv.o(.text.kv_blk_freesz_get)
+    [Anonymous Symbol]                       0x08030dc0   Section        0  tos_kv.o(.text.kv_blk_freesz_reduce)
+    kv_blk_freesz_reduce                     0x08030dc1   Thumb Code    38  tos_kv.o(.text.kv_blk_freesz_reduce)
+    [Anonymous Symbol]                       0x08030de8   Section        0  tos_kv.o(.text.kv_blk_freesz_set)
+    kv_blk_freesz_set                        0x08030de9   Thumb Code    56  tos_kv.o(.text.kv_blk_freesz_set)
+    [Anonymous Symbol]                       0x08030e20   Section        0  tos_kv.o(.text.kv_blk_hdr_read)
+    kv_blk_hdr_read                          0x08030e21   Thumb Code    34  tos_kv.o(.text.kv_blk_hdr_read)
+    [Anonymous Symbol]                       0x08030e44   Section        0  tos_kv.o(.text.kv_blk_is_bad)
+    kv_blk_is_bad                            0x08030e45   Thumb Code    24  tos_kv.o(.text.kv_blk_is_bad)
+    [Anonymous Symbol]                       0x08030e5c   Section        0  tos_kv.o(.text.kv_blk_is_dirty)
+    kv_blk_is_dirty                          0x08030e5d   Thumb Code    24  tos_kv.o(.text.kv_blk_is_dirty)
+    [Anonymous Symbol]                       0x08030e74   Section        0  tos_kv.o(.text.kv_blk_is_fresh)
+    kv_blk_is_fresh                          0x08030e75   Thumb Code    24  tos_kv.o(.text.kv_blk_is_fresh)
+    [Anonymous Symbol]                       0x08030e8c   Section        0  tos_kv.o(.text.kv_blk_is_full)
+    kv_blk_is_full                           0x08030e8d   Thumb Code    54  tos_kv.o(.text.kv_blk_is_full)
+    [Anonymous Symbol]                       0x08030ec4   Section        0  tos_kv.o(.text.kv_blk_is_hanging)
+    kv_blk_is_hanging                        0x08030ec5   Thumb Code    24  tos_kv.o(.text.kv_blk_is_hanging)
+    [Anonymous Symbol]                       0x08030edc   Section        0  tos_kv.o(.text.kv_blk_is_inuse)
+    kv_blk_is_inuse                          0x08030edd   Thumb Code    24  tos_kv.o(.text.kv_blk_is_inuse)
+    [Anonymous Symbol]                       0x08030ef4   Section        0  tos_kv.o(.text.kv_blk_mark_gc_done)
+    kv_blk_mark_gc_done                      0x08030ef5   Thumb Code    64  tos_kv.o(.text.kv_blk_mark_gc_done)
+    [Anonymous Symbol]                       0x08030f34   Section        0  tos_kv.o(.text.kv_blk_mark_gc_dst)
+    kv_blk_mark_gc_dst                       0x08030f35   Thumb Code    64  tos_kv.o(.text.kv_blk_mark_gc_dst)
+    [Anonymous Symbol]                       0x08030f74   Section        0  tos_kv.o(.text.kv_blk_mark_gc_src)
+    kv_blk_mark_gc_src                       0x08030f75   Thumb Code    64  tos_kv.o(.text.kv_blk_mark_gc_src)
+    [Anonymous Symbol]                       0x08030fb4   Section        0  tos_kv.o(.text.kv_blk_next_fresh)
+    kv_blk_next_fresh                        0x08030fb5   Thumb Code   200  tos_kv.o(.text.kv_blk_next_fresh)
+    [Anonymous Symbol]                       0x0803107c   Section        0  tos_kv.o(.text.kv_blk_reset_fresh)
+    kv_blk_reset_fresh                       0x0803107d   Thumb Code    50  tos_kv.o(.text.kv_blk_reset_fresh)
+    [Anonymous Symbol]                       0x080310b0   Section        0  tos_kv.o(.text.kv_blk_reset_hanging)
+    kv_blk_reset_hanging                     0x080310b1   Thumb Code    50  tos_kv.o(.text.kv_blk_reset_hanging)
+    [Anonymous Symbol]                       0x080310e4   Section        0  tos_kv.o(.text.kv_blk_reset_inuse)
+    kv_blk_reset_inuse                       0x080310e5   Thumb Code    50  tos_kv.o(.text.kv_blk_reset_inuse)
+    [Anonymous Symbol]                       0x08031118   Section        0  tos_kv.o(.text.kv_blk_search_inuse)
+    kv_blk_search_inuse                      0x08031119   Thumb Code   224  tos_kv.o(.text.kv_blk_search_inuse)
+    [Anonymous Symbol]                       0x080311f8   Section        0  tos_kv.o(.text.kv_blk_search_suitable)
+    kv_blk_search_suitable                   0x080311f9   Thumb Code   284  tos_kv.o(.text.kv_blk_search_suitable)
+    [Anonymous Symbol]                       0x08031314   Section        0  tos_kv.o(.text.kv_blk_set_bad)
+    kv_blk_set_bad                           0x08031315   Thumb Code    24  tos_kv.o(.text.kv_blk_set_bad)
+    [Anonymous Symbol]                       0x0803132c   Section        0  tos_kv.o(.text.kv_blk_set_dirty)
+    kv_blk_set_dirty                         0x0803132d   Thumb Code    24  tos_kv.o(.text.kv_blk_set_dirty)
+    [Anonymous Symbol]                       0x08031344   Section        0  tos_kv.o(.text.kv_blk_set_fresh)
+    kv_blk_set_fresh                         0x08031345   Thumb Code    88  tos_kv.o(.text.kv_blk_set_fresh)
+    [Anonymous Symbol]                       0x0803139c   Section        0  tos_kv.o(.text.kv_blk_set_hanging)
+    kv_blk_set_hanging                       0x0803139d   Thumb Code    50  tos_kv.o(.text.kv_blk_set_hanging)
+    [Anonymous Symbol]                       0x080313d0   Section        0  tos_kv.o(.text.kv_blk_set_inuse)
+    kv_blk_set_inuse                         0x080313d1   Thumb Code    50  tos_kv.o(.text.kv_blk_set_inuse)
+    [Anonymous Symbol]                       0x08031404   Section        0  tos_kv.o(.text.kv_block_walkthru)
+    kv_block_walkthru                        0x08031405   Thumb Code   986  tos_kv.o(.text.kv_block_walkthru)
+    [Anonymous Symbol]                       0x080317e0   Section        0  tos_kv.o(.text.kv_checksum_crc8)
+    kv_checksum_crc8                         0x080317e1   Thumb Code   126  tos_kv.o(.text.kv_checksum_crc8)
+    [Anonymous Symbol]                       0x08031860   Section        0  tos_kv.o(.text.kv_do_gc)
+    kv_do_gc                                 0x08031861   Thumb Code   236  tos_kv.o(.text.kv_do_gc)
+    [Anonymous Symbol]                       0x0803194c   Section        0  tos_kv.o(.text.kv_flash_blk_erase)
+    kv_flash_blk_erase                       0x0803194d   Thumb Code    38  tos_kv.o(.text.kv_flash_blk_erase)
+    [Anonymous Symbol]                       0x08031974   Section        0  tos_kv.o(.text.kv_flash_ctl_init)
+    kv_flash_ctl_init                        0x08031975   Thumb Code   174  tos_kv.o(.text.kv_flash_ctl_init)
+    [Anonymous Symbol]                       0x08031a24   Section        0  tos_kv.o(.text.kv_flash_erase)
+    kv_flash_erase                           0x08031a25   Thumb Code    76  tos_kv.o(.text.kv_flash_erase)
+    [Anonymous Symbol]                       0x08031a70   Section        0  tos_kv.o(.text.kv_flash_read)
+    kv_flash_read                            0x08031a71   Thumb Code    86  tos_kv.o(.text.kv_flash_read)
+    [Anonymous Symbol]                       0x08031ac8   Section        0  tos_kv.o(.text.kv_flash_write)
+    kv_flash_write                           0x08031ac9   Thumb Code    86  tos_kv.o(.text.kv_flash_write)
+    [Anonymous Symbol]                       0x08031b20   Section        0  tos_kv.o(.text.kv_flash_wunit_modify)
+    kv_flash_wunit_modify                    0x08031b21   Thumb Code    44  tos_kv.o(.text.kv_flash_wunit_modify)
+    [Anonymous Symbol]                       0x08031b4c   Section        0  tos_kv.o(.text.kv_gc)
+    kv_gc                                    0x08031b4d   Thumb Code   198  tos_kv.o(.text.kv_gc)
+    [Anonymous Symbol]                       0x08031c14   Section        0  tos_kv.o(.text.kv_handle_incomplete_gc)
+    kv_handle_incomplete_gc                  0x08031c15   Thumb Code   252  tos_kv.o(.text.kv_handle_incomplete_gc)
+    [Anonymous Symbol]                       0x08031d10   Section        0  tos_kv.o(.text.kv_item_body_read)
+    kv_item_body_read                        0x08031d11   Thumb Code   150  tos_kv.o(.text.kv_item_body_read)
+    [Anonymous Symbol]                       0x08031da8   Section        0  tos_kv.o(.text.kv_item_body_verify)
+    kv_item_body_verify                      0x08031da9   Thumb Code    52  tos_kv.o(.text.kv_item_body_verify)
+    [Anonymous Symbol]                       0x08031ddc   Section        0  tos_kv.o(.text.kv_item_delete)
+    kv_item_delete                           0x08031ddd   Thumb Code    22  tos_kv.o(.text.kv_item_delete)
+    [Anonymous Symbol]                       0x08031df4   Section        0  tos_kv.o(.text.kv_item_delete_aux)
+    kv_item_delete_aux                       0x08031df5   Thumb Code    80  tos_kv.o(.text.kv_item_delete_aux)
+    [Anonymous Symbol]                       0x08031e44   Section        0  tos_kv.o(.text.kv_item_do_delete)
+    kv_item_do_delete                        0x08031e45   Thumb Code    28  tos_kv.o(.text.kv_item_do_delete)
+    [Anonymous Symbol]                       0x08031e60   Section        0  tos_kv.o(.text.kv_item_do_fetch)
+    kv_item_do_fetch                         0x08031e61   Thumb Code   122  tos_kv.o(.text.kv_item_do_fetch)
+    [Anonymous Symbol]                       0x08031edc   Section        0  tos_kv.o(.text.kv_item_do_fetch_new_copy)
+    kv_item_do_fetch_new_copy                0x08031edd   Thumb Code   170  tos_kv.o(.text.kv_item_do_fetch_new_copy)
+    [Anonymous Symbol]                       0x08031f88   Section        0  tos_kv.o(.text.kv_item_do_find)
+    kv_item_do_find                          0x08031f89   Thumb Code    72  tos_kv.o(.text.kv_item_do_find)
+    [Anonymous Symbol]                       0x08031fd0   Section        0  tos_kv.o(.text.kv_item_do_find_new_copy)
+    kv_item_do_find_new_copy                 0x08031fd1   Thumb Code    72  tos_kv.o(.text.kv_item_do_find_new_copy)
+    [Anonymous Symbol]                       0x08032018   Section        0  tos_kv.o(.text.kv_item_do_gc)
+    kv_item_do_gc                            0x08032019   Thumb Code   188  tos_kv.o(.text.kv_item_do_gc)
+    [Anonymous Symbol]                       0x080320d4   Section        0  tos_kv.o(.text.kv_item_do_recovery)
+    kv_item_do_recovery                      0x080320d5   Thumb Code   132  tos_kv.o(.text.kv_item_do_recovery)
+    [Anonymous Symbol]                       0x08032158   Section        0  tos_kv.o(.text.kv_item_do_save)
+    kv_item_do_save                          0x08032159   Thumb Code   252  tos_kv.o(.text.kv_item_do_save)
+    [Anonymous Symbol]                       0x08032254   Section        0  tos_kv.o(.text.kv_item_find)
+    kv_item_find                             0x08032255   Thumb Code   130  tos_kv.o(.text.kv_item_find)
+    [Anonymous Symbol]                       0x080322d8   Section        0  tos_kv.o(.text.kv_item_find_new_copy)
+    kv_item_find_new_copy                    0x080322d9   Thumb Code   130  tos_kv.o(.text.kv_item_find_new_copy)
+    [Anonymous Symbol]                       0x0803235c   Section        0  tos_kv.o(.text.kv_item_fix)
+    kv_item_fix                              0x0803235d   Thumb Code    64  tos_kv.o(.text.kv_item_fix)
+    [Anonymous Symbol]                       0x0803239c   Section        0  tos_kv.o(.text.kv_item_free)
+    kv_item_free                             0x0803239d   Thumb Code    40  tos_kv.o(.text.kv_item_free)
+    [Anonymous Symbol]                       0x080323c4   Section        0  tos_kv.o(.text.kv_item_hdr_read)
+    kv_item_hdr_read                         0x080323c5   Thumb Code    34  tos_kv.o(.text.kv_item_hdr_read)
+    [Anonymous Symbol]                       0x080323e8   Section        0  tos_kv.o(.text.kv_item_hdr_verify)
+    kv_item_hdr_verify                       0x080323e9   Thumb Code   218  tos_kv.o(.text.kv_item_hdr_verify)
+    [Anonymous Symbol]                       0x080324c4   Section        0  tos_kv.o(.text.kv_item_hdr_write)
+    kv_item_hdr_write                        0x080324c5   Thumb Code   100  tos_kv.o(.text.kv_item_hdr_write)
+    [Anonymous Symbol]                       0x08032528   Section        0  tos_kv.o(.text.kv_item_is_moved)
+    kv_item_is_moved                         0x08032529   Thumb Code   166  tos_kv.o(.text.kv_item_is_moved)
+    [Anonymous Symbol]                       0x080325d0   Section        0  tos_kv.o(.text.kv_item_is_updated_one)
+    kv_item_is_updated_one                   0x080325d1   Thumb Code    50  tos_kv.o(.text.kv_item_is_updated_one)
+    [Anonymous Symbol]                       0x08032604   Section        0  tos_kv.o(.text.kv_item_save)
+    kv_item_save                             0x08032605   Thumb Code   348  tos_kv.o(.text.kv_item_save)
+    [Anonymous Symbol]                       0x08032760   Section        0  tos_kv.o(.text.kv_item_try_delete)
+    kv_item_try_delete                       0x08032761   Thumb Code   274  tos_kv.o(.text.kv_item_try_delete)
+    [Anonymous Symbol]                       0x08032874   Section        0  tos_kv.o(.text.kv_item_update)
+    kv_item_update                           0x08032875   Thumb Code   112  tos_kv.o(.text.kv_item_update)
+    [Anonymous Symbol]                       0x080328e4   Section        0  tos_kv.o(.text.kv_item_value_is_match)
+    kv_item_value_is_match                   0x080328e5   Thumb Code   104  tos_kv.o(.text.kv_item_value_is_match)
+    [Anonymous Symbol]                       0x0803294c   Section        0  tos_kv.o(.text.kv_item_walkthru)
+    kv_item_walkthru                         0x0803294d   Thumb Code   710  tos_kv.o(.text.kv_item_walkthru)
+    [Anonymous Symbol]                       0x08032c14   Section        0  tos_kv.o(.text.kv_item_write)
+    kv_item_write                            0x08032c15   Thumb Code    96  tos_kv.o(.text.kv_item_write)
+    [Anonymous Symbol]                       0x08032c74   Section        0  tos_kv.o(.text.kv_lock)
+    kv_lock                                  0x08032c75   Thumb Code    36  tos_kv.o(.text.kv_lock)
+    [Anonymous Symbol]                       0x08032c98   Section        0  tos_kv.o(.text.kv_mgr_blk_index_rebuild)
+    kv_mgr_blk_index_rebuild                 0x08032c99   Thumb Code   110  tos_kv.o(.text.kv_mgr_blk_index_rebuild)
+    [Anonymous Symbol]                       0x08032d08   Section        0  tos_kv.o(.text.kv_mgr_ctl_build)
+    kv_mgr_ctl_build                         0x08032d09   Thumb Code   336  tos_kv.o(.text.kv_mgr_ctl_build)
+    [Anonymous Symbol]                       0x08032e58   Section        0  tos_kv.o(.text.kv_mgr_ctl_deinit)
+    kv_mgr_ctl_deinit                        0x08032e59   Thumb Code    56  tos_kv.o(.text.kv_mgr_ctl_deinit)
+    [Anonymous Symbol]                       0x08032e90   Section        0  tos_kv.o(.text.kv_mgr_ctl_init)
+    kv_mgr_ctl_init                          0x08032e91   Thumb Code   116  tos_kv.o(.text.kv_mgr_ctl_init)
+    [Anonymous Symbol]                       0x08032f04   Section        0  tos_kv.o(.text.kv_mgr_index_build)
+    kv_mgr_index_build                       0x08032f05   Thumb Code    34  tos_kv.o(.text.kv_mgr_index_build)
+    [Anonymous Symbol]                       0x08032f28   Section        0  tos_kv.o(.text.kv_mgr_workspace_locate)
+    kv_mgr_workspace_locate                  0x08032f29   Thumb Code   226  tos_kv.o(.text.kv_mgr_workspace_locate)
+    [Anonymous Symbol]                       0x0803300c   Section        0  tos_kv.o(.text.kv_param_verify)
+    kv_param_verify                          0x0803300d   Thumb Code   128  tos_kv.o(.text.kv_param_verify)
+    [Anonymous Symbol]                       0x0803308c   Section        0  tos_kv.o(.text.kv_u8_disp)
+    kv_u8_disp                               0x0803308d   Thumb Code   102  tos_kv.o(.text.kv_u8_disp)
+    [Anonymous Symbol]                       0x080330f4   Section        0  tos_kv.o(.text.kv_unlock)
+    kv_unlock                                0x080330f5   Thumb Code    36  tos_kv.o(.text.kv_unlock)
+    [Anonymous Symbol]                       0x08033118   Section        0  app_entry.o(.text.out)
+    [Anonymous Symbol]                       0x0803313c   Section        0  app_entry.o(.text.parse_argv_address)
+    parse_argv_address                       0x0803313d   Thumb Code   250  app_entry.o(.text.parse_argv_address)
+    [Anonymous Symbol]                       0x08033238   Section        0  app_entry.o(.text.parse_argv_byte)
+    parse_argv_byte                          0x08033239   Thumb Code   270  app_entry.o(.text.parse_argv_byte)
+    [Anonymous Symbol]                       0x08033348   Section        0  app_entry.o(.text.read_flash)
+    [Anonymous Symbol]                       0x0803338c   Section        0  app_entry.o(.text.rx_hook)
+    [Anonymous Symbol]                       0x080333ac   Section        0  tos_shell.o(.text.shell_cmd_do_process)
+    shell_cmd_do_process                     0x080333ad   Thumb Code    76  tos_shell.o(.text.shell_cmd_do_process)
+    [Anonymous Symbol]                       0x080333f8   Section        0  tos_shell_commands.o(.text.shell_cmd_find)
+    [Anonymous Symbol]                       0x08033460   Section        0  tos_shell_commands.o(.text.shell_cmd_init)
+    [Anonymous Symbol]                       0x080334a4   Section        0  tos_shell.o(.text.shell_cmd_process)
+    shell_cmd_process                        0x080334a5   Thumb Code   256  tos_shell.o(.text.shell_cmd_process)
+    [Anonymous Symbol]                       0x080335a4   Section        0  tos_shell_commands.o(.text.shell_cmd_set_regiser)
+    [Anonymous Symbol]                       0x080335e8   Section        0  tos_shell_commands.o(.text.shell_cmd_set_unregiser)
+    [Anonymous Symbol]                       0x0803362c   Section        0  tos_shell.o(.text.shell_getchar)
+    shell_getchar                            0x0803362d   Thumb Code   100  tos_shell.o(.text.shell_getchar)
+    [Anonymous Symbol]                       0x08033690   Section        0  tos_shell.o(.text.shell_parser)
+    shell_parser                             0x08033691   Thumb Code    42  tos_shell.o(.text.shell_parser)
+    [Anonymous Symbol]                       0x080336bc   Section        0  tos_shell.o(.text.shell_prompt)
+    shell_prompt                             0x080336bd   Thumb Code    16  tos_shell.o(.text.shell_prompt)
+    [Anonymous Symbol]                       0x080336cc   Section        0  tos_shell.o(.text.shell_putchar)
+    shell_putchar                            0x080336cd   Thumb Code    40  tos_shell.o(.text.shell_putchar)
+    [Anonymous Symbol]                       0x080336f4   Section        0  tos_shell.o(.text.shell_puts)
+    shell_puts                               0x080336f5   Thumb Code    56  tos_shell.o(.text.shell_puts)
+    [Anonymous Symbol]                       0x0803372c   Section        0  tos_shell.o(.text.shell_readline)
+    shell_readline                           0x0803372d   Thumb Code   214  tos_shell.o(.text.shell_readline)
+    [Anonymous Symbol]                       0x08033804   Section        0  app_entry.o(.text.test)
+    [Anonymous Symbol]                       0x08033960   Section        0  app_entry.o(.text.thread_1)
+    [Anonymous Symbol]                       0x08033994   Section        0  app_entry.o(.text.thread_2)
+    [Anonymous Symbol]                       0x080339c0   Section        0  tlib_usr.o(.text.tos_chr_fifo_create)
+    [Anonymous Symbol]                       0x080339f4   Section        0  tlib_usr.o(.text.tos_chr_fifo_create_dyn)
+    [Anonymous Symbol]                       0x08033a18   Section        0  tlib_usr.o(.text.tos_chr_fifo_destroy)
+    [Anonymous Symbol]                       0x08033a38   Section        0  tlib_usr.o(.text.tos_chr_fifo_destroy_dyn)
+    [Anonymous Symbol]                       0x08033a58   Section        0  tlib_usr.o(.text.tos_chr_fifo_flush)
+    [Anonymous Symbol]                       0x08033a78   Section        0  tlib_usr.o(.text.tos_chr_fifo_is_empty)
+    [Anonymous Symbol]                       0x08033ab4   Section        0  tlib_usr.o(.text.tos_chr_fifo_is_full)
+    [Anonymous Symbol]                       0x08033af0   Section        0  tlib_usr.o(.text.tos_chr_fifo_pop)
+    [Anonymous Symbol]                       0x08033b14   Section        0  tlib_usr.o(.text.tos_chr_fifo_pop_stream)
+    [Anonymous Symbol]                       0x08033b50   Section        0  tlib_usr.o(.text.tos_chr_fifo_push)
+    [Anonymous Symbol]                       0x08033b7c   Section        0  tlib_usr.o(.text.tos_chr_fifo_push_stream)
+    [Anonymous Symbol]                       0x08033bb8   Section        0  tlib_usr.o(.text.tos_event_create)
+    [Anonymous Symbol]                       0x08033bdc   Section        0  tlib_usr.o(.text.tos_event_destroy)
+    [Anonymous Symbol]                       0x08033bfc   Section        0  tlib_usr.o(.text.tos_event_pend)
+    [Anonymous Symbol]                       0x08033c50   Section        0  tlib_usr.o(.text.tos_event_post)
+    [Anonymous Symbol]                       0x08033c74   Section        0  tlib_usr.o(.text.tos_event_post_keep)
+    [Anonymous Symbol]                       0x08033c98   Section        0  tlib_usr.o(.text.tos_io_control)
+    [Anonymous Symbol]                       0x08033ce8   Section        0  tlib_usr.o(.text.tos_io_write)
+    [Anonymous Symbol]                       0x08033d60   Section        0  tlib_usr.o(.text.tos_knl_is_running)
+    [Anonymous Symbol]                       0x08033d8c   Section        0  tlib_usr.o(.text.tos_knl_sched_lock)
+    [Anonymous Symbol]                       0x08033d98   Section        0  tlib_usr.o(.text.tos_knl_sched_unlock)
+    [Anonymous Symbol]                       0x08033da4   Section        0  tos_kv.o(.text.tos_kv_deinit)
+    [Anonymous Symbol]                       0x08033db0   Section        0  tos_kv.o(.text.tos_kv_del)
+    [Anonymous Symbol]                       0x08033e28   Section        0  tos_kv.o(.text.tos_kv_get)
+    [Anonymous Symbol]                       0x08033f0c   Section        0  tos_kv.o(.text.tos_kv_has_key)
+    [Anonymous Symbol]                       0x08033f70   Section        0  tos_kv.o(.text.tos_kv_init)
+    [Anonymous Symbol]                       0x08034010   Section        0  tos_kv.o(.text.tos_kv_set)
+    [Anonymous Symbol]                       0x080340b8   Section        0  tos_kv.o(.text.tos_kv_walkthru)
+    [Anonymous Symbol]                       0x08034250   Section        0  tlib_usr.o(.text.tos_mmblk_alloc)
+    [Anonymous Symbol]                       0x08034274   Section        0  tlib_usr.o(.text.tos_mmblk_free)
+    [Anonymous Symbol]                       0x08034298   Section        0  tlib_usr.o(.text.tos_mmblk_pool_create)
+    [Anonymous Symbol]                       0x080342d4   Section        0  tlib_usr.o(.text.tos_mmheap_aligned_alloc)
+    [Anonymous Symbol]                       0x08034304   Section        0  tlib_usr.o(.text.tos_mmheap_alloc)
+    [Anonymous Symbol]                       0x0803432c   Section        0  tlib_usr.o(.text.tos_mmheap_check)
+    [Anonymous Symbol]                       0x0803434c   Section        0  tlib_usr.o(.text.tos_mmheap_free)
+    [Anonymous Symbol]                       0x0803436c   Section        0  tlib_usr.o(.text.tos_mmheap_pool_add)
+    [Anonymous Symbol]                       0x08034390   Section        0  tlib_usr.o(.text.tos_mmheap_pool_check)
+    [Anonymous Symbol]                       0x080343b4   Section        0  tlib_usr.o(.text.tos_mmheap_pool_rmv)
+    [Anonymous Symbol]                       0x080343d4   Section        0  tlib_usr.o(.text.tos_mmheap_realloc)
+    [Anonymous Symbol]                       0x08034404   Section        0  tlib_usr.o(.text.tos_mutex_create)
+    [Anonymous Symbol]                       0x08034424   Section        0  tlib_usr.o(.text.tos_mutex_destroy)
+    [Anonymous Symbol]                       0x08034444   Section        0  tlib_usr.o(.text.tos_mutex_pend)
+    [Anonymous Symbol]                       0x08034464   Section        0  tlib_usr.o(.text.tos_mutex_pend_timed)
+    [Anonymous Symbol]                       0x08034498   Section        0  tlib_usr.o(.text.tos_mutex_post)
+    [Anonymous Symbol]                       0x080344b8   Section        0  tlib_usr.o(.text.tos_sem_create)
+    [Anonymous Symbol]                       0x080344e4   Section        0  tlib_usr.o(.text.tos_sem_create_max)
+    [Anonymous Symbol]                       0x08034524   Section        0  tlib_usr.o(.text.tos_sem_destroy)
+    [Anonymous Symbol]                       0x08034544   Section        0  tlib_usr.o(.text.tos_sem_pend)
+    [Anonymous Symbol]                       0x08034578   Section        0  tlib_usr.o(.text.tos_sem_post)
+    [Anonymous Symbol]                       0x08034598   Section        0  tlib_usr.o(.text.tos_sem_post_all)
+    [Anonymous Symbol]                       0x080345b8   Section        0  tos_shell.o(.text.tos_shell_cmd_set_regiser)
+    [Anonymous Symbol]                       0x080345cc   Section        0  tos_shell.o(.text.tos_shell_cmd_set_unregiser)
+    [Anonymous Symbol]                       0x080345e0   Section        0  tos_shell.o(.text.tos_shell_deinit)
+    [Anonymous Symbol]                       0x08034628   Section        0  tos_shell.o(.text.tos_shell_init)
+    [Anonymous Symbol]                       0x08034788   Section        0  tos_shell.o(.text.tos_shell_input_byte)
+    [Anonymous Symbol]                       0x080347cc   Section        0  tos_shell.o(.text.tos_shell_printf)
+    [Anonymous Symbol]                       0x08034810   Section        0  tos_shell.o(.text.tos_shell_printfln)
+    [Anonymous Symbol]                       0x08034860   Section        0  tos_shell_commands.o(.text.tos_slist_add_head)
+    tos_slist_add_head                       0x08034861   Thumb Code    32  tos_shell_commands.o(.text.tos_slist_add_head)
+    [Anonymous Symbol]                       0x08034880   Section        0  tos_shell_commands.o(.text.tos_slist_contains)
+    tos_slist_contains                       0x08034881   Thumb Code    64  tos_shell_commands.o(.text.tos_slist_contains)
+    [Anonymous Symbol]                       0x080348c0   Section        0  tos_shell_commands.o(.text.tos_slist_del)
+    tos_slist_del                            0x080348c1   Thumb Code    60  tos_shell_commands.o(.text.tos_slist_del)
+    [Anonymous Symbol]                       0x080348fc   Section        0  tos_shell_commands.o(.text.tos_slist_init)
+    tos_slist_init                           0x080348fd   Thumb Code    18  tos_shell_commands.o(.text.tos_slist_init)
+    [Anonymous Symbol]                       0x08034910   Section        0  tlib_usr.o(.text.tos_task_create)
+    [Anonymous Symbol]                       0x08034980   Section        0  tlib_usr.o(.text.tos_task_create_dyn)
+    [Anonymous Symbol]                       0x080349e4   Section        0  tlib_usr.o(.text.tos_task_create_dyn_k)
+    [Anonymous Symbol]                       0x08034a48   Section        0  tlib_usr.o(.text.tos_task_create_k)
+    [Anonymous Symbol]                       0x08034ab8   Section        0  tlib_usr.o(.text.tos_task_curr_task_get)
+    [Anonymous Symbol]                       0x08034ad4   Section        0  tlib_usr.o(.text.tos_task_delay)
+    [Anonymous Symbol]                       0x08034af0   Section        0  tlib_usr.o(.text.tos_task_delay_abort)
+    [Anonymous Symbol]                       0x08034b10   Section        0  tlib_usr.o(.text.tos_task_destroy)
+    [Anonymous Symbol]                       0x08034b30   Section        0  tlib_usr.o(.text.tos_task_destroy_dyn)
+    [Anonymous Symbol]                       0x08034b50   Section        0  tlib_usr.o(.text.tos_task_destroy_dyn_k)
+    [Anonymous Symbol]                       0x08034b70   Section        0  tlib_usr.o(.text.tos_task_destroy_k)
+    [Anonymous Symbol]                       0x08034b90   Section        0  tlib_usr.o(.text.tos_task_prio_change)
+    [Anonymous Symbol]                       0x08034bbc   Section        0  tlib_usr.o(.text.tos_task_resume)
+    [Anonymous Symbol]                       0x08034bdc   Section        0  tlib_usr.o(.text.tos_task_stack_draught_depth)
+    [Anonymous Symbol]                       0x08034c00   Section        0  tlib_usr.o(.text.tos_task_suspend)
+    [Anonymous Symbol]                       0x08034c20   Section        0  tlib_usr.o(.text.tos_task_walkthru)
+    [Anonymous Symbol]                       0x08034c40   Section        0  tlib_usr.o(.text.tos_task_yield)
+    [Anonymous Symbol]                       0x08034c54   Section        0  app_entry.o(.text.write_flash)
+    RO                                       0x08034c90   Section       14  tlib_s.o(RO)
+    i.__0printf                              0x08034ca0   Section        0  printfa.o(i.__0printf)
+    i.__0vsnprintf                           0x08034cc0   Section        0  printfa.o(i.__0vsnprintf)
+    i._fp_digits                             0x08034cec   Section        0  printfa.o(i._fp_digits)
+    _fp_digits                               0x08034ced   Thumb Code   366  printfa.o(i._fp_digits)
+    i._printf_core                           0x08034e70   Section        0  printfa.o(i._printf_core)
+    _printf_core                             0x08034e71   Thumb Code  1744  printfa.o(i._printf_core)
+    i._printf_post_padding                   0x0803554c   Section        0  printfa.o(i._printf_post_padding)
+    _printf_post_padding                     0x0803554d   Thumb Code    36  printfa.o(i._printf_post_padding)
+    i._printf_pre_padding                    0x08035570   Section        0  printfa.o(i._printf_pre_padding)
+    _printf_pre_padding                      0x08035571   Thumb Code    46  printfa.o(i._printf_pre_padding)
+    i._snputc                                0x0803559e   Section        0  printfa.o(i._snputc)
+    _snputc                                  0x0803559f   Thumb Code    22  printfa.o(i._snputc)
+    [Anonymous Symbol]                       0x080355b4   Section        0  tos_shell_commands.o(.rodata.builtin_shell_cmds)
+    builtin_shell_cmds                       0x080355b4   Data          48  tos_shell_commands.o(.rodata.builtin_shell_cmds)
+    [Anonymous Symbol]                       0x080355e4   Section        0  app_entry.o(.rodata.str1.1)
+    .L.str.16                                0x080355e4   Data          15  app_entry.o(.rodata.str1.1)
+    .L.str.15                                0x080355f3   Data          15  app_entry.o(.rodata.str1.1)
+    .L.str.17                                0x08035602   Data           8  app_entry.o(.rodata.str1.1)
+    .L.str.19                                0x0803560a   Data           6  app_entry.o(.rodata.str1.1)
+    .L.str.18                                0x08035610   Data           8  app_entry.o(.rodata.str1.1)
+    .L.str.22                                0x08035618   Data           9  app_entry.o(.rodata.str1.1)
+    .L.str.36                                0x08035621   Data           8  app_entry.o(.rodata.str1.1)
+    .L.str.28                                0x08035629   Data           8  app_entry.o(.rodata.str1.1)
+    .L.str.26                                0x08035631   Data           9  app_entry.o(.rodata.str1.1)
+    .L.str.30                                0x0803563a   Data           8  app_entry.o(.rodata.str1.1)
+    .L.str.34                                0x08035642   Data           7  app_entry.o(.rodata.str1.1)
+    .L.str.6                                 0x08035649   Data          50  app_entry.o(.rodata.str1.1)
+    .L.str.3                                 0x0803567b   Data          51  app_entry.o(.rodata.str1.1)
+    .L.str.7                                 0x080356ae   Data          43  app_entry.o(.rodata.str1.1)
+    .L.str.11                                0x080356d9   Data          35  app_entry.o(.rodata.str1.1)
+    .L.str.9                                 0x080356fc   Data          32  app_entry.o(.rodata.str1.1)
+    .L.str.13                                0x0803571c   Data          49  app_entry.o(.rodata.str1.1)
+    .L.str.14                                0x0803574d   Data          28  app_entry.o(.rodata.str1.1)
+    .L.str.10                                0x08035769   Data          25  app_entry.o(.rodata.str1.1)
+    .L.str.1                                 0x08035782   Data          22  app_entry.o(.rodata.str1.1)
+    .L.str.2                                 0x08035798   Data          30  app_entry.o(.rodata.str1.1)
+    .L.str.4                                 0x080357b6   Data          46  app_entry.o(.rodata.str1.1)
+    .L.str.5                                 0x080357e4   Data          46  app_entry.o(.rodata.str1.1)
+    .L.str.12                                0x08035812   Data          42  app_entry.o(.rodata.str1.1)
+    .L.str.8                                 0x0803583c   Data          47  app_entry.o(.rodata.str1.1)
+    .L.str.39                                0x0803586b   Data          37  app_entry.o(.rodata.str1.1)
+    .L.str.25                                0x08035890   Data          47  app_entry.o(.rodata.str1.1)
+    .L.str.35                                0x080358bf   Data          27  app_entry.o(.rodata.str1.1)
+    .L.str.31                                0x080358da   Data          42  app_entry.o(.rodata.str1.1)
+    .L.str.33                                0x08035904   Data          29  app_entry.o(.rodata.str1.1)
+    .L.str.23                                0x08035921   Data          58  app_entry.o(.rodata.str1.1)
+    .L.str.21                                0x0803595b   Data          34  app_entry.o(.rodata.str1.1)
+    .L.str.29                                0x0803597d   Data          52  app_entry.o(.rodata.str1.1)
+    .L.str.27                                0x080359b1   Data          53  app_entry.o(.rodata.str1.1)
+    .L.str.37                                0x080359e6   Data          32  app_entry.o(.rodata.str1.1)
+    .L.str.38                                0x08035a06   Data           9  app_entry.o(.rodata.str1.1)
+    .L.str.20                                0x08035a0f   Data           5  app_entry.o(.rodata.str1.1)
+    .L.str                                   0x08035a14   Data           3  app_entry.o(.rodata.str1.1)
+    .L.str.24                                0x08035a17   Data           9  app_entry.o(.rodata.str1.1)
+    .L.str.32                                0x08035a20   Data           7  app_entry.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x08035a27   Section        0  tos_shell.o(.rodata.str1.1)
+    .L.str.2                                 0x08035a27   Data           8  tos_shell.o(.rodata.str1.1)
+    .L.str.3                                 0x08035a2f   Data          30  tos_shell.o(.rodata.str1.1)
+    .L.str                                   0x08035a4d   Data          13  tos_shell.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x08035a5a   Section        0  tos_shell_commands.o(.rodata.str1.1)
+    .L.str                                   0x08035a5a   Data          11  tos_shell_commands.o(.rodata.str1.1)
+    .L.str.7                                 0x08035a65   Data          19  tos_shell_commands.o(.rodata.str1.1)
+    .L.str.11                                0x08035a78   Data          27  tos_shell_commands.o(.rodata.str1.1)
+    .L.str.10                                0x08035a93   Data           5  tos_shell_commands.o(.rodata.str1.1)
+    .L.str.5                                 0x08035a98   Data           5  tos_shell_commands.o(.rodata.str1.1)
+    .L.str.9                                 0x08035a9d   Data           6  tos_shell_commands.o(.rodata.str1.1)
+    .L.str.4                                 0x08035aa3   Data          25  tos_shell_commands.o(.rodata.str1.1)
+    .L.str.6                                 0x08035abc   Data          27  tos_shell_commands.o(.rodata.str1.1)
+    .L.str.2                                 0x08035ad7   Data          20  tos_shell_commands.o(.rodata.str1.1)
+    .L.str.1                                 0x08035aeb   Data           5  tos_shell_commands.o(.rodata.str1.1)
+    .L.str.8                                 0x08035af0   Data          27  tos_shell_commands.o(.rodata.str1.1)
+    .L.str.3                                 0x08035b0b   Data           3  tos_shell_commands.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x08035b0e   Section        0  tos_kv.o(.rodata.str1.1)
+    .L.str.10                                0x08035b0e   Data           4  tos_kv.o(.rodata.str1.1)
+    .L.str.30                                0x08035b12   Data           4  tos_kv.o(.rodata.str1.1)
+    .L.str.13                                0x08035b16   Data          16  tos_kv.o(.rodata.str1.1)
+    .L.str                                   0x08035b26   Data          29  tos_kv.o(.rodata.str1.1)
+    .L.str.20                                0x08035b43   Data          31  tos_kv.o(.rodata.str1.1)
+    .L.str.19                                0x08035b62   Data          31  tos_kv.o(.rodata.str1.1)
+    .L.str.33                                0x08035b81   Data          61  tos_kv.o(.rodata.str1.1)
+    .L.str.5                                 0x08035bbe   Data          18  tos_kv.o(.rodata.str1.1)
+    .L.str.21                                0x08035bd0   Data          15  tos_kv.o(.rodata.str1.1)
+    .L.str.22                                0x08035bdf   Data          15  tos_kv.o(.rodata.str1.1)
+    .L.str.17                                0x08035bee   Data          15  tos_kv.o(.rodata.str1.1)
+    .L.str.14                                0x08035bfd   Data          24  tos_kv.o(.rodata.str1.1)
+    .L.str.3                                 0x08035c15   Data          27  tos_kv.o(.rodata.str1.1)
+    .L.str.9                                 0x08035c30   Data          25  tos_kv.o(.rodata.str1.1)
+    .L.str.16                                0x08035c49   Data          26  tos_kv.o(.rodata.str1.1)
+    .L.str.18                                0x08035c63   Data          24  tos_kv.o(.rodata.str1.1)
+    .L.str.4                                 0x08035c7b   Data          22  tos_kv.o(.rodata.str1.1)
+    .L.str.8                                 0x08035c91   Data          31  tos_kv.o(.rodata.str1.1)
+    .L.str.7                                 0x08035cb0   Data          19  tos_kv.o(.rodata.str1.1)
+    .L.str.25                                0x08035cc3   Data          14  tos_kv.o(.rodata.str1.1)
+    .L.str.31                                0x08035cd1   Data          65  tos_kv.o(.rodata.str1.1)
+    .L.str.1                                 0x08035d05   Data          13  tos_kv.o(.rodata.str1.1)
+    .L.str.32                                0x08035d12   Data          57  tos_kv.o(.rodata.str1.1)
+    .L.str.15                                0x08035d4b   Data          18  tos_kv.o(.rodata.str1.1)
+    .L.str.27                                0x08035d5d   Data          13  tos_kv.o(.rodata.str1.1)
+    .L.str.11                                0x08035d6a   Data          16  tos_kv.o(.rodata.str1.1)
+    .L.str.6                                 0x08035d7a   Data          18  tos_kv.o(.rodata.str1.1)
+    .L.str.26                                0x08035d8c   Data          30  tos_kv.o(.rodata.str1.1)
+    .L.str.12                                0x08035daa   Data          16  tos_kv.o(.rodata.str1.1)
+    .L.str.2                                 0x08035dad   Data          13  tos_kv.o(.rodata.str1.1)
+    .L.str.1                                 0x08035db7   Data           3  tos_kv.o(.rodata.str1.1)
+    .L.str.23                                0x08035dba   Data           7  tos_kv.o(.rodata.str1.1)
+    .L.str.24                                0x08035dc1   Data           7  tos_kv.o(.rodata.str1.1)
+    .L.str.28                                0x08035dc8   Data           2  tos_kv.o(.rodata.str1.1)
+    .L.str.29                                0x08035dca   Data           3  tos_kv.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x08035dd0   Section        0  app_entry.o(.rodata.user_shell_commands)
+    user_shell_commands                      0x08035dd0   Data         132  app_entry.o(.rodata.user_shell_commands)
+    [Anonymous Symbol]                       0x0803f000   Section        0  app_entry.o(.ARM.__at_0x0803f000)
+    .data                                    0x20008000   Section        4  stdout.o(.data)
+    [Anonymous Symbol]                       0x20008004   Section        0  tos_shell_commands.o(.data.buildin_shell_cmd_set)
+    buildin_shell_cmd_set                    0x20008004   Data           8  tos_shell_commands.o(.data.buildin_shell_cmd_set)
+    [Anonymous Symbol]                       0x2000800c   Section        0  tos_shell.o(.data.shell_cmd_do_process.cmd_not_found)
+    shell_cmd_do_process.cmd_not_found       0x2000800c   Data           4  tos_shell.o(.data.shell_cmd_do_process.cmd_not_found)
+    [Anonymous Symbol]                       0x20008030   Section        0  app_entry.o(.data.user_shell_cmd_set)
+    user_shell_cmd_set                       0x20008030   Data           8  app_entry.o(.data.user_shell_cmd_set)
+    [Anonymous Symbol]                       0x20008038   Section        0  tos_shell_commands.o(.bss.cmd_set_list)
+    cmd_set_list                             0x20008038   Data           4  tos_shell_commands.o(.bss.cmd_set_list)
+    [Anonymous Symbol]                       0x2000803c   Section        0  tos_kv.o(.bss.kv_ctl)
+    kv_ctl                                   0x2000803c   Data          72  tos_kv.o(.bss.kv_ctl)
+    [Anonymous Symbol]                       0x2000d494   Section        0  tos_shell.o(.bss.shell_cmd_process.argv)
+    shell_cmd_process.argv                   0x2000d494   Data          64  tos_shell.o(.bss.shell_cmd_process.argv)
+    [Anonymous Symbol]                       0x2000d4d8   Section        0  tos_shell.o(.bss.shell_ctl)
+    shell_ctl                                0x2000d4d8   Data         216  tos_shell.o(.bss.shell_ctl)
+    [Anonymous Symbol]                       0x2000d5b0   Section        0  tos_shell.o(.bss.shell_parser_task_stack)
+    shell_parser_task_stack                  0x2000d5b0   Data        1024  tos_shell.o(.bss.shell_parser_task_stack)
+    [Anonymous Symbol]                       0x2000de48   Section        0  tos_shell.o(.bss.tos_shell_printf.buffer)
+    tos_shell_printf.buffer                  0x2000de48   Data         256  tos_shell.o(.bss.tos_shell_printf.buffer)
+    [Anonymous Symbol]                       0x2000df48   Section        0  tos_shell.o(.bss.tos_shell_printfln.buffer)
+    tos_shell_printfln.buffer                0x2000df48   Data         256  tos_shell.o(.bss.tos_shell_printfln.buffer)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv4$E$P$D$K$B$S$7EM$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$~IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$ROPI$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    Load$$RW_IRAM2$$RW$$Length               0x00000038   Number         0  anon$$obj.o ABSOLUTE
+    Image$$RW_IRAM2$$ZI$$Length              0x00006010   Number         0  anon$$obj.o ABSOLUTE
+    init_load                                0x08030001   Thumb Code   132  tool.o(.ARM.__at_0x08030000)
+    __aeabi_memcpy                           0x08030085   Thumb Code    36  memcpya.o(.text)
+    __aeabi_memcpy4                          0x08030085   Thumb Code     0  memcpya.o(.text)
+    __aeabi_memcpy8                          0x08030085   Thumb Code     0  memcpya.o(.text)
+    __aeabi_memset                           0x080300a9   Thumb Code    14  memseta.o(.text)
+    __aeabi_memset4                          0x080300a9   Thumb Code     0  memseta.o(.text)
+    __aeabi_memset8                          0x080300a9   Thumb Code     0  memseta.o(.text)
+    __aeabi_memclr                           0x080300b7   Thumb Code     4  memseta.o(.text)
+    __aeabi_memclr4                          0x080300b7   Thumb Code     0  memseta.o(.text)
+    __aeabi_memclr8                          0x080300b7   Thumb Code     0  memseta.o(.text)
+    _memset$wrapper                          0x080300bb   Thumb Code    18  memseta.o(.text)
+    strlen                                   0x080300cd   Thumb Code    14  strlen.o(.text)
+    strcmp                                   0x080300db   Thumb Code    28  strcmp.o(.text)
+    memcmp                                   0x080300f7   Thumb Code    26  memcmp.o(.text)
+    __aeabi_uidiv                            0x08030111   Thumb Code     0  uidiv.o(.text)
+    __aeabi_uidivmod                         0x08030111   Thumb Code    44  uidiv.o(.text)
+    __aeabi_uldivmod                         0x0803013d   Thumb Code    98  uldiv.o(.text)
+    __I$use$fp                               0x0803019f   Thumb Code     0  iusefp.o(.text)
+    __aeabi_dadd                             0x0803019f   Thumb Code   322  dadd.o(.text)
+    __aeabi_dsub                             0x080302e1   Thumb Code     6  dadd.o(.text)
+    __aeabi_drsub                            0x080302e7   Thumb Code     6  dadd.o(.text)
+    __aeabi_dmul                             0x080302ed   Thumb Code   228  dmul.o(.text)
+    __aeabi_ddiv                             0x080303d1   Thumb Code   222  ddiv.o(.text)
+    __aeabi_d2ulz                            0x080304af   Thumb Code    48  dfixul.o(.text)
+    __aeabi_cdrcmple                         0x080304e1   Thumb Code    48  cdrcmple.o(.text)
+    __aeabi_llsl                             0x08030511   Thumb Code    30  llshl.o(.text)
+    _ll_shift_l                              0x08030511   Thumb Code     0  llshl.o(.text)
+    __aeabi_llsr                             0x0803052f   Thumb Code    32  llushr.o(.text)
+    _ll_ushift_r                             0x0803052f   Thumb Code     0  llushr.o(.text)
+    __aeabi_lasr                             0x0803054f   Thumb Code    36  llsshr.o(.text)
+    _ll_sshift_r                             0x0803054f   Thumb Code     0  llsshr.o(.text)
+    _double_round                            0x08030573   Thumb Code    30  depilogue.o(.text)
+    _double_epilogue                         0x08030591   Thumb Code   156  depilogue.o(.text)
+    Test_1                                   0x0803062d   Thumb Code    30  app_entry.o(.text.Test_1)
+    Test_2                                   0x0803064d   Thumb Code    30  app_entry.o(.text.Test_2)
+    cmd_chk_adrs                             0x0803066d   Thumb Code   112  app_entry.o(.text.cmd_chk_adrs)
+    cmd_chk_func                             0x080306dd   Thumb Code    90  app_entry.o(.text.cmd_chk_func)
+    cmd_goto                                 0x080307b5   Thumb Code   118  app_entry.o(.text.cmd_goto)
+    cmd_help                                 0x0803082d   Thumb Code   100  tos_shell_commands.o(.text.cmd_help)
+    cmd_kv_del                               0x08030891   Thumb Code   122  app_entry.o(.text.cmd_kv_del)
+    cmd_kv_find                              0x0803090d   Thumb Code   164  app_entry.o(.text.cmd_kv_find)
+    cmd_kv_set                               0x080309b1   Thumb Code   142  app_entry.o(.text.cmd_kv_set)
+    cmd_kv_walk                              0x08030a41   Thumb Code    30  app_entry.o(.text.cmd_kv_walk)
+    cmd_post                                 0x08030a61   Thumb Code    38  app_entry.o(.text.cmd_post)
+    cmd_read_bt                              0x08030aa9   Thumb Code   132  app_entry.o(.text.cmd_read_bt)
+    cmd_write_bt                             0x08030b2d   Thumb Code   158  app_entry.o(.text.cmd_write_bt)
+    erase_flash                              0x08030bcd   Thumb Code    64  app_entry.o(.text.erase_flash)
+    fputc                                    0x08030c0d   Thumb Code    64  tool.o(.text.fputc)
+    out                                      0x08033119   Thumb Code    36  app_entry.o(.text.out)
+    read_flash                               0x08033349   Thumb Code    68  app_entry.o(.text.read_flash)
+    rx_hook                                  0x0803338d   Thumb Code    30  app_entry.o(.text.rx_hook)
+    shell_cmd_find                           0x080333f9   Thumb Code   104  tos_shell_commands.o(.text.shell_cmd_find)
+    shell_cmd_init                           0x08033461   Thumb Code    66  tos_shell_commands.o(.text.shell_cmd_init)
+    shell_cmd_set_regiser                    0x080335a5   Thumb Code    66  tos_shell_commands.o(.text.shell_cmd_set_regiser)
+    shell_cmd_set_unregiser                  0x080335e9   Thumb Code    66  tos_shell_commands.o(.text.shell_cmd_set_unregiser)
+    test                                     0x08033805   Thumb Code   346  app_entry.o(.text.test)
+    thread_1                                 0x08033961   Thumb Code    50  app_entry.o(.text.thread_1)
+    thread_2                                 0x08033995   Thumb Code    42  app_entry.o(.text.thread_2)
+    tos_chr_fifo_create                      0x080339c1   Thumb Code    50  tlib_usr.o(.text.tos_chr_fifo_create)
+    tos_chr_fifo_create_dyn                  0x080339f5   Thumb Code    36  tlib_usr.o(.text.tos_chr_fifo_create_dyn)
+    tos_chr_fifo_destroy                     0x08033a19   Thumb Code    30  tlib_usr.o(.text.tos_chr_fifo_destroy)
+    tos_chr_fifo_destroy_dyn                 0x08033a39   Thumb Code    30  tlib_usr.o(.text.tos_chr_fifo_destroy_dyn)
+    tos_chr_fifo_flush                       0x08033a59   Thumb Code    30  tlib_usr.o(.text.tos_chr_fifo_flush)
+    tos_chr_fifo_is_empty                    0x08033a79   Thumb Code    58  tlib_usr.o(.text.tos_chr_fifo_is_empty)
+    tos_chr_fifo_is_full                     0x08033ab5   Thumb Code    58  tlib_usr.o(.text.tos_chr_fifo_is_full)
+    tos_chr_fifo_pop                         0x08033af1   Thumb Code    36  tlib_usr.o(.text.tos_chr_fifo_pop)
+    tos_chr_fifo_pop_stream                  0x08033b15   Thumb Code    60  tlib_usr.o(.text.tos_chr_fifo_pop_stream)
+    tos_chr_fifo_push                        0x08033b51   Thumb Code    42  tlib_usr.o(.text.tos_chr_fifo_push)
+    tos_chr_fifo_push_stream                 0x08033b7d   Thumb Code    60  tlib_usr.o(.text.tos_chr_fifo_push_stream)
+    tos_event_create                         0x08033bb9   Thumb Code    36  tlib_usr.o(.text.tos_event_create)
+    tos_event_destroy                        0x08033bdd   Thumb Code    30  tlib_usr.o(.text.tos_event_destroy)
+    tos_event_pend                           0x08033bfd   Thumb Code    82  tlib_usr.o(.text.tos_event_pend)
+    tos_event_post                           0x08033c51   Thumb Code    36  tlib_usr.o(.text.tos_event_post)
+    tos_event_post_keep                      0x08033c75   Thumb Code    36  tlib_usr.o(.text.tos_event_post_keep)
+    tos_io_control                           0x08033c99   Thumb Code    78  tlib_usr.o(.text.tos_io_control)
+    tos_io_write                             0x08033ce9   Thumb Code   118  tlib_usr.o(.text.tos_io_write)
+    tos_knl_is_running                       0x08033d61   Thumb Code    44  tlib_usr.o(.text.tos_knl_is_running)
+    tos_knl_sched_lock                       0x08033d8d   Thumb Code    12  tlib_usr.o(.text.tos_knl_sched_lock)
+    tos_knl_sched_unlock                     0x08033d99   Thumb Code    12  tlib_usr.o(.text.tos_knl_sched_unlock)
+    tos_kv_deinit                            0x08033da5   Thumb Code    10  tos_kv.o(.text.tos_kv_deinit)
+    tos_kv_del                               0x08033db1   Thumb Code   118  tos_kv.o(.text.tos_kv_del)
+    tos_kv_get                               0x08033e29   Thumb Code   228  tos_kv.o(.text.tos_kv_get)
+    tos_kv_has_key                           0x08033f0d   Thumb Code    98  tos_kv.o(.text.tos_kv_has_key)
+    tos_kv_init                              0x08033f71   Thumb Code   158  tos_kv.o(.text.tos_kv_init)
+    tos_kv_set                               0x08034011   Thumb Code   166  tos_kv.o(.text.tos_kv_set)
+    tos_kv_walkthru                          0x080340b9   Thumb Code   408  tos_kv.o(.text.tos_kv_walkthru)
+    tos_mmblk_alloc                          0x08034251   Thumb Code    36  tlib_usr.o(.text.tos_mmblk_alloc)
+    tos_mmblk_free                           0x08034275   Thumb Code    36  tlib_usr.o(.text.tos_mmblk_free)
+    tos_mmblk_pool_create                    0x08034299   Thumb Code    60  tlib_usr.o(.text.tos_mmblk_pool_create)
+    tos_mmheap_aligned_alloc                 0x080342d5   Thumb Code    46  tlib_usr.o(.text.tos_mmheap_aligned_alloc)
+    tos_mmheap_alloc                         0x08034305   Thumb Code    38  tlib_usr.o(.text.tos_mmheap_alloc)
+    tos_mmheap_check                         0x0803432d   Thumb Code    30  tlib_usr.o(.text.tos_mmheap_check)
+    tos_mmheap_free                          0x0803434d   Thumb Code    32  tlib_usr.o(.text.tos_mmheap_free)
+    tos_mmheap_pool_add                      0x0803436d   Thumb Code    36  tlib_usr.o(.text.tos_mmheap_pool_add)
+    tos_mmheap_pool_check                    0x08034391   Thumb Code    36  tlib_usr.o(.text.tos_mmheap_pool_check)
+    tos_mmheap_pool_rmv                      0x080343b5   Thumb Code    30  tlib_usr.o(.text.tos_mmheap_pool_rmv)
+    tos_mmheap_realloc                       0x080343d5   Thumb Code    46  tlib_usr.o(.text.tos_mmheap_realloc)
+    tos_mutex_create                         0x08034405   Thumb Code    30  tlib_usr.o(.text.tos_mutex_create)
+    tos_mutex_destroy                        0x08034425   Thumb Code    30  tlib_usr.o(.text.tos_mutex_destroy)
+    tos_mutex_pend                           0x08034445   Thumb Code    30  tlib_usr.o(.text.tos_mutex_pend)
+    tos_mutex_pend_timed                     0x08034465   Thumb Code    52  tlib_usr.o(.text.tos_mutex_pend_timed)
+    tos_mutex_post                           0x08034499   Thumb Code    30  tlib_usr.o(.text.tos_mutex_post)
+    tos_sem_create                           0x080344b9   Thumb Code    42  tlib_usr.o(.text.tos_sem_create)
+    tos_sem_create_max                       0x080344e5   Thumb Code    62  tlib_usr.o(.text.tos_sem_create_max)
+    tos_sem_destroy                          0x08034525   Thumb Code    30  tlib_usr.o(.text.tos_sem_destroy)
+    tos_sem_pend                             0x08034545   Thumb Code    52  tlib_usr.o(.text.tos_sem_pend)
+    tos_sem_post                             0x08034579   Thumb Code    30  tlib_usr.o(.text.tos_sem_post)
+    tos_sem_post_all                         0x08034599   Thumb Code    30  tlib_usr.o(.text.tos_sem_post_all)
+    tos_shell_cmd_set_regiser                0x080345b9   Thumb Code    20  tos_shell.o(.text.tos_shell_cmd_set_regiser)
+    tos_shell_cmd_set_unregiser              0x080345cd   Thumb Code    20  tos_shell.o(.text.tos_shell_cmd_set_unregiser)
+    tos_shell_deinit                         0x080345e1   Thumb Code    70  tos_shell.o(.text.tos_shell_deinit)
+    tos_shell_init                           0x08034629   Thumb Code   352  tos_shell.o(.text.tos_shell_init)
+    tos_shell_input_byte                     0x08034789   Thumb Code    66  tos_shell.o(.text.tos_shell_input_byte)
+    tos_shell_printf                         0x080347cd   Thumb Code    66  tos_shell.o(.text.tos_shell_printf)
+    tos_shell_printfln                       0x08034811   Thumb Code    78  tos_shell.o(.text.tos_shell_printfln)
+    tos_task_create                          0x08034911   Thumb Code   110  tlib_usr.o(.text.tos_task_create)
+    tos_task_create_dyn                      0x08034981   Thumb Code   100  tlib_usr.o(.text.tos_task_create_dyn)
+    tos_task_create_dyn_k                    0x080349e5   Thumb Code   100  tlib_usr.o(.text.tos_task_create_dyn_k)
+    tos_task_create_k                        0x08034a49   Thumb Code   110  tlib_usr.o(.text.tos_task_create_k)
+    tos_task_curr_task_get                   0x08034ab9   Thumb Code    26  tlib_usr.o(.text.tos_task_curr_task_get)
+    tos_task_delay                           0x08034ad5   Thumb Code    28  tlib_usr.o(.text.tos_task_delay)
+    tos_task_delay_abort                     0x08034af1   Thumb Code    30  tlib_usr.o(.text.tos_task_delay_abort)
+    tos_task_destroy                         0x08034b11   Thumb Code    30  tlib_usr.o(.text.tos_task_destroy)
+    tos_task_destroy_dyn                     0x08034b31   Thumb Code    30  tlib_usr.o(.text.tos_task_destroy_dyn)
+    tos_task_destroy_dyn_k                   0x08034b51   Thumb Code    30  tlib_usr.o(.text.tos_task_destroy_dyn_k)
+    tos_task_destroy_k                       0x08034b71   Thumb Code    30  tlib_usr.o(.text.tos_task_destroy_k)
+    tos_task_prio_change                     0x08034b91   Thumb Code    42  tlib_usr.o(.text.tos_task_prio_change)
+    tos_task_resume                          0x08034bbd   Thumb Code    30  tlib_usr.o(.text.tos_task_resume)
+    tos_task_stack_draught_depth             0x08034bdd   Thumb Code    36  tlib_usr.o(.text.tos_task_stack_draught_depth)
+    tos_task_suspend                         0x08034c01   Thumb Code    30  tlib_usr.o(.text.tos_task_suspend)
+    tos_task_walkthru                        0x08034c21   Thumb Code    32  tlib_usr.o(.text.tos_task_walkthru)
+    tos_task_yield                           0x08034c41   Thumb Code    18  tlib_usr.o(.text.tos_task_yield)
+    write_flash                              0x08034c55   Thumb Code    58  app_entry.o(.text.write_flash)
+    syscall                                  0x08034c91   Thumb Code     0  tlib_s.o(RO)
+    tool_goto_adrs_asm                       0x08034c95   Thumb Code     0  tlib_s.o(RO)
+    __0printf                                0x08034ca1   Thumb Code    22  printfa.o(i.__0printf)
+    __1printf                                0x08034ca1   Thumb Code     0  printfa.o(i.__0printf)
+    __2printf                                0x08034ca1   Thumb Code     0  printfa.o(i.__0printf)
+    __c89printf                              0x08034ca1   Thumb Code     0  printfa.o(i.__0printf)
+    printf                                   0x08034ca1   Thumb Code     0  printfa.o(i.__0printf)
+    __0vsnprintf                             0x08034cc1   Thumb Code    40  printfa.o(i.__0vsnprintf)
+    __1vsnprintf                             0x08034cc1   Thumb Code     0  printfa.o(i.__0vsnprintf)
+    __2vsnprintf                             0x08034cc1   Thumb Code     0  printfa.o(i.__0vsnprintf)
+    __c89vsnprintf                           0x08034cc1   Thumb Code     0  printfa.o(i.__0vsnprintf)
+    vsnprintf                                0x08034cc1   Thumb Code     0  printfa.o(i.__0vsnprintf)
+    app_entry                                0x0803f001   Thumb Code   128  app_entry.o(.ARM.__at_0x0803f000)
+    Load$$RW_IRAM2$$RW$$Base                 0x0803f080   Number         0  anon$$obj.o ABSOLUTE
+    Image$$RW_IRAM2$$RW$$Base                0x20008000   Number         0  anon$$obj.o ABSOLUTE
+    __stdout                                 0x20008000   Data           4  stdout.o(.data)
+    str_1                                    0x20008010   Data          15  app_entry.o(.data.str_1)
+    str_2                                    0x2000801f   Data          14  app_entry.o(.data.str_2)
+    Image$$RW_IRAM2$$ZI$$Base                0x20008038   Number         0  anon$$obj.o ABSOLUTE
+    mem                                      0x20008084   Data       20480  app_entry.o(.bss.mem)
+    sem                                      0x2000d084   Data          16  app_entry.o(.bss.sem)
+    shell                                    0x2000d094   Data        1024  app_entry.o(.bss.shell)
+    stack_1                                  0x2000d9b0   Data        1024  app_entry.o(.bss.stack_1)
+    t1_tcb                                   0x2000ddb0   Data         152  app_entry.o(.bss.t1_tcb)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image entry point : Not specified.
+
+  Load Region LR_IROM1 (Base: 0x08030000, Size: 0x0000f0b8, Max: 0x00010000, ABSOLUTE)
+
+    Execution Region ER_IROM1 (Exec base: 0x08030000, Load base: 0x08030000, Size: 0x0000f080, Max: 0x00010000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x08030000   0x08030000   0x00000084   Code   RO          473    .ARM.__at_0x08030000  tool.o
+    0x08030084   0x08030084   0x00000000   Code   RO            1    .text               app_entry.o
+    0x08030084   0x08030084   0x00000000   Code   RO           68    .text               tos_shell.o
+    0x08030084   0x08030084   0x00000000   Code   RO          116    .text               tos_shell_commands.o
+    0x08030084   0x08030084   0x00000000   Code   RO          153    .text               tos_kv.o
+    0x08030084   0x08030084   0x00000000   Code   RO          339    .text               tlib_usr.o
+    0x08030084   0x08030084   0x00000000   Code   RO          470    .text               tool.o
+    0x08030084   0x08030084   0x00000024   Code   RO          488    .text               mc_w.l(memcpya.o)
+    0x080300a8   0x080300a8   0x00000024   Code   RO          490    .text               mc_w.l(memseta.o)
+    0x080300cc   0x080300cc   0x0000000e   Code   RO          492    .text               mc_w.l(strlen.o)
+    0x080300da   0x080300da   0x0000001c   Code   RO          494    .text               mc_w.l(strcmp.o)
+    0x080300f6   0x080300f6   0x0000001a   Code   RO          496    .text               mc_w.l(memcmp.o)
+    0x08030110   0x08030110   0x0000002c   Code   RO          528    .text               mc_w.l(uidiv.o)
+    0x0803013c   0x0803013c   0x00000062   Code   RO          530    .text               mc_w.l(uldiv.o)
+    0x0803019e   0x0803019e   0x00000000   Code   RO          532    .text               mc_w.l(iusefp.o)
+    0x0803019e   0x0803019e   0x0000014e   Code   RO          533    .text               mf_w.l(dadd.o)
+    0x080302ec   0x080302ec   0x000000e4   Code   RO          535    .text               mf_w.l(dmul.o)
+    0x080303d0   0x080303d0   0x000000de   Code   RO          537    .text               mf_w.l(ddiv.o)
+    0x080304ae   0x080304ae   0x00000030   Code   RO          539    .text               mf_w.l(dfixul.o)
+    0x080304de   0x080304de   0x00000002   PAD
+    0x080304e0   0x080304e0   0x00000030   Code   RO          541    .text               mf_w.l(cdrcmple.o)
+    0x08030510   0x08030510   0x0000001e   Code   RO          543    .text               mc_w.l(llshl.o)
+    0x0803052e   0x0803052e   0x00000020   Code   RO          545    .text               mc_w.l(llushr.o)
+    0x0803054e   0x0803054e   0x00000024   Code   RO          547    .text               mc_w.l(llsshr.o)
+    0x08030572   0x08030572   0x000000ba   Code   RO          549    .text               mf_w.l(depilogue.o)
+    0x0803062c   0x0803062c   0x0000001e   Code   RO            2    .text.Test_1        app_entry.o
+    0x0803064a   0x0803064a   0x00000002   PAD
+    0x0803064c   0x0803064c   0x0000001e   Code   RO            4    .text.Test_2        app_entry.o
+    0x0803066a   0x0803066a   0x00000002   PAD
+    0x0803066c   0x0803066c   0x00000070   Code   RO           16    .text.cmd_chk_adrs  app_entry.o
+    0x080306dc   0x080306dc   0x0000005a   Code   RO           14    .text.cmd_chk_func  app_entry.o
+    0x08030736   0x08030736   0x00000002   PAD
+    0x08030738   0x08030738   0x0000007a   Code   RO          137    .text.cmd_free      tos_shell_commands.o
+    0x080307b2   0x080307b2   0x00000002   PAD
+    0x080307b4   0x080307b4   0x00000076   Code   RO            6    .text.cmd_goto      app_entry.o
+    0x0803082a   0x0803082a   0x00000002   PAD
+    0x0803082c   0x0803082c   0x00000064   Code   RO          117    .text.cmd_help      tos_shell_commands.o
+    0x08030890   0x08030890   0x0000007a   Code   RO           26    .text.cmd_kv_del    app_entry.o
+    0x0803090a   0x0803090a   0x00000002   PAD
+    0x0803090c   0x0803090c   0x000000a4   Code   RO           24    .text.cmd_kv_find   app_entry.o
+    0x080309b0   0x080309b0   0x0000008e   Code   RO           22    .text.cmd_kv_set    app_entry.o
+    0x08030a3e   0x08030a3e   0x00000002   PAD
+    0x08030a40   0x08030a40   0x0000001e   Code   RO           20    .text.cmd_kv_walk   app_entry.o
+    0x08030a5e   0x08030a5e   0x00000002   PAD
+    0x08030a60   0x08030a60   0x00000026   Code   RO           28    .text.cmd_post      app_entry.o
+    0x08030a86   0x08030a86   0x00000002   PAD
+    0x08030a88   0x08030a88   0x0000001e   Code   RO          135    .text.cmd_ps        tos_shell_commands.o
+    0x08030aa6   0x08030aa6   0x00000002   PAD
+    0x08030aa8   0x08030aa8   0x00000084   Code   RO           18    .text.cmd_read_bt   app_entry.o
+    0x08030b2c   0x08030b2c   0x0000009e   Code   RO           10    .text.cmd_write_bt  app_entry.o
+    0x08030bca   0x08030bca   0x00000002   PAD
+    0x08030bcc   0x08030bcc   0x00000040   Code   RO           38    .text.erase_flash   app_entry.o
+    0x08030c0c   0x08030c0c   0x00000040   Code   RO          471    .text.fputc         tool.o
+    0x08030c4c   0x08030c4c   0x00000042   Code   RO          250    .text.kv_blk_flags_add  tos_kv.o
+    0x08030c8e   0x08030c8e   0x00000002   PAD
+    0x08030c90   0x08030c90   0x0000002a   Code   RO          254    .text.kv_blk_flags_get  tos_kv.o
+    0x08030cba   0x08030cba   0x00000002   PAD
+    0x08030cbc   0x08030cbc   0x00000042   Code   RO          256    .text.kv_blk_flags_rmv  tos_kv.o
+    0x08030cfe   0x08030cfe   0x00000002   PAD
+    0x08030d00   0x08030d00   0x0000003a   Code   RO          224    .text.kv_blk_flags_set  tos_kv.o
+    0x08030d3a   0x08030d3a   0x00000002   PAD
+    0x08030d3c   0x08030d3c   0x00000058   Code   RO          214    .text.kv_blk_format  tos_kv.o
+    0x08030d94   0x08030d94   0x0000002c   Code   RO          282    .text.kv_blk_freesz_get  tos_kv.o
+    0x08030dc0   0x08030dc0   0x00000026   Code   RO          284    .text.kv_blk_freesz_reduce  tos_kv.o
+    0x08030de6   0x08030de6   0x00000002   PAD
+    0x08030de8   0x08030de8   0x00000038   Code   RO          236    .text.kv_blk_freesz_set  tos_kv.o
+    0x08030e20   0x08030e20   0x00000022   Code   RO          156    .text.kv_blk_hdr_read  tos_kv.o
+    0x08030e42   0x08030e42   0x00000002   PAD
+    0x08030e44   0x08030e44   0x00000018   Code   RO          292    .text.kv_blk_is_bad  tos_kv.o
+    0x08030e5c   0x08030e5c   0x00000018   Code   RO          314    .text.kv_blk_is_dirty  tos_kv.o
+    0x08030e74   0x08030e74   0x00000018   Code   RO          220    .text.kv_blk_is_fresh  tos_kv.o
+    0x08030e8c   0x08030e8c   0x00000036   Code   RO          278    .text.kv_blk_is_full  tos_kv.o
+    0x08030ec2   0x08030ec2   0x00000002   PAD
+    0x08030ec4   0x08030ec4   0x00000018   Code   RO          264    .text.kv_blk_is_hanging  tos_kv.o
+    0x08030edc   0x08030edc   0x00000018   Code   RO          252    .text.kv_blk_is_inuse  tos_kv.o
+    0x08030ef4   0x08030ef4   0x00000040   Code   RO          274    .text.kv_blk_mark_gc_done  tos_kv.o
+    0x08030f34   0x08030f34   0x00000040   Code   RO          270    .text.kv_blk_mark_gc_dst  tos_kv.o
+    0x08030f74   0x08030f74   0x00000040   Code   RO          268    .text.kv_blk_mark_gc_src  tos_kv.o
+    0x08030fb4   0x08030fb4   0x000000c8   Code   RO          310    .text.kv_blk_next_fresh  tos_kv.o
+    0x0803107c   0x0803107c   0x00000032   Code   RO          276    .text.kv_blk_reset_fresh  tos_kv.o
+    0x080310ae   0x080310ae   0x00000002   PAD
+    0x080310b0   0x080310b0   0x00000032   Code   RO          290    .text.kv_blk_reset_hanging  tos_kv.o
+    0x080310e2   0x080310e2   0x00000002   PAD
+    0x080310e4   0x080310e4   0x00000032   Code   RO          248    .text.kv_blk_reset_inuse  tos_kv.o
+    0x08031116   0x08031116   0x00000002   PAD
+    0x08031118   0x08031118   0x000000e0   Code   RO          308    .text.kv_blk_search_inuse  tos_kv.o
+    0x080311f8   0x080311f8   0x0000011c   Code   RO          300    .text.kv_blk_search_suitable  tos_kv.o
+    0x08031314   0x08031314   0x00000018   Code   RO          212    .text.kv_blk_set_bad  tos_kv.o
+    0x0803132c   0x0803132c   0x00000018   Code   RO          244    .text.kv_blk_set_dirty  tos_kv.o
+    0x08031344   0x08031344   0x00000058   Code   RO          230    .text.kv_blk_set_fresh  tos_kv.o
+    0x0803139c   0x0803139c   0x00000032   Code   RO          218    .text.kv_blk_set_hanging  tos_kv.o
+    0x080313ce   0x080313ce   0x00000002   PAD
+    0x080313d0   0x080313d0   0x00000032   Code   RO          246    .text.kv_blk_set_inuse  tos_kv.o
+    0x08031402   0x08031402   0x00000002   PAD
+    0x08031404   0x08031404   0x000003da   Code   RO          158    .text.kv_block_walkthru  tos_kv.o
+    0x080317de   0x080317de   0x00000002   PAD
+    0x080317e0   0x080317e0   0x0000007e   Code   RO          210    .text.kv_checksum_crc8  tos_kv.o
+    0x0803185e   0x0803185e   0x00000002   PAD
+    0x08031860   0x08031860   0x000000ec   Code   RO          266    .text.kv_do_gc      tos_kv.o
+    0x0803194c   0x0803194c   0x00000026   Code   RO          226    .text.kv_flash_blk_erase  tos_kv.o
+    0x08031972   0x08031972   0x00000002   PAD
+    0x08031974   0x08031974   0x000000ae   Code   RO          164    .text.kv_flash_ctl_init  tos_kv.o
+    0x08031a22   0x08031a22   0x00000002   PAD
+    0x08031a24   0x08031a24   0x0000004c   Code   RO          232    .text.kv_flash_erase  tos_kv.o
+    0x08031a70   0x08031a70   0x00000056   Code   RO          198    .text.kv_flash_read  tos_kv.o
+    0x08031ac6   0x08031ac6   0x00000002   PAD
+    0x08031ac8   0x08031ac8   0x00000056   Code   RO          234    .text.kv_flash_write  tos_kv.o
+    0x08031b1e   0x08031b1e   0x00000002   PAD
+    0x08031b20   0x08031b20   0x0000002c   Code   RO          228    .text.kv_flash_wunit_modify  tos_kv.o
+    0x08031b4c   0x08031b4c   0x000000c6   Code   RO          312    .text.kv_gc         tos_kv.o
+    0x08031c12   0x08031c12   0x00000002   PAD
+    0x08031c14   0x08031c14   0x000000fc   Code   RO          222    .text.kv_handle_incomplete_gc  tos_kv.o
+    0x08031d10   0x08031d10   0x00000096   Code   RO          204    .text.kv_item_body_read  tos_kv.o
+    0x08031da6   0x08031da6   0x00000002   PAD
+    0x08031da8   0x08031da8   0x00000034   Code   RO          206    .text.kv_item_body_verify  tos_kv.o
+    0x08031ddc   0x08031ddc   0x00000016   Code   RO          196    .text.kv_item_delete  tos_kv.o
+    0x08031df2   0x08031df2   0x00000002   PAD
+    0x08031df4   0x08031df4   0x00000050   Code   RO          262    .text.kv_item_delete_aux  tos_kv.o
+    0x08031e44   0x08031e44   0x0000001c   Code   RO          242    .text.kv_item_do_delete  tos_kv.o
+    0x08031e60   0x08031e60   0x0000007a   Code   RO          296    .text.kv_item_do_fetch  tos_kv.o
+    0x08031eda   0x08031eda   0x00000002   PAD
+    0x08031edc   0x08031edc   0x000000aa   Code   RO          320    .text.kv_item_do_fetch_new_copy  tos_kv.o
+    0x08031f86   0x08031f86   0x00000002   PAD
+    0x08031f88   0x08031f88   0x00000048   Code   RO          294    .text.kv_item_do_find  tos_kv.o
+    0x08031fd0   0x08031fd0   0x00000048   Code   RO          318    .text.kv_item_do_find_new_copy  tos_kv.o
+    0x08032018   0x08032018   0x000000bc   Code   RO          272    .text.kv_item_do_gc  tos_kv.o
+    0x080320d4   0x080320d4   0x00000084   Code   RO          240    .text.kv_item_do_recovery  tos_kv.o
+    0x08032158   0x08032158   0x000000fc   Code   RO          306    .text.kv_item_do_save  tos_kv.o
+    0x08032254   0x08032254   0x00000082   Code   RO          180    .text.kv_item_find  tos_kv.o
+    0x080322d6   0x080322d6   0x00000002   PAD
+    0x080322d8   0x080322d8   0x00000082   Code   RO          316    .text.kv_item_find_new_copy  tos_kv.o
+    0x0803235a   0x0803235a   0x00000002   PAD
+    0x0803235c   0x0803235c   0x00000040   Code   RO          304    .text.kv_item_fix   tos_kv.o
+    0x0803239c   0x0803239c   0x00000028   Code   RO          184    .text.kv_item_free  tos_kv.o
+    0x080323c4   0x080323c4   0x00000022   Code   RO          200    .text.kv_item_hdr_read  tos_kv.o
+    0x080323e6   0x080323e6   0x00000002   PAD
+    0x080323e8   0x080323e8   0x000000da   Code   RO          202    .text.kv_item_hdr_verify  tos_kv.o
+    0x080324c2   0x080324c2   0x00000002   PAD
+    0x080324c4   0x080324c4   0x00000064   Code   RO          286    .text.kv_item_hdr_write  tos_kv.o
+    0x08032528   0x08032528   0x000000a6   Code   RO          302    .text.kv_item_is_moved  tos_kv.o
+    0x080325ce   0x080325ce   0x00000002   PAD
+    0x080325d0   0x080325d0   0x00000032   Code   RO          258    .text.kv_item_is_updated_one  tos_kv.o
+    0x08032602   0x08032602   0x00000002   PAD
+    0x08032604   0x08032604   0x0000015c   Code   RO          186    .text.kv_item_save  tos_kv.o
+    0x08032760   0x08032760   0x00000112   Code   RO          260    .text.kv_item_try_delete  tos_kv.o
+    0x08032872   0x08032872   0x00000002   PAD
+    0x08032874   0x08032874   0x00000070   Code   RO          182    .text.kv_item_update  tos_kv.o
+    0x080328e4   0x080328e4   0x00000068   Code   RO          298    .text.kv_item_value_is_match  tos_kv.o
+    0x0803294c   0x0803294c   0x000002c6   Code   RO          238    .text.kv_item_walkthru  tos_kv.o
+    0x08032c12   0x08032c12   0x00000002   PAD
+    0x08032c14   0x08032c14   0x00000060   Code   RO          280    .text.kv_item_write  tos_kv.o
+    0x08032c74   0x08032c74   0x00000024   Code   RO          178    .text.kv_lock       tos_kv.o
+    0x08032c98   0x08032c98   0x0000006e   Code   RO          288    .text.kv_mgr_blk_index_rebuild  tos_kv.o
+    0x08032d06   0x08032d06   0x00000002   PAD
+    0x08032d08   0x08032d08   0x00000150   Code   RO          168    .text.kv_mgr_ctl_build  tos_kv.o
+    0x08032e58   0x08032e58   0x00000038   Code   RO          174    .text.kv_mgr_ctl_deinit  tos_kv.o
+    0x08032e90   0x08032e90   0x00000074   Code   RO          166    .text.kv_mgr_ctl_init  tos_kv.o
+    0x08032f04   0x08032f04   0x00000022   Code   RO          216    .text.kv_mgr_index_build  tos_kv.o
+    0x08032f26   0x08032f26   0x00000002   PAD
+    0x08032f28   0x08032f28   0x000000e2   Code   RO          170    .text.kv_mgr_workspace_locate  tos_kv.o
+    0x0803300a   0x0803300a   0x00000002   PAD
+    0x0803300c   0x0803300c   0x00000080   Code   RO          162    .text.kv_param_verify  tos_kv.o
+    0x0803308c   0x0803308c   0x00000066   Code   RO          208    .text.kv_u8_disp    tos_kv.o
+    0x080330f2   0x080330f2   0x00000002   PAD
+    0x080330f4   0x080330f4   0x00000024   Code   RO          188    .text.kv_unlock     tos_kv.o
+    0x08033118   0x08033118   0x00000024   Code   RO           30    .text.out           app_entry.o
+    0x0803313c   0x0803313c   0x000000fa   Code   RO            8    .text.parse_argv_address  app_entry.o
+    0x08033236   0x08033236   0x00000002   PAD
+    0x08033238   0x08033238   0x0000010e   Code   RO           12    .text.parse_argv_byte  app_entry.o
+    0x08033346   0x08033346   0x00000002   PAD
+    0x08033348   0x08033348   0x00000044   Code   RO           36    .text.read_flash    app_entry.o
+    0x0803338c   0x0803338c   0x0000001e   Code   RO           32    .text.rx_hook       app_entry.o
+    0x080333aa   0x080333aa   0x00000002   PAD
+    0x080333ac   0x080333ac   0x0000004c   Code   RO           97    .text.shell_cmd_do_process  tos_shell.o
+    0x080333f8   0x080333f8   0x00000068   Code   RO          129    .text.shell_cmd_find  tos_shell_commands.o
+    0x08033460   0x08033460   0x00000042   Code   RO          131    .text.shell_cmd_init  tos_shell_commands.o
+    0x080334a2   0x080334a2   0x00000002   PAD
+    0x080334a4   0x080334a4   0x00000100   Code   RO           91    .text.shell_cmd_process  tos_shell.o
+    0x080335a4   0x080335a4   0x00000042   Code   RO          119    .text.shell_cmd_set_regiser  tos_shell_commands.o
+    0x080335e6   0x080335e6   0x00000002   PAD
+    0x080335e8   0x080335e8   0x00000042   Code   RO          125    .text.shell_cmd_set_unregiser  tos_shell_commands.o
+    0x0803362a   0x0803362a   0x00000002   PAD
+    0x0803362c   0x0803362c   0x00000064   Code   RO           93    .text.shell_getchar  tos_shell.o
+    0x08033690   0x08033690   0x0000002a   Code   RO           71    .text.shell_parser  tos_shell.o
+    0x080336ba   0x080336ba   0x00000002   PAD
+    0x080336bc   0x080336bc   0x00000010   Code   RO           87    .text.shell_prompt  tos_shell.o
+    0x080336cc   0x080336cc   0x00000028   Code   RO           95    .text.shell_putchar  tos_shell.o
+    0x080336f4   0x080336f4   0x00000038   Code   RO           81    .text.shell_puts    tos_shell.o
+    0x0803372c   0x0803372c   0x000000d6   Code   RO           89    .text.shell_readline  tos_shell.o
+    0x08033802   0x08033802   0x00000002   PAD
+    0x08033804   0x08033804   0x0000015a   Code   RO           44    .text.test          app_entry.o
+    0x0803395e   0x0803395e   0x00000002   PAD
+    0x08033960   0x08033960   0x00000032   Code   RO           40    .text.thread_1      app_entry.o
+    0x08033992   0x08033992   0x00000002   PAD
+    0x08033994   0x08033994   0x0000002a   Code   RO           42    .text.thread_2      app_entry.o
+    0x080339be   0x080339be   0x00000002   PAD
+    0x080339c0   0x080339c0   0x00000032   Code   RO          438    .text.tos_chr_fifo_create  tlib_usr.o
+    0x080339f2   0x080339f2   0x00000002   PAD
+    0x080339f4   0x080339f4   0x00000024   Code   RO          440    .text.tos_chr_fifo_create_dyn  tlib_usr.o
+    0x08033a18   0x08033a18   0x0000001e   Code   RO          442    .text.tos_chr_fifo_destroy  tlib_usr.o
+    0x08033a36   0x08033a36   0x00000002   PAD
+    0x08033a38   0x08033a38   0x0000001e   Code   RO          444    .text.tos_chr_fifo_destroy_dyn  tlib_usr.o
+    0x08033a56   0x08033a56   0x00000002   PAD
+    0x08033a58   0x08033a58   0x0000001e   Code   RO          454    .text.tos_chr_fifo_flush  tlib_usr.o
+    0x08033a76   0x08033a76   0x00000002   PAD
+    0x08033a78   0x08033a78   0x0000003a   Code   RO          456    .text.tos_chr_fifo_is_empty  tlib_usr.o
+    0x08033ab2   0x08033ab2   0x00000002   PAD
+    0x08033ab4   0x08033ab4   0x0000003a   Code   RO          458    .text.tos_chr_fifo_is_full  tlib_usr.o
+    0x08033aee   0x08033aee   0x00000002   PAD
+    0x08033af0   0x08033af0   0x00000024   Code   RO          450    .text.tos_chr_fifo_pop  tlib_usr.o
+    0x08033b14   0x08033b14   0x0000003c   Code   RO          452    .text.tos_chr_fifo_pop_stream  tlib_usr.o
+    0x08033b50   0x08033b50   0x0000002a   Code   RO          446    .text.tos_chr_fifo_push  tlib_usr.o
+    0x08033b7a   0x08033b7a   0x00000002   PAD
+    0x08033b7c   0x08033b7c   0x0000003c   Code   RO          448    .text.tos_chr_fifo_push_stream  tlib_usr.o
+    0x08033bb8   0x08033bb8   0x00000024   Code   RO          424    .text.tos_event_create  tlib_usr.o
+    0x08033bdc   0x08033bdc   0x0000001e   Code   RO          426    .text.tos_event_destroy  tlib_usr.o
+    0x08033bfa   0x08033bfa   0x00000002   PAD
+    0x08033bfc   0x08033bfc   0x00000052   Code   RO          428    .text.tos_event_pend  tlib_usr.o
+    0x08033c4e   0x08033c4e   0x00000002   PAD
+    0x08033c50   0x08033c50   0x00000024   Code   RO          430    .text.tos_event_post  tlib_usr.o
+    0x08033c74   0x08033c74   0x00000024   Code   RO          432    .text.tos_event_post_keep  tlib_usr.o
+    0x08033c98   0x08033c98   0x0000004e   Code   RO          434    .text.tos_io_control  tlib_usr.o
+    0x08033ce6   0x08033ce6   0x00000002   PAD
+    0x08033ce8   0x08033ce8   0x00000076   Code   RO          436    .text.tos_io_write  tlib_usr.o
+    0x08033d5e   0x08033d5e   0x00000002   PAD
+    0x08033d60   0x08033d60   0x0000002c   Code   RO          348    .text.tos_knl_is_running  tlib_usr.o
+    0x08033d8c   0x08033d8c   0x0000000c   Code   RO          350    .text.tos_knl_sched_lock  tlib_usr.o
+    0x08033d98   0x08033d98   0x0000000c   Code   RO          352    .text.tos_knl_sched_unlock  tlib_usr.o
+    0x08033da4   0x08033da4   0x0000000a   Code   RO          172    .text.tos_kv_deinit  tos_kv.o
+    0x08033dae   0x08033dae   0x00000002   PAD
+    0x08033db0   0x08033db0   0x00000076   Code   RO          194    .text.tos_kv_del    tos_kv.o
+    0x08033e26   0x08033e26   0x00000002   PAD
+    0x08033e28   0x08033e28   0x000000e4   Code   RO          190    .text.tos_kv_get    tos_kv.o
+    0x08033f0c   0x08033f0c   0x00000062   Code   RO          192    .text.tos_kv_has_key  tos_kv.o
+    0x08033f6e   0x08033f6e   0x00000002   PAD
+    0x08033f70   0x08033f70   0x0000009e   Code   RO          160    .text.tos_kv_init   tos_kv.o
+    0x0803400e   0x0803400e   0x00000002   PAD
+    0x08034010   0x08034010   0x000000a6   Code   RO          176    .text.tos_kv_set    tos_kv.o
+    0x080340b6   0x080340b6   0x00000002   PAD
+    0x080340b8   0x080340b8   0x00000198   Code   RO          154    .text.tos_kv_walkthru  tos_kv.o
+    0x08034250   0x08034250   0x00000024   Code   RO          398    .text.tos_mmblk_alloc  tlib_usr.o
+    0x08034274   0x08034274   0x00000024   Code   RO          400    .text.tos_mmblk_free  tlib_usr.o
+    0x08034298   0x08034298   0x0000003c   Code   RO          396    .text.tos_mmblk_pool_create  tlib_usr.o
+    0x080342d4   0x080342d4   0x0000002e   Code   RO          386    .text.tos_mmheap_aligned_alloc  tlib_usr.o
+    0x08034302   0x08034302   0x00000002   PAD
+    0x08034304   0x08034304   0x00000026   Code   RO          384    .text.tos_mmheap_alloc  tlib_usr.o
+    0x0803432a   0x0803432a   0x00000002   PAD
+    0x0803432c   0x0803432c   0x0000001e   Code   RO          394    .text.tos_mmheap_check  tlib_usr.o
+    0x0803434a   0x0803434a   0x00000002   PAD
+    0x0803434c   0x0803434c   0x00000020   Code   RO          390    .text.tos_mmheap_free  tlib_usr.o
+    0x0803436c   0x0803436c   0x00000024   Code   RO          380    .text.tos_mmheap_pool_add  tlib_usr.o
+    0x08034390   0x08034390   0x00000024   Code   RO          392    .text.tos_mmheap_pool_check  tlib_usr.o
+    0x080343b4   0x080343b4   0x0000001e   Code   RO          382    .text.tos_mmheap_pool_rmv  tlib_usr.o
+    0x080343d2   0x080343d2   0x00000002   PAD
+    0x080343d4   0x080343d4   0x0000002e   Code   RO          388    .text.tos_mmheap_realloc  tlib_usr.o
+    0x08034402   0x08034402   0x00000002   PAD
+    0x08034404   0x08034404   0x0000001e   Code   RO          402    .text.tos_mutex_create  tlib_usr.o
+    0x08034422   0x08034422   0x00000002   PAD
+    0x08034424   0x08034424   0x0000001e   Code   RO          404    .text.tos_mutex_destroy  tlib_usr.o
+    0x08034442   0x08034442   0x00000002   PAD
+    0x08034444   0x08034444   0x0000001e   Code   RO          406    .text.tos_mutex_pend  tlib_usr.o
+    0x08034462   0x08034462   0x00000002   PAD
+    0x08034464   0x08034464   0x00000034   Code   RO          408    .text.tos_mutex_pend_timed  tlib_usr.o
+    0x08034498   0x08034498   0x0000001e   Code   RO          410    .text.tos_mutex_post  tlib_usr.o
+    0x080344b6   0x080344b6   0x00000002   PAD
+    0x080344b8   0x080344b8   0x0000002a   Code   RO          412    .text.tos_sem_create  tlib_usr.o
+    0x080344e2   0x080344e2   0x00000002   PAD
+    0x080344e4   0x080344e4   0x0000003e   Code   RO          414    .text.tos_sem_create_max  tlib_usr.o
+    0x08034522   0x08034522   0x00000002   PAD
+    0x08034524   0x08034524   0x0000001e   Code   RO          416    .text.tos_sem_destroy  tlib_usr.o
+    0x08034542   0x08034542   0x00000002   PAD
+    0x08034544   0x08034544   0x00000034   Code   RO          418    .text.tos_sem_pend  tlib_usr.o
+    0x08034578   0x08034578   0x0000001e   Code   RO          420    .text.tos_sem_post  tlib_usr.o
+    0x08034596   0x08034596   0x00000002   PAD
+    0x08034598   0x08034598   0x0000001e   Code   RO          422    .text.tos_sem_post_all  tlib_usr.o
+    0x080345b6   0x080345b6   0x00000002   PAD
+    0x080345b8   0x080345b8   0x00000014   Code   RO           75    .text.tos_shell_cmd_set_regiser  tos_shell.o
+    0x080345cc   0x080345cc   0x00000014   Code   RO           77    .text.tos_shell_cmd_set_unregiser  tos_shell.o
+    0x080345e0   0x080345e0   0x00000046   Code   RO           73    .text.tos_shell_deinit  tos_shell.o
+    0x08034626   0x08034626   0x00000002   PAD
+    0x08034628   0x08034628   0x00000160   Code   RO           69    .text.tos_shell_init  tos_shell.o
+    0x08034788   0x08034788   0x00000042   Code   RO           85    .text.tos_shell_input_byte  tos_shell.o
+    0x080347ca   0x080347ca   0x00000002   PAD
+    0x080347cc   0x080347cc   0x00000042   Code   RO           79    .text.tos_shell_printf  tos_shell.o
+    0x0803480e   0x0803480e   0x00000002   PAD
+    0x08034810   0x08034810   0x0000004e   Code   RO           83    .text.tos_shell_printfln  tos_shell.o
+    0x0803485e   0x0803485e   0x00000002   PAD
+    0x08034860   0x08034860   0x00000020   Code   RO          123    .text.tos_slist_add_head  tos_shell_commands.o
+    0x08034880   0x08034880   0x00000040   Code   RO          121    .text.tos_slist_contains  tos_shell_commands.o
+    0x080348c0   0x080348c0   0x0000003c   Code   RO          127    .text.tos_slist_del  tos_shell_commands.o
+    0x080348fc   0x080348fc   0x00000012   Code   RO          133    .text.tos_slist_init  tos_shell_commands.o
+    0x0803490e   0x0803490e   0x00000002   PAD
+    0x08034910   0x08034910   0x0000006e   Code   RO          354    .text.tos_task_create  tlib_usr.o
+    0x0803497e   0x0803497e   0x00000002   PAD
+    0x08034980   0x08034980   0x00000064   Code   RO          358    .text.tos_task_create_dyn  tlib_usr.o
+    0x080349e4   0x080349e4   0x00000064   Code   RO          342    .text.tos_task_create_dyn_k  tlib_usr.o
+    0x08034a48   0x08034a48   0x0000006e   Code   RO          340    .text.tos_task_create_k  tlib_usr.o
+    0x08034ab6   0x08034ab6   0x00000002   PAD
+    0x08034ab8   0x08034ab8   0x0000001a   Code   RO          374    .text.tos_task_curr_task_get  tlib_usr.o
+    0x08034ad2   0x08034ad2   0x00000002   PAD
+    0x08034ad4   0x08034ad4   0x0000001c   Code   RO          362    .text.tos_task_delay  tlib_usr.o
+    0x08034af0   0x08034af0   0x0000001e   Code   RO          364    .text.tos_task_delay_abort  tlib_usr.o
+    0x08034b0e   0x08034b0e   0x00000002   PAD
+    0x08034b10   0x08034b10   0x0000001e   Code   RO          356    .text.tos_task_destroy  tlib_usr.o
+    0x08034b2e   0x08034b2e   0x00000002   PAD
+    0x08034b30   0x08034b30   0x0000001e   Code   RO          360    .text.tos_task_destroy_dyn  tlib_usr.o
+    0x08034b4e   0x08034b4e   0x00000002   PAD
+    0x08034b50   0x08034b50   0x0000001e   Code   RO          346    .text.tos_task_destroy_dyn_k  tlib_usr.o
+    0x08034b6e   0x08034b6e   0x00000002   PAD
+    0x08034b70   0x08034b70   0x0000001e   Code   RO          344    .text.tos_task_destroy_k  tlib_usr.o
+    0x08034b8e   0x08034b8e   0x00000002   PAD
+    0x08034b90   0x08034b90   0x0000002a   Code   RO          370    .text.tos_task_prio_change  tlib_usr.o
+    0x08034bba   0x08034bba   0x00000002   PAD
+    0x08034bbc   0x08034bbc   0x0000001e   Code   RO          368    .text.tos_task_resume  tlib_usr.o
+    0x08034bda   0x08034bda   0x00000002   PAD
+    0x08034bdc   0x08034bdc   0x00000024   Code   RO          376    .text.tos_task_stack_draught_depth  tlib_usr.o
+    0x08034c00   0x08034c00   0x0000001e   Code   RO          366    .text.tos_task_suspend  tlib_usr.o
+    0x08034c1e   0x08034c1e   0x00000002   PAD
+    0x08034c20   0x08034c20   0x00000020   Code   RO          378    .text.tos_task_walkthru  tlib_usr.o
+    0x08034c40   0x08034c40   0x00000012   Code   RO          372    .text.tos_task_yield  tlib_usr.o
+    0x08034c52   0x08034c52   0x00000002   PAD
+    0x08034c54   0x08034c54   0x0000003a   Code   RO           34    .text.write_flash   app_entry.o
+    0x08034c8e   0x08034c8e   0x00000002   PAD
+    0x08034c90   0x08034c90   0x0000000e   Code   RO          334    RO                  tlib_s.o
+    0x08034c9e   0x08034c9e   0x00000002   PAD
+    0x08034ca0   0x08034ca0   0x00000020   Code   RO          501    i.__0printf         mc_w.l(printfa.o)
+    0x08034cc0   0x08034cc0   0x0000002c   Code   RO          506    i.__0vsnprintf      mc_w.l(printfa.o)
+    0x08034cec   0x08034cec   0x00000184   Code   RO          508    i._fp_digits        mc_w.l(printfa.o)
+    0x08034e70   0x08034e70   0x000006dc   Code   RO          509    i._printf_core      mc_w.l(printfa.o)
+    0x0803554c   0x0803554c   0x00000024   Code   RO          510    i._printf_post_padding  mc_w.l(printfa.o)
+    0x08035570   0x08035570   0x0000002e   Code   RO          511    i._printf_pre_padding  mc_w.l(printfa.o)
+    0x0803559e   0x0803559e   0x00000016   Code   RO          512    i._snputc           mc_w.l(printfa.o)
+    0x080355b4   0x080355b4   0x00000030   Data   RO          142    .rodata.builtin_shell_cmds  tos_shell_commands.o
+    0x080355e4   0x080355e4   0x00000443   Data   RO           50    .rodata.str1.1      app_entry.o
+    0x08035a27   0x08035a27   0x00000033   Data   RO          100    .rodata.str1.1      tos_shell.o
+    0x08035a5a   0x08035a5a   0x000000b4   Data   RO          140    .rodata.str1.1      tos_shell_commands.o
+    0x08035b0e   0x08035b0e   0x000002bf   Data   RO          322    .rodata.str1.1      tos_kv.o
+    0x08035dcd   0x08035dcd   0x00000003   PAD
+    0x08035dd0   0x08035dd0   0x00000084   Data   RO           57    .rodata.user_shell_commands  app_entry.o
+    0x08035e54   0x08035e54   0x000091ac   PAD
+    0x0803f000   0x0803f000   0x00000080   Code   RO           46    .ARM.__at_0x0803f000  app_entry.o
+
+
+    Execution Region RW_IRAM2 (Exec base: 0x20008000, Load base: 0x0803f080, Size: 0x00006048, Max: 0x00008000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20008000   0x0803f080   0x00000004   Data   RW          487    .data               mc_w.l(stdout.o)
+    0x20008004   0x0803f084   0x00000008   Data   RW          141    .data.buildin_shell_cmd_set  tos_shell_commands.o
+    0x2000800c   0x0803f08c   0x00000004   Data   RW          105    .data.shell_cmd_do_process.cmd_not_found  tos_shell.o
+    0x20008010   0x0803f090   0x0000000f   Data   RW           48    .data.str_1         app_entry.o
+    0x2000801f   0x0803f09f   0x0000000e   Data   RW           49    .data.str_2         app_entry.o
+    0x2000802d   0x0803f0ad   0x00000003   PAD
+    0x20008030   0x0803f0b0   0x00000008   Data   RW           53    .data.user_shell_cmd_set  app_entry.o
+    0x20008038        -       0x00000004   Zero   RW          139    .bss.cmd_set_list   tos_shell_commands.o
+    0x2000803c        -       0x00000048   Zero   RW          323    .bss.kv_ctl         tos_kv.o
+    0x20008084        -       0x00005000   Zero   RW           54    .bss.mem            app_entry.o
+    0x2000d084        -       0x00000010   Zero   RW           51    .bss.sem            app_entry.o
+    0x2000d094        -       0x00000400   Zero   RW           52    .bss.shell          app_entry.o
+    0x2000d494        -       0x00000040   Zero   RW          104    .bss.shell_cmd_process.argv  tos_shell.o
+    0x2000d4d4   0x0803f0b8   0x00000004   PAD
+    0x2000d4d8        -       0x000000d8   Zero   RW           99    .bss.shell_ctl      tos_shell.o
+    0x2000d5b0        -       0x00000400   Zero   RW          101    .bss.shell_parser_task_stack  tos_shell.o
+    0x2000d9b0        -       0x00000400   Zero   RW           56    .bss.stack_1        app_entry.o
+    0x2000ddb0        -       0x00000098   Zero   RW           55    .bss.t1_tcb         app_entry.o
+    0x2000de48        -       0x00000100   Zero   RW          102    .bss.tos_shell_printf.buffer  tos_shell.o
+    0x2000df48        -       0x00000100   Zero   RW          103    .bss.tos_shell_printfln.buffer  tos_shell.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+      2508          0       1223         37      22696      13885   app_entry.o
+        14          0          0          0          0        268   tlib_s.o
+      2630          0          0          0          0      22285   tlib_usr.o
+       196          0          0          0          0       1447   tool.o
+     10536          0        703          0         72      28855   tos_kv.o
+      1472          0         51          4       1816      11294   tos_shell.o
+       728          0        228          8          4       6458   tos_shell_commands.o
+
+    ----------------------------------------------------------------------
+     18296          0      39500         52      24592      84492   Object Totals
+         0          0          0          0          0          0   (incl. Generated)
+       212          0      37295          3          4          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         0          0          0          0          0          0   iusefp.o
+        30          0          0          0          0         68   llshl.o
+        36          0          0          0          0         68   llsshr.o
+        32          0          0          0          0         68   llushr.o
+        26          0          0          0          0         80   memcmp.o
+        36          0          0          0          0         68   memcpya.o
+        36          0          0          0          0        108   memseta.o
+      2324         94          0          0          0        600   printfa.o
+         0          0          0          4          0          0   stdout.o
+        28          0          0          0          0         76   strcmp.o
+        14          0          0          0          0         68   strlen.o
+        44          0          0          0          0         80   uidiv.o
+        98          0          0          0          0         92   uldiv.o
+        48          0          0          0          0         68   cdrcmple.o
+       334          0          0          0          0        148   dadd.o
+       222          0          0          0          0        100   ddiv.o
+       186          0          0          0          0        176   depilogue.o
+        48          0          0          0          0         68   dfixul.o
+       228          0          0          0          0         96   dmul.o
+
+    ----------------------------------------------------------------------
+      3772         94          0          4          0       2032   Library Totals
+         2          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+      2704         94          0          4          0       1376   mc_w.l
+      1066          0          0          0          0        656   mf_w.l
+
+    ----------------------------------------------------------------------
+      3772         94          0          4          0       2032   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+     22068         94      39500         56      24592      85404   Grand Totals
+     22068         94      39500         56      24592      85404   ELF Image Totals
+     22068         94      39500         56          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                61568 (  60.13kB)
+    Total RW  Size (RW Data + ZI Data)             24648 (  24.07kB)
+    Total ROM Size (Code + RO Data + RW Data)      61624 (  60.18kB)
+
+==============================================================================
+

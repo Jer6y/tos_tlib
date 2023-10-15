@@ -1,0 +1,64 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000         
+    2 00000000         
+    3 00000000                 AREA             RO, CODE, READONLY, ALIGN=2
+    4 00000000                 THUMB
+    5 00000000                 REQUIRE8
+    6 00000000                 PRESERVE8
+    7 00000000         
+    8 00000000                 GLOBAL           syscall
+    9 00000000         syscall
+   10 00000000 DF0F            SVC              #0xf
+   11 00000002 4770            BX               LR
+   12 00000004         
+   13 00000004                 GLOBAL           tool_goto_adrs_asm
+   14 00000004         tool_goto_adrs_asm
+   15 00000004 B500            PUSH             {LR}
+   16 00000006 4780            BLX              R0
+   17 00000008 F85D EB04       POP              {LR}
+   18 0000000C 4770            BX               LR
+   19 0000000E                 END
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4 --fpu=SoftVFP
+ --depend=32_tos\tlib_s.d -o32_tos\tlib_s.o -I..\CONFIG -I..\TLIB_INC -I..\TOOL
+S -I..\TLIB -I..\APP -I.\RTE\_User -ID:\Keil5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\In
+clude -ID:\Keil5\ARM\PACK\Keil\STM32WLxx_DFP\1.1.0\Drivers\CMSIS\Device\ST\STM3
+2WLxx\Include --predefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SE
+TA 524" --predefine="_RTE_ SETA 1" --predefine="STM32WLE5xx SETA 1" --list=tlib
+_s.lst ..\tlib\tlib_s.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RO 00000000
+
+Symbol: RO
+   Definitions
+      At line 3 in file ..\tlib\tlib_s.s
+   Uses
+      None
+Comment: RO unused
+syscall 00000000
+
+Symbol: syscall
+   Definitions
+      At line 9 in file ..\tlib\tlib_s.s
+   Uses
+      At line 8 in file ..\tlib\tlib_s.s
+Comment: syscall used once
+tool_goto_adrs_asm 00000004
+
+Symbol: tool_goto_adrs_asm
+   Definitions
+      At line 14 in file ..\tlib\tlib_s.s
+   Uses
+      At line 13 in file ..\tlib\tlib_s.s
+Comment: tool_goto_adrs_asm used once
+3 symbols
+337 symbols in table

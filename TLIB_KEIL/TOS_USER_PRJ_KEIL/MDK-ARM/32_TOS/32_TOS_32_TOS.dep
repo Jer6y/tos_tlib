@@ -1,0 +1,188 @@
+Dependencies for Project '32_TOS', Target '32_TOS': (DO NOT MODIFY !)
+F (..\APP\app_entry.c)(0x64F6EB03)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../tlib -I ../tlib/tlib_user/include -I ../APP-I./RTE/_32_TOS-ID:/Keil5/ARM/PACK/ARM/CMSIS/5.0.1/CMSIS/Include-ID:/Keil5/ARM/PACK/Keil/STM32WLxx_DFP/1.1.0/Drivers/CMSIS/Device/ST/STM32WLxx/Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32WLE5xx -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WLE5xx-o 32_tos/app_entry.o -MD)
+I (..\tlib\tlib.h)(0x64F6EB5B)
+I (..\tlib\tlib_user\include\tos_compiler.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_kerr.h)(0x64F04C5A)
+I (..\tlib\tlib_user\include\tos_cpu_def.h)(0x64DC3B1D)
+I (..\tlib\tos_config.h)(0x64F6CB94)
+I (D:\Keil5\ARM\ARMCLANG\include\stdio.h)(0x588CAFD2)
+I (..\tlib\tlib_user\include\tos_config_default.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\port_config.h)(0x64DC3B1D)
+I (..\tlib\tlib_user\include\tos_config_check.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_ktypes.h)(0x64D9F35E)
+I (D:\Keil5\ARM\ARMCLANG\include\stdint.h)(0x588CAFD2)
+I (D:\Keil5\ARM\ARMCLANG\include\stddef.h)(0x588CAFD2)
+I (..\tlib\tlib_user\include\tos_cpu_types.h)(0x64DC3B1D)
+I (..\tlib\tlib_user\include\tos_klib.h)(0x63DCBBA2)
+I (D:\Keil5\ARM\ARMCLANG\include\stdarg.h)(0x588CAFD0)
+I (D:\Keil5\ARM\ARMCLANG\include\stdlib.h)(0x588CAFDA)
+I (D:\Keil5\ARM\ARMCLANG\include\string.h)(0x588CAFD2)
+I (..\tlib\tlib_user\include\tos_list.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_slist.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_pend.h)(0x64D72503)
+I (..\tlib\tlib_user\include\tos_sys.h)(0x64F6C7E9)
+I (..\tlib\tlib_user\include\tos_bitmap.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_ring_queue.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_char_fifo.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_mail_queue.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_message_queue.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_binary_heap.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_priority_queue.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_priority_mail_queue.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_priority_message_queue.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_task.h)(0x64F6CC9F)
+I (..\tlib\tlib_user\include\tos_robin.h)(0x64D9F3AB)
+I (..\tlib\tlib_user\include\tos_mutex.h)(0x64D72388)
+I (..\tlib\tlib_user\include\tos_sem.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_event.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_barrier.h)(0x64F6B518)
+I (..\tlib\tlib_user\include\tos_completion.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_countdownlatch.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_rwlock.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_timer.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_time.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_stopwatch.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_mmblk.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_mmheap.h)(0x64F698B8)
+I (..\tlib\tlib_user\include\tos_tick.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_sched.h)(0x63DCBBA2)
+I (..\tlib\tlib_port.h)(0x64F6CB74)
+F (..\tlib\tos_config.h)(0x64F6CB94)()
+F (..\tlib\tlib.h)(0x64F6EB5B)()
+F (..\tlib\tlib_port.h)(0x64F6CB74)()
+F (..\tlib\tlib_s.s)(0x64F6EAA8)(--cpu Cortex-M4 --fpu=SoftVFP -g --pd "__MICROLIB SETA 1"-I.\RTE\_32_TOS-ID:\Keil5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Keil5\ARM\PACK\Keil\STM32WLxx_DFP\1.1.0\Drivers\CMSIS\Device\ST\STM32WLxx\Include--pd "__UVISION_VERSION SETA 524"--pd "_RTE_ SETA 1"--pd "STM32WLE5xx SETA 1"--list tlib_s.lst--xref -o 32_tos\tlib_s.o--depend 32_tos\tlib_s.d)
+F (..\tlib\tlib_user\tlib_usr.c)(0x64F708A6)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../tlib -I ../tlib/tlib_user/include -I ../APP-I./RTE/_32_TOS-ID:/Keil5/ARM/PACK/ARM/CMSIS/5.0.1/CMSIS/Include-ID:/Keil5/ARM/PACK/Keil/STM32WLxx_DFP/1.1.0/Drivers/CMSIS/Device/ST/STM32WLxx/Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32WLE5xx -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WLE5xx-o 32_tos/tlib_usr.o -MD)
+I (..\tlib\tlib.h)(0x64F6EB5B)
+I (..\tlib\tlib_user\include\tos_compiler.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_kerr.h)(0x64F04C5A)
+I (..\tlib\tlib_user\include\tos_cpu_def.h)(0x64DC3B1D)
+I (..\tlib\tos_config.h)(0x64F6CB94)
+I (D:\Keil5\ARM\ARMCLANG\include\stdio.h)(0x588CAFD2)
+I (..\tlib\tlib_user\include\tos_config_default.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\port_config.h)(0x64DC3B1D)
+I (..\tlib\tlib_user\include\tos_config_check.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_ktypes.h)(0x64D9F35E)
+I (D:\Keil5\ARM\ARMCLANG\include\stdint.h)(0x588CAFD2)
+I (D:\Keil5\ARM\ARMCLANG\include\stddef.h)(0x588CAFD2)
+I (..\tlib\tlib_user\include\tos_cpu_types.h)(0x64DC3B1D)
+I (..\tlib\tlib_user\include\tos_klib.h)(0x63DCBBA2)
+I (D:\Keil5\ARM\ARMCLANG\include\stdarg.h)(0x588CAFD0)
+I (D:\Keil5\ARM\ARMCLANG\include\stdlib.h)(0x588CAFDA)
+I (D:\Keil5\ARM\ARMCLANG\include\string.h)(0x588CAFD2)
+I (..\tlib\tlib_user\include\tos_list.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_slist.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_pend.h)(0x64D72503)
+I (..\tlib\tlib_user\include\tos_sys.h)(0x64F6C7E9)
+I (..\tlib\tlib_user\include\tos_bitmap.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_ring_queue.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_char_fifo.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_mail_queue.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_message_queue.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_binary_heap.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_priority_queue.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_priority_mail_queue.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_priority_message_queue.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_task.h)(0x64F6CC9F)
+I (..\tlib\tlib_user\include\tos_robin.h)(0x64D9F3AB)
+I (..\tlib\tlib_user\include\tos_mutex.h)(0x64D72388)
+I (..\tlib\tlib_user\include\tos_sem.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_event.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_barrier.h)(0x64F6B518)
+I (..\tlib\tlib_user\include\tos_completion.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_countdownlatch.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_rwlock.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_timer.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_time.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_stopwatch.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_mmblk.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_mmheap.h)(0x64F698B8)
+I (..\tlib\tlib_user\include\tos_tick.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_sched.h)(0x63DCBBA2)
+I (..\tlib\tlib_port.h)(0x64F6CB74)
+F (..\tlib\tlib_user\include\port_config.h)(0x64DC3B1D)()
+F (..\tlib\tlib_user\include\tos_barrier.h)(0x64F6B518)()
+F (..\tlib\tlib_user\include\tos_binary_heap.h)(0x63DCBBA2)()
+F (..\tlib\tlib_user\include\tos_bitmap.h)(0x63DCBBA2)()
+F (..\tlib\tlib_user\include\tos_char_fifo.h)(0x63DCBBA2)()
+F (..\tlib\tlib_user\include\tos_compiler.h)(0x63DCBBA2)()
+F (..\tlib\tlib_user\include\tos_completion.h)(0x63DCBBA2)()
+F (..\tlib\tlib_user\include\tos_config_check.h)(0x63DCBBA2)()
+F (..\tlib\tlib_user\include\tos_config_default.h)(0x63DCBBA2)()
+F (..\tlib\tlib_user\include\tos_countdownlatch.h)(0x63DCBBA2)()
+F (..\tlib\tlib_user\include\tos_cpu_def.h)(0x64DC3B1D)()
+F (..\tlib\tlib_user\include\tos_cpu_types.h)(0x64DC3B1D)()
+F (..\tlib\tlib_user\include\tos_event.h)(0x63DCBBA2)()
+F (..\tlib\tlib_user\include\tos_k.h)(0x64D9FBE2)()
+F (..\tlib\tlib_user\include\tos_kerr.h)(0x64F04C5A)()
+F (..\tlib\tlib_user\include\tos_klib.h)(0x63DCBBA2)()
+F (..\tlib\tlib_user\include\tos_ktypes.h)(0x64D9F35E)()
+F (..\tlib\tlib_user\include\tos_list.h)(0x63DCBBA2)()
+F (..\tlib\tlib_user\include\tos_mail_queue.h)(0x63DCBBA2)()
+F (..\tlib\tlib_user\include\tos_message_queue.h)(0x63DCBBA2)()
+F (..\tlib\tlib_user\include\tos_mmblk.h)(0x63DCBBA2)()
+F (..\tlib\tlib_user\include\tos_mmheap.h)(0x64F698B8)()
+F (..\tlib\tlib_user\include\tos_mutex.h)(0x64D72388)()
+F (..\tlib\tlib_user\include\tos_pend.h)(0x64D72503)()
+F (..\tlib\tlib_user\include\tos_priority_mail_queue.h)(0x63DCBBA2)()
+F (..\tlib\tlib_user\include\tos_priority_message_queue.h)(0x63DCBBA2)()
+F (..\tlib\tlib_user\include\tos_priority_queue.h)(0x63DCBBA2)()
+F (..\tlib\tlib_user\include\tos_ring_queue.h)(0x63DCBBA2)()
+F (..\tlib\tlib_user\include\tos_robin.h)(0x64D9F3AB)()
+F (..\tlib\tlib_user\include\tos_rwlock.h)(0x63DCBBA2)()
+F (..\tlib\tlib_user\include\tos_sched.h)(0x63DCBBA2)()
+F (..\tlib\tlib_user\include\tos_sem.h)(0x63DCBBA2)()
+F (..\tlib\tlib_user\include\tos_slist.h)(0x63DCBBA2)()
+F (..\tlib\tlib_user\include\tos_stopwatch.h)(0x63DCBBA2)()
+F (..\tlib\tlib_user\include\tos_sys.h)(0x64F6C7E9)()
+F (..\tlib\tlib_user\include\tos_task.h)(0x64F6CC9F)()
+F (..\tlib\tlib_user\include\tos_tick.h)(0x63DCBBA2)()
+F (..\tlib\tlib_user\include\tos_time.h)(0x63DCBBA2)()
+F (..\tlib\tlib_user\include\tos_timer.h)(0x63DCBBA2)()
+F (..\Start\tool.c)(0x64F70853)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=none -mfloat-abi=soft -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../tlib -I ../tlib/tlib_user/include -I ../APP-I./RTE/_32_TOS-ID:/Keil5/ARM/PACK/ARM/CMSIS/5.0.1/CMSIS/Include-ID:/Keil5/ARM/PACK/Keil/STM32WLxx_DFP/1.1.0/Drivers/CMSIS/Device/ST/STM32WLxx/Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32WLE5xx -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32WLE5xx-o 32_tos/tool.o -MD)
+I (..\tlib\tlib.h)(0x64F6EB5B)
+I (..\tlib\tlib_user\include\tos_compiler.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_kerr.h)(0x64F04C5A)
+I (..\tlib\tlib_user\include\tos_cpu_def.h)(0x64DC3B1D)
+I (..\tlib\tos_config.h)(0x64F6CB94)
+I (D:\Keil5\ARM\ARMCLANG\include\stdio.h)(0x588CAFD2)
+I (..\tlib\tlib_user\include\tos_config_default.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\port_config.h)(0x64DC3B1D)
+I (..\tlib\tlib_user\include\tos_config_check.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_ktypes.h)(0x64D9F35E)
+I (D:\Keil5\ARM\ARMCLANG\include\stdint.h)(0x588CAFD2)
+I (D:\Keil5\ARM\ARMCLANG\include\stddef.h)(0x588CAFD2)
+I (..\tlib\tlib_user\include\tos_cpu_types.h)(0x64DC3B1D)
+I (..\tlib\tlib_user\include\tos_klib.h)(0x63DCBBA2)
+I (D:\Keil5\ARM\ARMCLANG\include\stdarg.h)(0x588CAFD0)
+I (D:\Keil5\ARM\ARMCLANG\include\stdlib.h)(0x588CAFDA)
+I (D:\Keil5\ARM\ARMCLANG\include\string.h)(0x588CAFD2)
+I (..\tlib\tlib_user\include\tos_list.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_slist.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_pend.h)(0x64D72503)
+I (..\tlib\tlib_user\include\tos_sys.h)(0x64F6C7E9)
+I (..\tlib\tlib_user\include\tos_bitmap.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_ring_queue.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_char_fifo.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_mail_queue.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_message_queue.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_binary_heap.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_priority_queue.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_priority_mail_queue.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_priority_message_queue.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_task.h)(0x64F6CC9F)
+I (..\tlib\tlib_user\include\tos_robin.h)(0x64D9F3AB)
+I (..\tlib\tlib_user\include\tos_mutex.h)(0x64D72388)
+I (..\tlib\tlib_user\include\tos_sem.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_event.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_barrier.h)(0x64F6B518)
+I (..\tlib\tlib_user\include\tos_completion.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_countdownlatch.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_rwlock.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_timer.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_time.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_stopwatch.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_mmblk.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_mmheap.h)(0x64F698B8)
+I (..\tlib\tlib_user\include\tos_tick.h)(0x63DCBBA2)
+I (..\tlib\tlib_user\include\tos_sched.h)(0x63DCBBA2)
+I (..\tlib\tlib_port.h)(0x64F6CB74)

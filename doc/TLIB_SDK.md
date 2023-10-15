@@ -6,10 +6,10 @@
 
 ## 系统管理
 
-### tos_knl_is_running_t
+### tos_knl_is_running
 
 ```c
-int tos_knl_is_running_t(void);
+int tos_knl_is_running(void);
 ```
 
 - **功能描述**
@@ -26,10 +26,10 @@ int tos_knl_is_running_t(void);
 
 ​		非 0 内核正在运行
 
-###  tos_knl_sched_lock_t
+###  tos_knl_sched_lock
 
 ```c
-k_err_t tos_knl_sched_lock_t(void);
+k_err_t tos_knl_sched_lock(void);
 ```
 
 - **功能描述**
@@ -50,10 +50,10 @@ k_err_t tos_knl_sched_lock_t(void);
 
 ​		K_ERR_IN_IRQ 在中断服务程序ISR中上锁
 
-###  tos_knl_sched_unlock_t
+###  tos_knl_sched_unlock
 
 ```c
-k_err_t tos_knl_sched_unlock_t(void);
+k_err_t tos_knl_sched_unlock(void);
 ```
 
 - **功能描述**
@@ -76,20 +76,176 @@ k_err_t tos_knl_sched_unlock_t(void);
 
 ## 任务管理
 
-### tos_task_create_dy_t
+### tos_task_create_k
 
 ```c
-pid_t tos_task_create_dyn_t(char *name,						
-                            k_task_entry_t entry,					
-                            void *arg,										
-                            k_prio_t prio,								
-                            size_t stk_size,							
-                            k_timeslice_t timeslice);
+k_err_t tos_task_create_k(k_task_t *task,
+                        char *name,
+                        k_task_entry_t entry,
+                        void *arg,
+                        k_prio_t prio,
+                        k_stack_t *stk_base,
+                        size_t stk_size,
+                        k_timeslice_t timeslice);
 ```
 
 - **功能描述**
 
-​		创建任务。
+​		创建任务 [内核线程]
+
+- **参数解释**
+
+| **IN/OUT** | **参数名** | **描述**                                                     |
+| ---------- | :--------- | ------------------------------------------------------------ |
+| [in]       | task       | 任务结构体描述符                                             |
+| [in]       | name       | 任务名称                                                     |
+| [in]       | entry      | 任务入口函数                                                 |
+| [in]       | arg        | 任务入口函数参数                                             |
+| [in]       | prio       | 任务优先级                                                   |
+| [in]       | stk_base   | 任务用户栈空间首地址                                         |
+| [in]       | k_stk_base | 任务内核栈空间首地址                                         |
+| [in]       | stk_size   | 任务用户栈空间的大小                                         |
+| [in]       | k_stk_size | 任务内核栈空间的大小                                         |
+| [in]       | timeslice  | 时间片轮转调度侧策略中，时间片的大小设置，0 表示设置为系统默认值 |
+
+- **返回值**
+
+​		K_ERR_NONE 任务创建成功。
+
+​		K_ERR_TASK_STK_SIZE_INVALID 非法的任务栈大小。
+
+​		K_ERR_TASK_PRIO_INVALID 非法的任务优先级。
+
+​		K_ERR_IN_IRQ在中断服务程序lSR中创建任务
+
+​		K_ERR_OBJ_PTR_NULL传入的指针中包含有NULL指针
+
+​		K_ERR_TASK_ALREADY_CREATED 该任务已经被创建
+
+### tos_task_create
+
+```c
+k_err_t tos_task_create(k_task_t *task,
+                        char *name,
+                        k_task_entry_t entry,
+                        void *arg,
+                        k_prio_t prio,
+                        k_stack_t *stk_base,
+                        size_t stk_size,
+                        k_timeslice_t timeslice);
+```
+
+- **功能描述**
+
+​		创建用户任务 [用户线程]
+
+- **参数解释**
+
+| **IN/OUT** | **参数名** | **描述**                                                     |
+| ---------- | :--------- | ------------------------------------------------------------ |
+| [in]       | task       | 任务结构体描述符                                             |
+| [in]       | name       | 任务名称                                                     |
+| [in]       | entry      | 任务入口函数                                                 |
+| [in]       | arg        | 任务入口函数参数                                             |
+| [in]       | prio       | 任务优先级                                                   |
+| [in]       | stk_base   | 任务用户栈空间首地址                                         |
+| [in]       | stk_size   | 任务用户栈空间的大小                                         |
+| [in]       | timeslice  | 时间片轮转调度侧策略中，时间片的大小设置，0 表示设置为系统默认值 |
+
+- **返回值**
+
+​	K_ERR_NONE 任务创建成功。
+
+​	K_ERR_TASK_STK_SIZE_INVALID 非法的任务栈大小。
+
+​	K_ERR_TASK_PRIO_INVALID 非法的任务优先级。
+
+​	K_ERR_IN_IRQ在中断服务程序lSR中创建任务
+
+​	K_ERR_OBJ_PTR_NULL传入的指针中包含有NULL指针
+
+​	K_ERR_TASK_ALREADY_CREATED 该任务已经被创建
+
+### tos_task_destroy_k
+
+```c
+k_err_t tos_task_destroy_k(k_task_t *task)
+```
+
+- **功能描述**
+
+​		删除内核线程
+
+- **参数解释**
+
+| **IN/OUT** | **参数名** | **描述**         |
+| ---------- | ---------- | ---------------- |
+| [in]       | task       | 任务结构体描述符 |
+
+- **返回值**
+
+​		K_ERR_NONE 任务销毁成功。
+
+​		K_ERR_TASK_DESTROY_IDLE 试图销毁 idle 任务（非法）。
+
+​		K_ERR_IN_IRQ 试图在中断服务程序ISR中销毁任务
+
+​		K_ERR_OBJ_INVALID 传入的参数不是一个正确的kernel_object
+
+​		K_ERR_SCHED_LOCKED 已经上锁且删除当前任务(非法 导致死锁)
+
+​		K_ERR_OBJ_INVALID_ALLOC_TYPE [若开启动态创建]不是一个静态的任务!
+
+​		K_ERR_TLIB_THREAD_TYPE   [若TLIB开启] 不是一个内核线程 ！ 是一个用户线程！
+
+### tos_task_destroy
+
+```c
+k_err_t tos_task_destroy(k_task_t *task)
+```
+
+- **功能描述**
+
+​	  删除用户任务 [用户线程]
+
+- **参数解释**
+
+| **IN/OUT** | **参数名** | **描述**         |
+| ---------- | ---------- | ---------------- |
+| [in]       | task       | 任务结构体描述符 |
+
+- **返回值**
+
+​	K_ERR_NONE 任务销毁成功。
+
+​	K_ERR_TASK_DESTROY_IDLE 试图销毁 idle 任务（非法）。
+
+​	K_ERR_IN_IRQ 试图在中断服务程序ISR中销毁任务
+
+​	K_ERR_OBJ_INVALID 传入的参数不是一个正确的kernel_object
+
+​	K_ERR_SCHED_LOCKED 已经上锁且删除当前任务(非法 导致死锁)
+
+​	K_ERR_OBJ_INVALID_ALLOC_TYPE [若开启动态创建]不是一个静态的任务!
+
+​	K_ERR_TLIB_THREAD_TYPE   [若TLIB开启] 不是一个用户线程 ！ 是一个内核线程！
+
+### tos_task_create_dyn
+
+```c
+pid_t tos_task_create_dyn(k_task_t **task,
+                        char *name,
+                        k_task_entry_t entry,
+                        void *arg,
+                        k_prio_t prio,
+                        size_t stk_size,
+                        size_t k_stk_size,
+                        k_timeslice_t timeslice);
+```
+
+- **功能描述**
+
+​		动态创建用户任务 [用户线程]。
 
 - **参数解释**	
 
@@ -99,30 +255,41 @@ pid_t tos_task_create_dyn_t(char *name,
 | [in]       | entry      | 任务入口函数                                                 |
 | [in]       | arg        | 任务入口函数参数                                             |
 | [in]       | prio       | 任务优先级                                                   |
-| [in]       | stk_size   | 任务栈空间的大小                                             |
+| [in]       | stk_size   | 任务用户栈空间的大小                                         |
+| [in]       | k_stk_size | 任务内核栈空间的大小                                         |
 | [in]       | timeslice  | 时间片轮转调度侧策略中，时间片的大小设置，0 表示设置为系统默认值 |
 
 - **返回值**
 
-​	>0   对应任务的PID
+​	K_ERR_NONE 任务创建成功。
 
-​    -1   创建任务失败
+​	K_ERR_TASK_STK_SIZE_INVALID 非法的任务栈大小。
 
-### tos_task_destroy_dyn_t
+​	K_ERR_TASK_PRIO_INVALID 非法的任务优先级。
+
+​	K_ERR_TASK_OUT_OF_MEMORY 系统堆内存不足。
+
+​	K_ERR_IN_IRQ 在中断服务程序ISR中创建任务
+
+​	K_ERR_OBJ_PTR_NULL 传入的指针中包含有NULL指针
+
+​	K_ERR_TASK_ALREADY_CREATED 该任务已经被创建
+
+### tos_task_destroy_dyn
 
 ```c
-k_err_t tos_task_destroy_dyn_t(pid_t pid);
+k_err_t tos_task_destroy_dyn(k_task_t *task)
 ```
 
 - **功能描述**
 
-​	删除任务
+​	动态删除用户任务 [用户线程]
 
 - **参数解释**
 
-| **IN/OUT** | **参数名** | **描述**                       |
-| ---------- | ---------- | ------------------------------ |
-| [in]       | pid        | 任务的pid , 为-1时删除当前任务 |
+| **IN/OUT** | **参数名** | **描述**         |
+| ---------- | ---------- | ---------------- |
+| [in]       | task       | 任务结构体描述符 |
 
 - **返回值**
 
@@ -130,21 +297,23 @@ k_err_t tos_task_destroy_dyn_t(pid_t pid);
 
 ​		K_ERR_TASK_DESTROY_IDLE 试图销毁 idle 任务（非法）。
 
+​		K_ERR_OBJ_INVALID 传入的参数不是一个正确的kernel_object
+
 ​		K_ERR_SCHED_LOCKED 已经上锁且删除当前任务(非法 导致死锁)
 
-​		K_ERR_OBJ_INVALID_ALLOC_TYPE 尝试删除内核创建的线程(非法)
+​		K_ERR_OBJ_INVALID_ALLOC_TYPE 删除的任务不是一个dynamic创建的task!
 
-​		K_ERR_TLIB_INVALID_PID	传入的pid 是一个无效的pid
+​		K_ERR_TLIB_THREAD_TYPE   [若TLIB开启] 不是一个用户线程 ！ 是一个内核线程！
 
-### get_pid
+### tos_task_curr_task_get
 
 ```c
-pid_t  get_pid(void );
+k_task_t *tos_task_curr_task_get(void);
 ```
 
 - **功能描述**
 
-​		获取任务pid
+​		获取当前正在运行的任务句柄。
 
 - **参数解释**
 
@@ -152,12 +321,14 @@ pid_t  get_pid(void );
 
 - **返回值**
 
-​		>0 表示某个任务的pid
+​		K_NULL 当前无正在运行任务（内核尚未启动）。
 
-### tos_task_delay_t
+​		非 K_NULL 任务句柄。
+
+### tos_task_delay
 
 ```c
-k_err_t tos_task_delay_t(k_tick_t delay);
+k_err_t tos_task_delay(k_tick_t delay);
 ```
 
 - **功能描述**
@@ -182,10 +353,10 @@ k_err_t tos_task_delay_t(k_tick_t delay);
 
 ​		K_ERR_DELAY_FOREVER 使用suspend 代替这个forever 的delay
 
-### tos_task_delay_abort_t
+### tos_task_delay_abort
 
 ```c
-k_err_t tos_task_delay_abort_t(pid_t pid);
+k_err_t tos_task_delay_abort(k_task_t *task);
 ```
 
 - **功能描述**
@@ -208,23 +379,25 @@ k_err_t tos_task_delay_abort_t(pid_t pid);
 
 ​		K_ERR_IN_IRQ 试图在中断服务程序ISR取消延时
 
-​		K_ERR_TLIB_INVALID_PID	传入的pid 是一个无效的pid
+​		K_ERR_OBJ_PTR_NULL 传入的task任务为Null Ptr
 
-### tos_task_suspend_t
+​		K_ERR_OBJ_INVALID 传入的task任务不是一个Kernel对象
+
+### tos_task_suspend
 
 ```c
-k_err_t tos_task_suspend_t(pid_t pid)
+k_err_t tos_task_suspend(k_task_t *task);
 ```
 
 - **功能描述**
 
-​		挂起为pid 的任务
+​		挂起一个任务（剥夺一个任务的运行调度）。
 
 - **参数解释**
 
-| **IN/OUT** | **参数名** | **描述**                              |
-| ---------- | ---------- | ------------------------------------- |
-| [in]       | pid        | 任务的进程号pid, 为-1 时 挂起当前任务 |
+| **IN/OUT** | **参数名** | **描述**         |
+| ---------- | ---------- | ---------------- |
+| [in]       | task       | 任务结构体描述符 |
 
 - **返回值**
 
@@ -232,14 +405,14 @@ k_err_t tos_task_suspend_t(pid_t pid)
 
 ​		K_ERR_TASK_SUSPEND_IDLE 试图挂起 idle 任务（非法）。
 
-​		K_ERR_TLIB_INVALID_PID	传入的pid 是一个无效的pid
+​		K_ERR_OBJ_INVALID 传入的task任务不是一个Kernel对象
 
-​		K_ERR_SCHED_LOCKED  上锁了同时要挂起自己
+​		K_ERR_SCHED_LOCKED 上锁了同时要挂起自己
 
-### tos_task_resume_t
+### tos_task_resume
 
 ```c
-k_err_t tos_task_resume_t(pid_t pid);
+k_err_t tos_task_resume(k_task_t *task);
 ```
 
 - **功能描述**
@@ -248,9 +421,9 @@ k_err_t tos_task_resume_t(pid_t pid);
 
 - **参数解释**
 
-| **IN/OUT** | **参数名** | **描述**                            |
-| ---------- | ---------- | ----------------------------------- |
-| [in]       | pid        | 任务的进程号pid, 为-1时表示当前任务 |
+| **IN/OUT** | **参数名** | **描述**         |
+| ---------- | ---------- | ---------------- |
+| [in]       | task       | 任务结构体描述符 |
 
 - **返回值**
 
@@ -258,12 +431,14 @@ k_err_t tos_task_resume_t(pid_t pid);
 
 ​	K_ERR_TASK_RESUME_SELF 试图恢复当前任务（非法）。
 
-​	K_ERR_TLIB_INVALID_PID 无效的PID
+​	K_ERR_OBJ_PTR_NULL 传入的task是一个Null ptr
 
-### tos_task_prio_change_t
+​	K_ERR_OBJ_INVALID 传入的task不是一个kernel 对象
+
+### tos_task_prio_change
 
 ```c
-k_err_t tos_task_prio_change_t(pid_t pid, k_prio_t prio_new);
+k_err_t tos_task_prio_change(k_task_t *task, k_prio_t prio_new);
 ```
 
 - **功能描述**
@@ -272,10 +447,10 @@ k_err_t tos_task_prio_change_t(pid_t pid, k_prio_t prio_new);
 
 - **参数解释**
 
-| **IN/OUT** | **参数名** | **描述**                            |
-| ---------- | ---------- | ----------------------------------- |
-| [in]       | pid        | 任务的进程号pid, 为-1时表示当前任务 |
-| [in]       | prio_new   | 新的优先级                          |
+| **IN/OUT** | **参数名** | **描述**         |
+| ---------- | ---------- | ---------------- |
+| [in]       | task       | 任务结构体描述符 |
+| [in]       | prio_new   | 新的优先级       |
 
 - **返回值**
 
@@ -283,14 +458,16 @@ k_err_t tos_task_prio_change_t(pid_t pid, k_prio_t prio_new);
 
 ​		K_ERR_TASK_PRIO_INVALID 优先级非法。
 
-​		K_ERR_TLIB_INVALID_PID 无效的PID
+​		K_ERR_OBJ_PTR_NULL 传入的task是一个Null ptr
 
-​		K_ERR_IN_IRQ   试图在中断服务程序ISR中改变某个任务的优先级
+​		K_ERR_OBJ_INVALID 传入的task不是一个kernel 对象
+
+​		K_ERR_IN_IRQ 试图在中断服务程序ISR中改变某个任务的优先级
 
 ### tos_task_yield_t
 
 ```c
-void tos_task_yield_t(void);
+void tos_task_yield(void);
 ```
 
 - **功能描述**
@@ -305,10 +482,10 @@ void tos_task_yield_t(void);
 
 ​		无
 
-### tos_task_stack_draught_depth_t
+### tos_task_stack_draught_depth
 
 ```c
-k_err_t tos_task_stack_draught_depth_t(pid_t pid, int *depth);
+k_err_t tos_task_stack_draught_depth(k_task_t *task, int *depth);
 ```
 
 - **功能描述**
@@ -317,10 +494,10 @@ k_err_t tos_task_stack_draught_depth_t(pid_t pid, int *depth);
 
 - **参数解释**
 
-| **IN/OUT** | **参数名** | **描述**                            |
-| ---------- | ---------- | ----------------------------------- |
-| [in]       | pid        | 任务的进程号pid, 为-1时表示当前任务 |
-| [out]      | depth      | 任务栈的吃水深度                    |
+| **IN/OUT** | **参数名** | **描述**         |
+| ---------- | ---------- | ---------------- |
+| [in]       | task       | 任务结构体描述符 |
+| [out]      | depth      | 任务栈的吃水深度 |
 
 - **返回值**
 
@@ -328,14 +505,38 @@ k_err_t tos_task_stack_draught_depth_t(pid_t pid, int *depth);
 
 ​		K_ERR_TASK_STK_OVERFLOW 任务栈溢出。
 
-​		K_ERR_TLIB_INVALID_PID 无效的PID
+​		K_ERR_OBJ_PTR_NULL	传入的depth 是一个 null ptr
+
+​		K_ERR_OBJ_INVALID        传入的task不是一个kernel 对象
+
+### tos_task_walkthru
+
+```c
+void tos_task_walkthru(void);
+```
+
+- **功能描述**
+
+​		遍历当前系统已创建的（不包括已删除的）任务 ， 使用系统默认的句柄
+
+- **参数解释**
+
+  无
+
+- **返回值**
+
+​		无
+
+- **解释**
+
+​		**不给可以挂的hook函数的原因是 在hook 函数运行是处在内核态的，十分的不安全**
 
 ## 堆内存管理
 
-### tos_mmheap_pool_add_t
+### tos_mmheap_pool_add
 
 ```c
- k_err_t tos_mmheap_pool_add_t(void *pool_start, size_t pool_size);
+ k_err_t tos_mmheap_pool_add(void *pool_start, size_t pool_size);
 ```
 
 - **功能描述**
@@ -361,10 +562,10 @@ k_err_t tos_task_stack_draught_depth_t(pid_t pid, int *depth);
 
   K_ERR_MMHEAP_INVALID_POOL_SIZE 内存池大小非法。
 
-### tos_mmheap_pool_rmv_t
+### tos_mmheap_pool_rmv
 
 ```c
-k_err_t tos_mmheap_pool_rmv_t(void *pool_start);
+k_err_t tos_mmheap_pool_rmv(void *pool_start);
 ```
 
 - **功能描述**
@@ -385,10 +586,10 @@ k_err_t tos_mmheap_pool_rmv_t(void *pool_start);
 
    K_ERR_NONE 			  								删除成功
 
-### tos_mmheap_alloc_t
+### tos_mmheap_alloc
 
 ```c
-void *tos_mmheap_alloc_t(size_t size);
+void *tos_mmheap_alloc(size_t size);
 ```
 
 - **功能描述**
@@ -405,10 +606,10 @@ void *tos_mmheap_alloc_t(size_t size);
 
   分配到的内存起始地址（返回 K_NULL 表示分配失败）。
 
-### tos_mmheap_aligned_alloc_t
+### tos_mmheap_aligned_alloc
 
 ```c
-void *tos_mmheap_aligned_alloc_t(size_t size, size_t align);
+void *tos_mmheap_aligned_alloc(size_t size, size_t align);
 ```
 
 - **功能描述**
@@ -426,10 +627,10 @@ void *tos_mmheap_aligned_alloc_t(size_t size, size_t align);
 
 分配到的内存起始地址（返回 K_NULL 表示分配失败）。
 
-### tos_mmheap_realloc_t
+### tos_mmheap_realloc
 
 ```c
-void *tos_mmheap_realloc_t(void *ptr, size_t size);
+void *tos_mmheap_realloc(void *ptr, size_t size);
 ```
 
 - **功能描述**
@@ -447,10 +648,10 @@ void *tos_mmheap_realloc_t(void *ptr, size_t size);
 
 ​    分配到的内存起始地址（返回 K_NULL 表示分配失败）
 
-### tos_mmheap_free_t
+### tos_mmheap_free
 
 ```c
-void tos_mmheap_free_t(void *ptr);
+void tos_mmheap_free(void *ptr);
 ```
 
 - **功能描述**
@@ -467,10 +668,10 @@ void tos_mmheap_free_t(void *ptr);
 
 ​    无
 
-### tos_mmheap_pool_check_t
+### tos_mmheap_pool_check
 
 ```c
-k_err_t tos_mmheap_pool_check_t(void *pool_start, k_mmheap_info_t *info);
+k_err_t tos_mmheap_pool_check(void *pool_start, k_mmheap_info_t *info);
 ```
 
 - **功能描述**
@@ -490,12 +691,34 @@ k_err_t tos_mmheap_pool_check_t(void *pool_start, k_mmheap_info_t *info);
 
 ​    K_ERR_OBJ_PTR_NULL info 为空指针。
 
-## 互斥量mutex
-
-###  tos_mutex_create_t
+### tos_mmheap_check
 
 ```c
-k_err_t tos_mutex_create_t(k_mutex_t *mutex);
+k_err_t tos_mmheap_check(k_mmheap_info_t *info);
+```
+
+- **功能描述**
+
+​		获取堆内存的整体使用情况（包含了所有的池的信息）。
+
+- **参数解释**
+
+| **IN/OUT** | **参数名** | **描述**                                   |
+| ---------- | ---------- | ------------------------------------------ |
+| [out]      | info       | 堆内存的整体使用情况（使用量和剩余量信息） |
+
+- **返回值**
+
+​		K_ERR_NONE 函数返回成功。
+
+​		K_ERR_OBJ_PTR_NULL info 为空指针。
+
+## 互斥量mutex
+
+###  tos_mutex_create
+
+```c
+k_err_t tos_mutex_create(k_mutex_t *mutex);
 ```
 
 - **功能描述**
@@ -516,10 +739,10 @@ k_err_t tos_mutex_create_t(k_mutex_t *mutex);
 
 ​    K_ERR_OBJ_PTR_NULL mutex 为空指针。
 
-### tos_mutex_destroy_t
+### tos_mutex_destroy
 
 ```c
-k_err_t tos_mutex_destroy_t(k_mutex_t *mutex);
+k_err_t tos_mutex_destroy(k_mutex_t *mutex);
 ```
 
 - **功能描述**
@@ -544,10 +767,10 @@ k_err_t tos_mutex_destroy_t(k_mutex_t *mutex);
 
 ​    K_ERR_OBJ_INVALID_ALLOC_TYPE  指向的互斥量mutex不是一个静态的mutex (如果动态创建开启的话)。
 
-### tos_mutex_pend_t
+### tos_mutex_pend
 
 ```c
-k_err_t tos_mutex_pend_t(k_mutex_t *mutex);
+k_err_t tos_mutex_pend(k_mutex_t *mutex);
 ```
 
 - **功能描述**
@@ -580,10 +803,10 @@ K_ERR_OBJ_INVALID mutex 指向的不是一个合法的互斥量。
 
 
 
-### tos_mutex_pend_timed_t
+### tos_mutex_pend_timed
 
 ```c
-k_err_t tos_mutex_pend_timed_t(k_mutex_t *mutex, k_tick_t timeout);
+k_err_t tos_mutex_pend_timed(k_mutex_t *mutex, k_tick_t timeout);
 ```
 
 - **功能描述**
@@ -621,10 +844,10 @@ K_ERR_OBJ_INVALID mutex 指向的不是一个合法的互斥量。
 
 
 
-### tos_mutex_post_t
+### tos_mutex_post
 
 ```c
-k_err_t tos_mutex_post_t(k_mutex_t *mutex);
+k_err_t tos_mutex_post(k_mutex_t *mutex);
 ```
 
 - **功能描述**
@@ -655,10 +878,10 @@ K_ERR_MUTEX_NESTING 互斥量拥有者嵌套释放。
 
 ## 信号量 semaphore
 
-### tos_sem_create_t
+### tos_sem_create
 
 ```c
-k_err_t tos_sem_create_t(k_sem_t *sem, k_sem_cnt_t init_count);
+k_err_t tos_sem_create(k_sem_t *sem, k_sem_cnt_t init_count);
 ```
 
 - **功能描述**
@@ -680,10 +903,10 @@ K_ERR_OBJ_PTR_NULL sem 指针为空。
 
 
 
-### tos_sem_create_max_t
+### tos_sem_create_max
 
 ```c
-k_err_t tos_sem_create_max_t(k_sem_t *sem, k_sem_cnt_t init_count, k_sem_cnt_t max_count);
+k_err_t tos_sem_create_max(k_sem_t *sem, k_sem_cnt_t init_count, k_sem_cnt_t max_count);
 ```
 
 - **功能描述**
@@ -706,10 +929,10 @@ K_ERR_OBJ_PTR_NULL sem 指针为空。
 
 
 
-### tos_sem_destroy_t
+### tos_sem_destroy
 
 ```c
-k_err_t tos_sem_destroy_t(k_sem_t *sem);
+k_err_t tos_sem_destroy(k_sem_t *sem);
 ```
 
 - **功能描述**
@@ -734,10 +957,10 @@ K_ERR_OBJ_INVALID_ALLOC_TYPE sem指向的是一个动态的信号量（在动态
 
 
 
-### tos_sem_pend_t
+### tos_sem_pend
 
 ```c
-k_err_t tos_sem_pend_t(k_sem_t *sem, k_tick_t timeout);
+k_err_t tos_sem_pend(k_sem_t *sem, k_tick_t timeout);
 ```
 
 - **功能描述**
@@ -769,10 +992,10 @@ k_err_t tos_sem_pend_t(k_sem_t *sem, k_tick_t timeout);
 
 ​	K_ERR_IN_IRQ  在中断服务程序ISR中获取信号量。
 
-### tos_sem_post_t
+### tos_sem_post
 
 ```c
-k_err_t tos_sem_post_t(k_sem_t *sem);
+k_err_t tos_sem_post(k_sem_t *sem);
 ```
 
 - **功能描述**
@@ -795,10 +1018,10 @@ k_err_t tos_sem_post_t(k_sem_t *sem);
 
 
 
-### tos_sem_post_all_t
+### tos_sem_post_all
 
 ```c
-k_err_t tos_sem_post_all_t(k_sem_t *sem);
+k_err_t tos_sem_post_all(k_sem_t *sem);
 ```
 
 - **功能描述**

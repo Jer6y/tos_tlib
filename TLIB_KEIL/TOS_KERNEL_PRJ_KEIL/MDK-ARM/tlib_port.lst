@@ -1,0 +1,52 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             |.text|, CODE, READONLY, ALIGN=
+2
+    2 00000000                 THUMB
+    3 00000000                 REQUIRE8
+    4 00000000                 PRESERVE8
+    5 00000000         
+    6 00000000         User_Init
+                               PROC
+    7 00000000                 EXPORT           User_Init
+    8 00000000 B500            PUSH             {LR}
+    9 00000002 F7FF FFFE       BL               0x08030001
+   10 00000006 F85D EB04       POP              {LR}
+   11 0000000A 4770            BX               LR
+   12 0000000C                 ENDP
+   13 0000000C                 END
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4 --fpu=SoftVFP
+ --depend=tos_tlib_kernel\tlib_port.d -otos_tlib_kernel\tlib_port.o -I.\RTE\_to
+s_tlib_kernel -ID:\Keil5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include -ID:\Keil5\ARM\
+PACK\Keil\STM32WLxx_DFP\1.1.0\Drivers\CMSIS\Device\ST\STM32WLxx\Include --prede
+fine="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SETA 524" --predefine="
+_RTE_ SETA 1" --predefine="STM32WLE5xx SETA 1" --list=tlib_port.lst ..\TOS\TLIB
+_PORT\tlib_port.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+.text 00000000
+
+Symbol: .text
+   Definitions
+      At line 1 in file ..\TOS\TLIB_PORT\tlib_port.s
+   Uses
+      None
+Comment: .text unused
+User_Init 00000000
+
+Symbol: User_Init
+   Definitions
+      At line 6 in file ..\TOS\TLIB_PORT\tlib_port.s
+   Uses
+      At line 7 in file ..\TOS\TLIB_PORT\tlib_port.s
+Comment: User_Init used once
+2 symbols
+336 symbols in table

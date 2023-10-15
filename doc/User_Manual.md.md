@@ -14,20 +14,35 @@
 
 ## `TOS_TLIB`使用流程
 
-### `TLIB`启用
+### 引入`TLIB`静态库
 
-- 在 `tos_config.h` 文件中将 `TOS_CFG_OBJ_DYNAMIC_CREATE_EN` 宏使能
+- **建立`KEIL`工程**
 
-![config_1](./pic/config_2.png)
+- **创建下图的`GROUP`**
+- ![](./pic/app_road_1.png)
 
-- 在 `tos_config.h` 文件中将 `TOS_CFG_TLIB_EN` 宏使能
+- **添加各个组的.c 和 .h文件 , 与`TLIB` 中的文件一致**
+- **点击魔术棒 , 添加头文件路径**
+- ![](./pic/app_road_2.png)
 
-![config_1](./pic/config_1.png)
+- 添加下列目录
 
-- ( 这一条是依赖于具体的硬件架构代码部分 以 `cortex-m4` 内核为例子)  将 `port_S.s` 中的`PendSV Handler`改为如下
+- ![](./pic/app_road_3.png)
+- **`APP`工程编译烧录**
+- **模板代码所使用的硬件板为`Tencent OS Tiny` 官方板 , 可以直接烧录**
+
+### Kernel工程
+
+- **正常引入`TOS_Kernel` 工程**
+- **创建`TLIB_PORT` 包**
+- **引入 `TLIB_PORT` 的各个文件**
+- ![](./pic/app_road_4.png)
+- **修改`ARCH/port_s.s` 中的  软中断 和 用于系统调用的中断 **
+- **下列以 `ARM-Cortex-M4`为例子**
+- **将`PendSV_Handler`替换**
 
 ```assembly
-    GLOBAL PendSV_Handler
+GLOBAL PendSV_Handler
 PendSV_Handler
     CPSID   I
     MRS     R0, PSP
@@ -129,9 +144,8 @@ Load
     BX      LR
 ```
 
-详细解说可查阅[`TLIB`开发细节](./TLIB_DETAIL.md)
-
-- ( 这一条是依赖于具体的硬件架构代码部分 以 `cortex-m4` 内核为例子)  将 `port_S.s` 中添加`SVC_Handler` 并注释掉原有的`SVC_Handler`改为如下
+- **更多细节解释在 [TLIB 开发细节](./TLIB_DETAIL.md)**
+- **将 `SVC_Handler` 替换**
 
 ```assembly
 GLOBAL SVC_Handler
@@ -143,6 +157,16 @@ GLOBAL SVC_Handler
 ; R0 返回值
 SVC_Handler
     CPSID   I
+	; judge for Handler_Mode
+	MOV		R3,LR
+	LDR  	R2,=0xFFFFFFF1
+	SUB		R3,R3,R2
+	CBZ		R3,CAL_FRM_HANDLER
+	MOV		R3,LR
+	LDR  	R2,=0xFFFFFFE1
+	SUB		R3,R3,R2
+	CBZ		R3,CAL_FRM_HANDLER
+	
 	MRS		R3,PSP
 	
 	; R0-R3, R12, LR, PC, xPSR is saved automatically here
@@ -167,6 +191,16 @@ SVC_Handler
 	LDR		R4, [R2,#0x4]
 	CBZ		R4, KTD
 	B UTD
+CAL_FRM_HANDLER
+	CPSIE	I
+	PUSH    {LR}
+	BL      syscall_kernel_knl
+	POP     {LR}
+	
+	MRS 	R1,MSP
+	STR     R0, [R1]
+	
+	BX 		LR
 KTD
 	STR     R3, [R2]
 	PUSH {LR}
@@ -240,51 +274,83 @@ UTD
     END
 ```
 
-详细解说可查阅[`TLIB`开发细节](./TLIB_DETAIL.md)
-
-- 接下来是在main中调用`tos_knl_init`完成初始化,同时创建第一个`app线程` 同时开启内核  ( 使用`tlib`的线程创建方式!!!!)
-
-- 在引入`tlib`后 ， 内核线程分为了两种线程 , `内核线程` 以及 `用户线程`, 使用 `TOS API` 创建的线程为内核线程， 使用 `TLIB API` 创建的线程为用户线程 , 内核线程会长期处于 特权级别 操作并不安全 不建议用户创建 用户线程则处于 普通级别 较安全
-- 建议`main` 函数方式
+- **更多细节解释在 [TLIB 开发细节](./TLIB_DETAIL.md)**
+- **使能`tos_config.h`中的 `TOS_CFG_TLIB_EN`**
+- **Kernel工程的main函数替换如下**
 
 ```c
 int main(void)
 {
+	extern void User_Init(void);
+	User_Init();
+    
+    /******* this is User_Defined function *******/
+  	BSP_Init();
+    /********************************************/ 
+    
+    /******* this is User_Defined function *******/
+	MPU_Config();
+    /********************************************/  
+    
+    
 	k_err_t err;
 	err = tos_knl_init();
 	if(err != K_ERR_NONE)
-		while(1);
-	pid_t pid = (pid_t)-1;
-    // tos_task_create_dyn_tlib 并非用户API 而是内核态的API
-	err = tos_task_create_dyn_tlib("app_entry",   			\    //线程名字
-                                    app_entry,				\	 //线程入口
-                                    NULL,					\	 //传入参数
-                                    APP_PRIO_ENTRY,			\	 //线程优先级
-                                    APP_STACK_ENTRY_SIZE,	\	 //线程用户栈大小
-                                    KERNEL_STACK_SIZE,		\	 //线程内核栈大小
-                                    0,						\	 //时间轮转使用的tick数
-                                    &pid);						 //成功创建将PID 放入参数pid中	
+    {
+        /******* this is User_Defined function *******/
+        	err_handle();
+        /********************************************/ 
+    }
+	err = tos_task_create(&app_entry_tcb,								
+                          "app_entry",										
+                          (k_task_entry_t)0x20003001,			
+                          NULL,														
+                          APP_PRIO_ENTRY,									
+                          app_stack,											
+                          APP_STACK_ENTRY_SIZE,
+                          0);
 	if(err != K_ERR_NONE)
-		while(1);	
+	{
+        /******* this is User_Defined function *******/
+        	err_handle();
+        /********************************************/ 
+    }
 	err = tos_knl_start();
-	while(1);
+    
+/******* this is User_Defined function *******/
+    err_handle();
+/********************************************/ 
+	
+    while(1);
+
 }
 ```
 
-- 用户程序函数例子
 
-  ```c
-  
-  #include "tlib.h"  // 包含用户态API
-  
-  void app_entry(void * parameter )
-  {
-  		while(1)
-  		{
-  			pid_t pid = get_pid(); //用户态API调用案例
-  			
-  		}
-  }
-  ```
 
-- 在`app_entry`中使用用户`API` 进行开发 详情: [用户`API`手册](./TLIB_SDK.md)
+- **编译烧录Kernel工程**
+- **Kernel 工程只需要烧录一次**
+- **`APP` 工程每次`APP`代码改变时都需要烧录**
+
+## `APP`工程入口状态描述
+
+- **入口函数**
+  - 入口函数为 `app_entry`
+  - `void app_entry(void *)` 
+- **入口状态**
+  - 入口函数为内核线程 处于 `Privileged` 状态
+  - 可以利用`TLIB_API` 创建 **内核线程** or  **用户线程**
+  - 内核线程级别更高, 用户线程级别较低
+
+## `TOS_TLIB`用户须知
+
+**`APP`工程与Kernel工程相互隔离 , 但是在以下的文件中应该保持同步**
+
+- **`tlib_port.h`**
+- **`API`的各个头文件  如: `tos_task.h` , `tos_slist.h` , `tos_mutex.h` 等**
+- **配置文件`tos_config.h` (请保持 `TOS_CFG_MMHEAP_DEFAULT_POOL_EN` 为0) **
+- **[ 若需要使用堆 请自行利用`tos_mmheap API`进行管理 ]**
+- **保持同步的方法**
+  -  **工程文件ADD 同一个文件**
+  -  **文件复制粘贴**
+- **最好不要创建内核线程， 如果需要创建内核线程，需要像对待`ISR`程序一样 **  
